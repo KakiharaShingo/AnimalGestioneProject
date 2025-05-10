@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- 背景：グラデーション -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A5ACD" />
+      <stop offset="100%" stop-color="#4169E1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 角丸の背景 -->
+  <rect x="0" y="0" width="1024" height="1024" rx="220" ry="220" fill="url(#bg-gradient)" />
+  
+  <!-- 中央の白い円 -->
+  <circle cx="512" cy="512" r="380" fill="white" />
+  
+  <!-- 猫のシルエット -->
+  <g transform="translate(512, 532) scale(0.6)">
+    <!-- 顔 -->
+    <circle cx="0" cy="0" r="280" fill="#FF9500" />
+    
+    <!-- 左耳 -->
+    <path d="M-180,-180 L-260,-360 L-100,-280 Z" fill="#FF9500" />
+    
+    <!-- 右耳 -->
+    <path d="M180,-180 L260,-360 L100,-280 Z" fill="#FF9500" />
+    
+    <!-- 左目 -->
+    <ellipse cx="-90" cy="-60" rx="30" ry="50" fill="#333333" />
+    
+    <!-- 右目 -->
+    <ellipse cx="90" cy="-60" rx="30" ry="50" fill="#333333" />
+    
+    <!-- 鼻 -->
+    <path d="M0,10 L20,40 L-20,40 Z" fill="#FF5E5E" />
+    
+    <!-- 口 -->
+    <path d="M0,40 C50,100 100,80 120,90 M0,40 C-50,100 -100,80 -120,90" stroke="#333333" stroke-width="8" fill="none" />
+    
+    <!-- ヒゲ -->
+    <path d="M30,30 L160,0 M30,50 L150,60 M-30,30 L-160,0 M-30,50 L-150,60" stroke="#333333" stroke-width="4" fill="none" />
+  </g>
+  
+  <!-- カレンダーアイコン -->
+  <g transform="translate(720, 260) scale(0.18)">
+    <rect x="0" y="0" width="500" height="500" rx="50" ry="50" fill="#FF2D55" />
+    <rect x="60" y="100" width="380" height="350" rx="20" ry="20" fill="white" />
+    
+    <!-- カレンダーの線 -->
+    <line x1="60" y1="200" x2="440" y2="200" stroke="#333" stroke-width="15" />
+    <line x1="150" y1="100" x2="150" y2="450" stroke="#333" stroke-width="15" />
+    <line x1="250" y1="100" x2="250" y2="450" stroke="#333" stroke-width="15" />
+    <line x1="350" y1="100" x2="350" y2="450" stroke="#333" stroke-width="15" />
+    <line x1="60" y1="280" x2="440" y2="280" stroke="#333" stroke-width="15" />
+    <line x1="60" y1="360" x2="440" y2="360" stroke="#333" stroke-width="15" />
+    
+    <!-- カレンダーの上部 -->
+    <rect x="100" y="-50" width="60" height="100" rx="15" ry="15" fill="#333" />
+    <rect x="340" y="-50" width="60" height="100" rx="15" ry="15" fill="#333" />
+  </g>
+  
+  <!-- ハート型のしおり -->
+  <path d="M320,290 C320,220 270,230 270,230 C270,230 240,220 240,260 C240,300 320,340 320,340 C320,340 400,300 400,260 C400,220 370,230 370,230 C370,230 320,220 320,290 Z" fill="#FF2D55" />
+</svg>

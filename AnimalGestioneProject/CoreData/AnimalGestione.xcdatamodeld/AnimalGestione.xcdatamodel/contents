@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="23D60" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="AnimalEntity" representedClassName="AnimalEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="birthDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="breed" optional="YES" attributeType="String"/>
+        <attribute name="colorHex" optional="YES" attributeType="String"/>
+        <attribute name="gender" attributeType="String"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="species" attributeType="String"/>
+        <relationship name="healthRecords" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="HealthRecordEntity" inverseName="animal" inverseEntity="HealthRecordEntity"/>
+        <relationship name="physiologicalCycles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PhysiologicalCycleEntity" inverseName="animal" inverseEntity="PhysiologicalCycleEntity"/>
+    </entity>
+    <entity name="HealthRecordEntity" representedClassName="HealthRecordEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="activityLevel" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="appetite" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="temperature" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="animal" maxCount="1" deletionRule="Nullify" destinationEntity="AnimalEntity" inverseName="healthRecords" inverseEntity="AnimalEntity"/>
+    </entity>
+    <entity name="PhysiologicalCycleEntity" representedClassName="PhysiologicalCycleEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="intensity" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="notes" optional="YES" attributeType="String"/>
+        <attribute name="startDate" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="animal" maxCount="1" deletionRule="Nullify" destinationEntity="AnimalEntity" inverseName="physiologicalCycles" inverseEntity="AnimalEntity"/>
+    </entity>
+</model>

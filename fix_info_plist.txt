@@ -1,0 +1,12 @@
+問題: 「Multiple commands produce '/Users/shingo/Library/Developer/Xcode/DerivedData/AnimalGestioneProject-djlwvaewocdgjjbprplemwvvkrzk/Build/Products/Debug-iphonesimulator/AnimalGestioneProject.app/Info.plist'」エラーを修正するには：
+
+1. Xcodeでプロジェクトを開きます
+2. 左側のプロジェクトナビゲーターでプロジェクトファイル「AnimalGestioneProject.xcodeproj」を選択
+3. 「Build Phases」タブを選択
+4. 「Copy Bundle Resources」セクションを展開
+5. Info.plistファイルを見つけて「-」ボタンをクリックして削除
+6. プロジェクトを再ビルド
+
+追加の注意事項:
+- プロジェクト設定で「INFOPLIST_FILE」パラメータが正しく指定されていれば（現在は「$(SRCROOT)/AnimalGestioneProject/Info.plist」）、Info.plistを「Copy Bundle Resources」から削除しても問題ありません。
+- この修正では、Info.plistは引き続きアプリに含まれますが、ビルドプロセス中に二重にコピーされなくなります。

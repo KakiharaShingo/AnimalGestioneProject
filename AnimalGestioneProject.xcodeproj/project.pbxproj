@@ -1,0 +1,1000 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1071C4671A4E39876A1F52B8 /* Pods_AnimalGestioneProject_AnimalGestioneProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770E7537FA11EE6CDB7FB7A2 /* Pods_AnimalGestioneProject_AnimalGestioneProjectUITests.framework */; };
+		2824B7C82DCF7D8200625889 /* get-pip.py in Resources */ = {isa = PBXBuildFile; fileRef = 2824B7982DCF7D8200625889 /* get-pip.py */; };
+		2824B7C92DCF7D8200625889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2824B78C2DCF7D8200625889 /* Assets.xcassets */; };
+		2824B7CA2DCF7D8200625889 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2824B7A62DCF7D8200625889 /* Preview Assets.xcassets */; };
+		2824B7CC2DCF7D8200625889 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7AC2DCF7D8200625889 /* BannerAdView.swift */; };
+		2824B7CD2DCF7D8200625889 /* EditAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7B82DCF7D8200625889 /* EditAnimalView.swift */; };
+		2824B7CE2DCF7D8200625889 /* CheckupRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B79C2DCF7D8200625889 /* CheckupRecord.swift */; };
+		2824B7CF2DCF7D8200625889 /* VaccineRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7C42DCF7D8200625889 /* VaccineRecordView.swift */; };
+		2824B7D02DCF7D8200625889 /* AppIconGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B78B2DCF7D8200625889 /* AppIconGenerator.swift */; };
+		2824B7D12DCF7D8200625889 /* AnimalDetailView+ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7B62DCF7D8200625889 /* AnimalDetailView+ColorPicker.swift */; };
+		2824B7D22DCF7D8200625889 /* InterstitialAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7AD2DCF7D8200625889 /* InterstitialAdManager.swift */; };
+		2824B7D32DCF7D8200625889 /* GroomingRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7BD2DCF7D8200625889 /* GroomingRecordView.swift */; };
+		2824B7D42DCF7D8200625889 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7C32DCF7D8200625889 /* SplashScreen.swift */; };
+		2824B7D52DCF7D8200625889 /* AnimalGestione.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2824B78F2DCF7D8200625889 /* AnimalGestione.xcdatamodeld */; };
+		2824B7D62DCF7D8200625889 /* HealthRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7BF2DCF7D8200625889 /* HealthRecordView.swift */; };
+		2824B7D72DCF7D8200625889 /* EnhancedContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7BB2DCF7D8200625889 /* EnhancedContentView.swift */; };
+		2824B7D82DCF7D8200625889 /* AnimalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7942DCF7D8200625889 /* AnimalDataStore.swift */; };
+		2824B7D92DCF7D8200625889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7892DCF7D8200625889 /* AppDelegate.swift */; };
+		2824B7DA2DCF7D8200625889 /* EnhancedHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7BC2DCF7D8200625889 /* EnhancedHomeView.swift */; };
+		2824B7DB2DCF7D8200625889 /* CoreDataStore+Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7912DCF7D8200625889 /* CoreDataStore+Records.swift */; };
+		2824B7DC2DCF7D8200625889 /* AnimalModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B79B2DCF7D8200625889 /* AnimalModel+CoreData.swift */; };
+		2824B7DD2DCF7D8200625889 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7962DCF7D8200625889 /* Color+Extensions.swift */; };
+		2824B7DE2DCF7D8200625889 /* NotificationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7A42DCF7D8200625889 /* NotificationsListView.swift */; };
+		2824B7DF2DCF7D8200625889 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7922DCF7D8200625889 /* PersistenceController.swift */; };
+		2824B7E02DCF7D8200625889 /* HealthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7BE2DCF7D8200625889 /* HealthChartView.swift */; };
+		2824B7E12DCF7D8200625889 /* WeightRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7A12DCF7D8200625889 /* WeightRecord.swift */; };
+		2824B7E22DCF7D8200625889 /* MedicationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B79E2DCF7D8200625889 /* MedicationRecord.swift */; };
+		2824B7E32DCF7D8200625889 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7B72DCF7D8200625889 /* ColorPickerView.swift */; };
+		2824B7E42DCF7D8200625889 /* RewardedFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7B02DCF7D8200625889 /* RewardedFeatureView.swift */; };
+		2824B7E52DCF7D8200625889 /* AppIconExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B78A2DCF7D8200625889 /* AppIconExporter.swift */; };
+		2824B7E62DCF7D8200625889 /* RewardedAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7AF2DCF7D8200625889 /* RewardedAdManager.swift */; };
+		2824B7E72DCF7D8200625889 /* VaccineRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7A02DCF7D8200625889 /* VaccineRecord.swift */; };
+		2824B7E82DCF7D8200625889 /* AnimalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7B52DCF7D8200625889 /* AnimalDetailView.swift */; };
+		2824B7E92DCF7D8200625889 /* WeightRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7C52DCF7D8200625889 /* WeightRecordView.swift */; };
+		2824B7EA2DCF7D8200625889 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7B22DCF7D8200625889 /* SearchBar.swift */; };
+		2824B7EB2DCF7D8200625889 /* PremiumHealthCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7C22DCF7D8200625889 /* PremiumHealthCheckView.swift */; };
+		2824B7EC2DCF7D8200625889 /* OtherRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B79F2DCF7D8200625889 /* OtherRecord.swift */; };
+		2824B7ED2DCF7D8200625889 /* PhysiologicalCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7C12DCF7D8200625889 /* PhysiologicalCycleView.swift */; };
+		2824B7EE2DCF7D8200625889 /* AdContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7AA2DCF7D8200625889 /* AdContainerView.swift */; };
+		2824B7EF2DCF7D8200625889 /* GroomingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B79D2DCF7D8200625889 /* GroomingRecord.swift */; };
+		2824B7F02DCF7D8200625889 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7902DCF7D8200625889 /* CoreDataStore.swift */; };
+		2824B7F12DCF7D8200625889 /* AnimalGestioneProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7882DCF7D8200625889 /* AnimalGestioneProjectApp.swift */; };
+		2824B7F22DCF7D8200625889 /* AddAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7B42DCF7D8200625889 /* AddAnimalView.swift */; };
+		2824B7F32DCF7D8200625889 /* AdConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B78D2DCF7D8200625889 /* AdConfig.swift */; };
+		2824B7F42DCF7D8200625889 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7AB2DCF7D8200625889 /* AdManager.swift */; };
+		2824B7F52DCF7D8200625889 /* EnhancedCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7BA2DCF7D8200625889 /* EnhancedCalendarView.swift */; };
+		2824B7F62DCF7D8200625889 /* InAppPurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7A82DCF7D8200625889 /* InAppPurchaseManager.swift */; };
+		2824B7F72DCF7D8200625889 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7A32DCF7D8200625889 /* NotificationManager.swift */; };
+		2824B7F82DCF7D8200625889 /* EnhancedAnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7B92DCF7D8200625889 /* EnhancedAnimalListView.swift */; };
+		2824B7F92DCF7D8200625889 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B79A2DCF7D8200625889 /* AnimalModel.swift */; };
+		2824B7FA2DCF7D8200625889 /* PremiumPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7AE2DCF7D8200625889 /* PremiumPurchaseView.swift */; };
+		2824B7FB2DCF7D8200625889 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B7C02DCF7D8200625889 /* ImagePicker.swift */; };
+		8712323F743F7D608F65A1D4 /* Pods_AnimalGestioneProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A339245298984A3ED5E817 /* Pods_AnimalGestioneProjectTests.framework */; };
+		C3CD51E73871342D3429AF85 /* Pods_AnimalGestioneProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF413571F0460F9FA2800BC0 /* Pods_AnimalGestioneProject.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28FD31E22BB733BE005D407E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28FD31C92BB733BD005D407E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28FD31D02BB733BD005D407E;
+			remoteInfo = AnimalGestioneProject;
+		};
+		28FD31EC2BB733BE005D407E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28FD31C92BB733BD005D407E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28FD31D02BB733BD005D407E;
+			remoteInfo = AnimalGestioneProject;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2824B7852DCF368900625889 /* AnimalGestioneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalGestioneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2824B7862DCF368900625889 /* AnimalGestioneProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalGestioneProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2824B7872DCF368900625889 /* AnimalGestioneProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalGestioneProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2824B7882DCF7D8200625889 /* AnimalGestioneProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGestioneProjectApp.swift; sourceTree = "<group>"; };
+		2824B7892DCF7D8200625889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2824B78A2DCF7D8200625889 /* AppIconExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconExporter.swift; sourceTree = "<group>"; };
+		2824B78B2DCF7D8200625889 /* AppIconGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconGenerator.swift; sourceTree = "<group>"; };
+		2824B78C2DCF7D8200625889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2824B78D2DCF7D8200625889 /* AdConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdConfig.swift; sourceTree = "<group>"; };
+		2824B7902DCF7D8200625889 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		2824B7912DCF7D8200625889 /* CoreDataStore+Records.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataStore+Records.swift"; sourceTree = "<group>"; };
+		2824B7922DCF7D8200625889 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		2824B7942DCF7D8200625889 /* AnimalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDataStore.swift; sourceTree = "<group>"; };
+		2824B7962DCF7D8200625889 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		2824B7982DCF7D8200625889 /* get-pip.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "get-pip.py"; sourceTree = "<group>"; };
+		2824B7992DCF7D8200625889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2824B79A2DCF7D8200625889 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
+		2824B79B2DCF7D8200625889 /* AnimalModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalModel+CoreData.swift"; sourceTree = "<group>"; };
+		2824B79C2DCF7D8200625889 /* CheckupRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckupRecord.swift; sourceTree = "<group>"; };
+		2824B79D2DCF7D8200625889 /* GroomingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroomingRecord.swift; sourceTree = "<group>"; };
+		2824B79E2DCF7D8200625889 /* MedicationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationRecord.swift; sourceTree = "<group>"; };
+		2824B79F2DCF7D8200625889 /* OtherRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherRecord.swift; sourceTree = "<group>"; };
+		2824B7A02DCF7D8200625889 /* VaccineRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineRecord.swift; sourceTree = "<group>"; };
+		2824B7A12DCF7D8200625889 /* WeightRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRecord.swift; sourceTree = "<group>"; };
+		2824B7A32DCF7D8200625889 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		2824B7A42DCF7D8200625889 /* NotificationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsListView.swift; sourceTree = "<group>"; };
+		2824B7A62DCF7D8200625889 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2824B7A82DCF7D8200625889 /* InAppPurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseManager.swift; sourceTree = "<group>"; };
+		2824B7AA2DCF7D8200625889 /* AdContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdContainerView.swift; sourceTree = "<group>"; };
+		2824B7AB2DCF7D8200625889 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
+		2824B7AC2DCF7D8200625889 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		2824B7AD2DCF7D8200625889 /* InterstitialAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdManager.swift; sourceTree = "<group>"; };
+		2824B7AE2DCF7D8200625889 /* PremiumPurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPurchaseView.swift; sourceTree = "<group>"; };
+		2824B7AF2DCF7D8200625889 /* RewardedAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdManager.swift; sourceTree = "<group>"; };
+		2824B7B02DCF7D8200625889 /* RewardedFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedFeatureView.swift; sourceTree = "<group>"; };
+		2824B7B22DCF7D8200625889 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		2824B7B42DCF7D8200625889 /* AddAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnimalView.swift; sourceTree = "<group>"; };
+		2824B7B52DCF7D8200625889 /* AnimalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailView.swift; sourceTree = "<group>"; };
+		2824B7B62DCF7D8200625889 /* AnimalDetailView+ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalDetailView+ColorPicker.swift"; sourceTree = "<group>"; };
+		2824B7B72DCF7D8200625889 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		2824B7B82DCF7D8200625889 /* EditAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAnimalView.swift; sourceTree = "<group>"; };
+		2824B7B92DCF7D8200625889 /* EnhancedAnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedAnimalListView.swift; sourceTree = "<group>"; };
+		2824B7BA2DCF7D8200625889 /* EnhancedCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedCalendarView.swift; sourceTree = "<group>"; };
+		2824B7BB2DCF7D8200625889 /* EnhancedContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedContentView.swift; sourceTree = "<group>"; };
+		2824B7BC2DCF7D8200625889 /* EnhancedHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedHomeView.swift; sourceTree = "<group>"; };
+		2824B7BD2DCF7D8200625889 /* GroomingRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroomingRecordView.swift; sourceTree = "<group>"; };
+		2824B7BE2DCF7D8200625889 /* HealthChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthChartView.swift; sourceTree = "<group>"; };
+		2824B7BF2DCF7D8200625889 /* HealthRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthRecordView.swift; sourceTree = "<group>"; };
+		2824B7C02DCF7D8200625889 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		2824B7C12DCF7D8200625889 /* PhysiologicalCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiologicalCycleView.swift; sourceTree = "<group>"; };
+		2824B7C22DCF7D8200625889 /* PremiumHealthCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumHealthCheckView.swift; sourceTree = "<group>"; };
+		2824B7C32DCF7D8200625889 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		2824B7C42DCF7D8200625889 /* VaccineRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineRecordView.swift; sourceTree = "<group>"; };
+		2824B7C52DCF7D8200625889 /* WeightRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRecordView.swift; sourceTree = "<group>"; };
+		2824B7C72DCF7D8200625889 /* AnimalGestione.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AnimalGestione.xcdatamodel; sourceTree = "<group>"; };
+		2DE34C90300A551CE820A7BD /* Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		67BE3A616E48A669D9BC8FB0 /* Pods-AnimalGestioneProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalGestioneProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-AnimalGestioneProjectTests/Pods-AnimalGestioneProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		770E7537FA11EE6CDB7FB7A2 /* Pods_AnimalGestioneProject_AnimalGestioneProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalGestioneProject_AnimalGestioneProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DAF31EEA700901297C67B47 /* Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.debug.xcconfig"; path = "Target Support Files/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		86A339245298984A3ED5E817 /* Pods_AnimalGestioneProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalGestioneProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AA0CA6C9D4141C11A59550B /* Pods-AnimalGestioneProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalGestioneProject.debug.xcconfig"; path = "Target Support Files/Pods-AnimalGestioneProject/Pods-AnimalGestioneProject.debug.xcconfig"; sourceTree = "<group>"; };
+		C460B614CA6BB135A14C028C /* Pods-AnimalGestioneProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalGestioneProject.release.xcconfig"; path = "Target Support Files/Pods-AnimalGestioneProject/Pods-AnimalGestioneProject.release.xcconfig"; sourceTree = "<group>"; };
+		D7BD5662B3B360EA6743C6A8 /* Pods-AnimalGestioneProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalGestioneProjectTests.release.xcconfig"; path = "Target Support Files/Pods-AnimalGestioneProjectTests/Pods-AnimalGestioneProjectTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF413571F0460F9FA2800BC0 /* Pods_AnimalGestioneProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalGestioneProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28FD31CE2BB733BD005D407E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3CD51E73871342D3429AF85 /* Pods_AnimalGestioneProject.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28FD31DE2BB733BE005D407E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8712323F743F7D608F65A1D4 /* Pods_AnimalGestioneProjectTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28FD31E82BB733BE005D407E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1071C4671A4E39876A1F52B8 /* Pods_AnimalGestioneProject_AnimalGestioneProjectUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2824B78E2DCF7D8200625889 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				2824B78D2DCF7D8200625889 /* AdConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		2824B7932DCF7D8200625889 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2824B78F2DCF7D8200625889 /* AnimalGestione.xcdatamodeld */,
+				2824B7902DCF7D8200625889 /* CoreDataStore.swift */,
+				2824B7912DCF7D8200625889 /* CoreDataStore+Records.swift */,
+				2824B7922DCF7D8200625889 /* PersistenceController.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		2824B7952DCF7D8200625889 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				2824B7942DCF7D8200625889 /* AnimalDataStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		2824B7972DCF7D8200625889 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2824B7962DCF7D8200625889 /* Color+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2824B7A22DCF7D8200625889 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2824B79A2DCF7D8200625889 /* AnimalModel.swift */,
+				2824B79B2DCF7D8200625889 /* AnimalModel+CoreData.swift */,
+				2824B79C2DCF7D8200625889 /* CheckupRecord.swift */,
+				2824B79D2DCF7D8200625889 /* GroomingRecord.swift */,
+				2824B79E2DCF7D8200625889 /* MedicationRecord.swift */,
+				2824B79F2DCF7D8200625889 /* OtherRecord.swift */,
+				2824B7A02DCF7D8200625889 /* VaccineRecord.swift */,
+				2824B7A12DCF7D8200625889 /* WeightRecord.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2824B7A52DCF7D8200625889 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				2824B7A32DCF7D8200625889 /* NotificationManager.swift */,
+				2824B7A42DCF7D8200625889 /* NotificationsListView.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		2824B7A72DCF7D8200625889 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2824B7A62DCF7D8200625889 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2824B7A92DCF7D8200625889 /* StoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				2824B7A82DCF7D8200625889 /* InAppPurchaseManager.swift */,
+			);
+			path = StoreKit;
+			sourceTree = "<group>";
+		};
+		2824B7B12DCF7D8200625889 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				2824B7AA2DCF7D8200625889 /* AdContainerView.swift */,
+				2824B7AB2DCF7D8200625889 /* AdManager.swift */,
+				2824B7AC2DCF7D8200625889 /* BannerAdView.swift */,
+				2824B7AD2DCF7D8200625889 /* InterstitialAdManager.swift */,
+				2824B7AE2DCF7D8200625889 /* PremiumPurchaseView.swift */,
+				2824B7AF2DCF7D8200625889 /* RewardedAdManager.swift */,
+				2824B7B02DCF7D8200625889 /* RewardedFeatureView.swift */,
+			);
+			path = Ads;
+			sourceTree = "<group>";
+		};
+		2824B7B32DCF7D8200625889 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				2824B7B22DCF7D8200625889 /* SearchBar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		2824B7C62DCF7D8200625889 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2824B7B12DCF7D8200625889 /* Ads */,
+				2824B7B32DCF7D8200625889 /* Components */,
+				2824B7B42DCF7D8200625889 /* AddAnimalView.swift */,
+				2824B7B52DCF7D8200625889 /* AnimalDetailView.swift */,
+				2824B7B62DCF7D8200625889 /* AnimalDetailView+ColorPicker.swift */,
+				2824B7B72DCF7D8200625889 /* ColorPickerView.swift */,
+				2824B7B82DCF7D8200625889 /* EditAnimalView.swift */,
+				2824B7B92DCF7D8200625889 /* EnhancedAnimalListView.swift */,
+				2824B7BA2DCF7D8200625889 /* EnhancedCalendarView.swift */,
+				2824B7BB2DCF7D8200625889 /* EnhancedContentView.swift */,
+				2824B7BC2DCF7D8200625889 /* EnhancedHomeView.swift */,
+				2824B7BD2DCF7D8200625889 /* GroomingRecordView.swift */,
+				2824B7BE2DCF7D8200625889 /* HealthChartView.swift */,
+				2824B7BF2DCF7D8200625889 /* HealthRecordView.swift */,
+				2824B7C02DCF7D8200625889 /* ImagePicker.swift */,
+				2824B7C12DCF7D8200625889 /* PhysiologicalCycleView.swift */,
+				2824B7C22DCF7D8200625889 /* PremiumHealthCheckView.swift */,
+				2824B7C32DCF7D8200625889 /* SplashScreen.swift */,
+				2824B7C42DCF7D8200625889 /* VaccineRecordView.swift */,
+				2824B7C52DCF7D8200625889 /* WeightRecordView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		28A3D3222DCF26CB001F6D36 /* AnimalGestioneProject */ = {
+			isa = PBXGroup;
+			children = (
+				2824B7882DCF7D8200625889 /* AnimalGestioneProjectApp.swift */,
+				2824B7892DCF7D8200625889 /* AppDelegate.swift */,
+				2824B78A2DCF7D8200625889 /* AppIconExporter.swift */,
+				2824B78B2DCF7D8200625889 /* AppIconGenerator.swift */,
+				2824B78C2DCF7D8200625889 /* Assets.xcassets */,
+				2824B78E2DCF7D8200625889 /* Config */,
+				2824B7932DCF7D8200625889 /* CoreData */,
+				2824B7952DCF7D8200625889 /* DataStore */,
+				2824B7972DCF7D8200625889 /* Extensions */,
+				2824B7982DCF7D8200625889 /* get-pip.py */,
+				2824B7992DCF7D8200625889 /* Info.plist */,
+				2824B7A22DCF7D8200625889 /* Models */,
+				2824B7A52DCF7D8200625889 /* Notifications */,
+				2824B7A72DCF7D8200625889 /* Preview Content */,
+				2824B7A92DCF7D8200625889 /* StoreKit */,
+				2824B7C62DCF7D8200625889 /* Views */,
+			);
+			path = AnimalGestioneProject;
+			sourceTree = "<group>";
+		};
+		28FD31C82BB733BD005D407E = {
+			isa = PBXGroup;
+			children = (
+				28A3D3222DCF26CB001F6D36 /* AnimalGestioneProject */,
+				73401AB7479553C17264D712 /* Pods */,
+				7C66C83E031696BBE0937121 /* Frameworks */,
+				2824B7852DCF368900625889 /* AnimalGestioneProject.app */,
+				2824B7862DCF368900625889 /* AnimalGestioneProjectTests.xctest */,
+				2824B7872DCF368900625889 /* AnimalGestioneProjectUITests.xctest */,
+			);
+			sourceTree = "<group>";
+		};
+		73401AB7479553C17264D712 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AA0CA6C9D4141C11A59550B /* Pods-AnimalGestioneProject.debug.xcconfig */,
+				C460B614CA6BB135A14C028C /* Pods-AnimalGestioneProject.release.xcconfig */,
+				7DAF31EEA700901297C67B47 /* Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.debug.xcconfig */,
+				2DE34C90300A551CE820A7BD /* Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.release.xcconfig */,
+				67BE3A616E48A669D9BC8FB0 /* Pods-AnimalGestioneProjectTests.debug.xcconfig */,
+				D7BD5662B3B360EA6743C6A8 /* Pods-AnimalGestioneProjectTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7C66C83E031696BBE0937121 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF413571F0460F9FA2800BC0 /* Pods_AnimalGestioneProject.framework */,
+				770E7537FA11EE6CDB7FB7A2 /* Pods_AnimalGestioneProject_AnimalGestioneProjectUITests.framework */,
+				86A339245298984A3ED5E817 /* Pods_AnimalGestioneProjectTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28FD31D02BB733BD005D407E /* AnimalGestioneProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28FD31F52BB733BE005D407E /* Build configuration list for PBXNativeTarget "AnimalGestioneProject" */;
+			buildPhases = (
+				8A373DBB83FF99821093A5DA /* [CP] Check Pods Manifest.lock */,
+				28FD31CD2BB733BD005D407E /* Sources */,
+				28FD31CE2BB733BD005D407E /* Frameworks */,
+				28FD31CF2BB733BD005D407E /* Resources */,
+				B8CF6765E4A9456DDA26385D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimalGestioneProject;
+			productName = AnimalGestioneProject;
+			productReference = 2824B7852DCF368900625889 /* AnimalGestioneProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28FD31E02BB733BE005D407E /* AnimalGestioneProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28FD31F82BB733BE005D407E /* Build configuration list for PBXNativeTarget "AnimalGestioneProjectTests" */;
+			buildPhases = (
+				CCB3B285D811E0563F4044E1 /* [CP] Check Pods Manifest.lock */,
+				28FD31DD2BB733BE005D407E /* Sources */,
+				28FD31DE2BB733BE005D407E /* Frameworks */,
+				28FD31DF2BB733BE005D407E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28FD31E32BB733BE005D407E /* PBXTargetDependency */,
+			);
+			name = AnimalGestioneProjectTests;
+			productName = AnimalGestioneProjectTests;
+			productReference = 2824B7862DCF368900625889 /* AnimalGestioneProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		28FD31EA2BB733BE005D407E /* AnimalGestioneProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28FD31FB2BB733BE005D407E /* Build configuration list for PBXNativeTarget "AnimalGestioneProjectUITests" */;
+			buildPhases = (
+				6449C62A9B5A6E7EDBE9A0EA /* [CP] Check Pods Manifest.lock */,
+				28FD31E72BB733BE005D407E /* Sources */,
+				28FD31E82BB733BE005D407E /* Frameworks */,
+				28FD31E92BB733BE005D407E /* Resources */,
+				B9899329AA25A07223310202 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28FD31ED2BB733BE005D407E /* PBXTargetDependency */,
+			);
+			name = AnimalGestioneProjectUITests;
+			productName = AnimalGestioneProjectUITests;
+			productReference = 2824B7872DCF368900625889 /* AnimalGestioneProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28FD31C92BB733BD005D407E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					28FD31D02BB733BD005D407E = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					28FD31E02BB733BE005D407E = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 28FD31D02BB733BD005D407E;
+					};
+					28FD31EA2BB733BE005D407E = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 28FD31D02BB733BD005D407E;
+					};
+				};
+			};
+			buildConfigurationList = 28FD31CC2BB733BD005D407E /* Build configuration list for PBXProject "AnimalGestioneProject" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28FD31C82BB733BD005D407E;
+			productRefGroup = 28FD31C82BB733BD005D407E;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28FD31D02BB733BD005D407E /* AnimalGestioneProject */,
+				28FD31E02BB733BE005D407E /* AnimalGestioneProjectTests */,
+				28FD31EA2BB733BE005D407E /* AnimalGestioneProjectUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28FD31CF2BB733BD005D407E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2824B7C82DCF7D8200625889 /* get-pip.py in Resources */,
+				2824B7C92DCF7D8200625889 /* Assets.xcassets in Resources */,
+				2824B7CA2DCF7D8200625889 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28FD31DF2BB733BE005D407E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28FD31E92BB733BE005D407E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6449C62A9B5A6E7EDBE9A0EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A373DBB83FF99821093A5DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimalGestioneProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8CF6765E4A9456DDA26385D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimalGestioneProject/Pods-AnimalGestioneProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimalGestioneProject/Pods-AnimalGestioneProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimalGestioneProject/Pods-AnimalGestioneProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9899329AA25A07223310202 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCB3B285D811E0563F4044E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnimalGestioneProjectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28FD31CD2BB733BD005D407E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2824B7CC2DCF7D8200625889 /* BannerAdView.swift in Sources */,
+				2824B7CD2DCF7D8200625889 /* EditAnimalView.swift in Sources */,
+				2824B7CE2DCF7D8200625889 /* CheckupRecord.swift in Sources */,
+				2824B7CF2DCF7D8200625889 /* VaccineRecordView.swift in Sources */,
+				2824B7D02DCF7D8200625889 /* AppIconGenerator.swift in Sources */,
+				2824B7D12DCF7D8200625889 /* AnimalDetailView+ColorPicker.swift in Sources */,
+				2824B7D22DCF7D8200625889 /* InterstitialAdManager.swift in Sources */,
+				2824B7D32DCF7D8200625889 /* GroomingRecordView.swift in Sources */,
+				2824B7D42DCF7D8200625889 /* SplashScreen.swift in Sources */,
+				2824B7D52DCF7D8200625889 /* AnimalGestione.xcdatamodeld in Sources */,
+				2824B7D62DCF7D8200625889 /* HealthRecordView.swift in Sources */,
+				2824B7D72DCF7D8200625889 /* EnhancedContentView.swift in Sources */,
+				2824B7D82DCF7D8200625889 /* AnimalDataStore.swift in Sources */,
+				2824B7D92DCF7D8200625889 /* AppDelegate.swift in Sources */,
+				2824B7DA2DCF7D8200625889 /* EnhancedHomeView.swift in Sources */,
+				2824B7DB2DCF7D8200625889 /* CoreDataStore+Records.swift in Sources */,
+				2824B7DC2DCF7D8200625889 /* AnimalModel+CoreData.swift in Sources */,
+				2824B7DD2DCF7D8200625889 /* Color+Extensions.swift in Sources */,
+				2824B7DE2DCF7D8200625889 /* NotificationsListView.swift in Sources */,
+				2824B7DF2DCF7D8200625889 /* PersistenceController.swift in Sources */,
+				2824B7E02DCF7D8200625889 /* HealthChartView.swift in Sources */,
+				2824B7E12DCF7D8200625889 /* WeightRecord.swift in Sources */,
+				2824B7E22DCF7D8200625889 /* MedicationRecord.swift in Sources */,
+				2824B7E32DCF7D8200625889 /* ColorPickerView.swift in Sources */,
+				2824B7E42DCF7D8200625889 /* RewardedFeatureView.swift in Sources */,
+				2824B7E52DCF7D8200625889 /* AppIconExporter.swift in Sources */,
+				2824B7E62DCF7D8200625889 /* RewardedAdManager.swift in Sources */,
+				2824B7E72DCF7D8200625889 /* VaccineRecord.swift in Sources */,
+				2824B7E82DCF7D8200625889 /* AnimalDetailView.swift in Sources */,
+				2824B7E92DCF7D8200625889 /* WeightRecordView.swift in Sources */,
+				2824B7EA2DCF7D8200625889 /* SearchBar.swift in Sources */,
+				2824B7EB2DCF7D8200625889 /* PremiumHealthCheckView.swift in Sources */,
+				2824B7EC2DCF7D8200625889 /* OtherRecord.swift in Sources */,
+				2824B7ED2DCF7D8200625889 /* PhysiologicalCycleView.swift in Sources */,
+				2824B7EE2DCF7D8200625889 /* AdContainerView.swift in Sources */,
+				2824B7EF2DCF7D8200625889 /* GroomingRecord.swift in Sources */,
+				2824B7F02DCF7D8200625889 /* CoreDataStore.swift in Sources */,
+				2824B7F12DCF7D8200625889 /* AnimalGestioneProjectApp.swift in Sources */,
+				2824B7F22DCF7D8200625889 /* AddAnimalView.swift in Sources */,
+				2824B7F32DCF7D8200625889 /* AdConfig.swift in Sources */,
+				2824B7F42DCF7D8200625889 /* AdManager.swift in Sources */,
+				2824B7F52DCF7D8200625889 /* EnhancedCalendarView.swift in Sources */,
+				2824B7F62DCF7D8200625889 /* InAppPurchaseManager.swift in Sources */,
+				2824B7F72DCF7D8200625889 /* NotificationManager.swift in Sources */,
+				2824B7F82DCF7D8200625889 /* EnhancedAnimalListView.swift in Sources */,
+				2824B7F92DCF7D8200625889 /* AnimalModel.swift in Sources */,
+				2824B7FA2DCF7D8200625889 /* PremiumPurchaseView.swift in Sources */,
+				2824B7FB2DCF7D8200625889 /* ImagePicker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28FD31DD2BB733BE005D407E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28FD31E72BB733BE005D407E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28FD31E32BB733BE005D407E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28FD31D02BB733BD005D407E /* AnimalGestioneProject */;
+			targetProxy = 28FD31E22BB733BE005D407E /* PBXContainerItemProxy */;
+		};
+		28FD31ED2BB733BE005D407E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28FD31D02BB733BD005D407E /* AnimalGestioneProject */;
+			targetProxy = 28FD31EC2BB733BE005D407E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		28FD31F32BB733BE005D407E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		28FD31F42BB733BE005D407E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28FD31F62BB733BE005D407E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AA0CA6C9D4141C11A59550B /* Pods-AnimalGestioneProject.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AnimalGestioneProject/Preview Content\"";
+				DEVELOPMENT_TEAM = V47R62H7V3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/AnimalGestioneProject/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Ks.AnimalGestioneProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28FD31F72BB733BE005D407E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C460B614CA6BB135A14C028C /* Pods-AnimalGestioneProject.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AnimalGestioneProject/Preview Content\"";
+				DEVELOPMENT_TEAM = V47R62H7V3;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/AnimalGestioneProject/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Ks.AnimalGestioneProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		28FD31F92BB733BE005D407E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67BE3A616E48A669D9BC8FB0 /* Pods-AnimalGestioneProjectTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V47R62H7V3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Ks.AnimalGestioneProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalGestioneProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AnimalGestioneProject";
+			};
+			name = Debug;
+		};
+		28FD31FA2BB733BE005D407E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7BD5662B3B360EA6743C6A8 /* Pods-AnimalGestioneProjectTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V47R62H7V3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Ks.AnimalGestioneProjectTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalGestioneProject.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AnimalGestioneProject";
+			};
+			name = Release;
+		};
+		28FD31FC2BB733BE005D407E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DAF31EEA700901297C67B47 /* Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V47R62H7V3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Ks.AnimalGestioneProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnimalGestioneProject;
+			};
+			name = Debug;
+		};
+		28FD31FD2BB733BE005D407E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DE34C90300A551CE820A7BD /* Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V47R62H7V3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Ks.AnimalGestioneProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnimalGestioneProject;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28FD31CC2BB733BD005D407E /* Build configuration list for PBXProject "AnimalGestioneProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28FD31F32BB733BE005D407E /* Debug */,
+				28FD31F42BB733BE005D407E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28FD31F52BB733BE005D407E /* Build configuration list for PBXNativeTarget "AnimalGestioneProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28FD31F62BB733BE005D407E /* Debug */,
+				28FD31F72BB733BE005D407E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28FD31F82BB733BE005D407E /* Build configuration list for PBXNativeTarget "AnimalGestioneProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28FD31F92BB733BE005D407E /* Debug */,
+				28FD31FA2BB733BE005D407E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28FD31FB2BB733BE005D407E /* Build configuration list for PBXNativeTarget "AnimalGestioneProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28FD31FC2BB733BE005D407E /* Debug */,
+				28FD31FD2BB733BE005D407E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2824B78F2DCF7D8200625889 /* AnimalGestione.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2824B7C72DCF7D8200625889 /* AnimalGestione.xcdatamodel */,
+			);
+			currentVersion = 2824B7C72DCF7D8200625889 /* AnimalGestione.xcdatamodel */;
+			path = AnimalGestione.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 28FD31C92BB733BD005D407E /* Project object */;
+}
