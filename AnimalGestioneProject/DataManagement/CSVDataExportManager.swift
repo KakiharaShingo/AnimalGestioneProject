@@ -6,10 +6,8 @@ import UIKit
 class CSVDataExportManager {
     static let shared = CSVDataExportManager()
     
-    // CoreDataストア
-    private var persistenceController: PersistenceController {
-        PersistenceController.shared
-    }
+    // CoreDataStoreインスタンス
+    private let dataStore = CoreDataStore()
     
     // 保存パス
     private let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -24,29 +22,27 @@ class CSVDataExportManager {
     // CSVとして動物データをエクスポート
     func exportAnimalsToCSV() -> URL? {
         do {
-            // 全ての動物データを取得
-            let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Animal")
-            let animals = try persistenceController.container.viewContext.fetch(fetchRequest) as! [NSManagedObject]
+            // 動物データをCoreDataStoreから取得
+            let animals = dataStore.animals
             
             // CSVヘッダーの生成
             var csvString = "ID,名前,種別,性別,誕生日,毛色,体重,メモ,最終更新日\n"
             
             // 各動物のデータを追加
             for animal in animals {
-                let id = animal.value(forKey: "id") as? UUID ?? UUID()
-                let name = animal.value(forKey: "name") as? String ?? ""
-                let species = animal.value(forKey: "species") as? String ?? ""
-                let gender = animal.value(forKey: "gender") as? String ?? ""
-                let birthDate = animal.value(forKey: "birthDate") as? Date
-                let birthDateString = formatDate(birthDate)
-                let coatColor = animal.value(forKey: "coatColor") as? String ?? ""
-                let weight = animal.value(forKey: "weight") as? Double ?? 0.0
-                let notes = animal.value(forKey: "notes") as? String ?? ""
-                let lastUpdated = animal.value(forKey: "lastUpdated") as? Date
-                let lastUpdatedString = formatDate(lastUpdated)
+                let id = animal.id
+                let name = animal.name
+                let species = animal.species
+                let gender = animal.gender.rawValue
+                let birthDateString = formatDate(animal.birthDate)
+                let coatColor = ""
+                
+                // 最新の体重記録を取得
+                let weightRecords = dataStore.weightRecordsForAnimal(id: animal.id)
+                let weight = weightRecords.first?.weight ?? 0.0
                 
                 // CSV行を作成（CSV形式に対応するためにエスケープ処理）
-                let row = "\"\(id.uuidString)\",\"\(escapeCSV(name))\",\"\(escapeCSV(species))\",\"\(escapeCSV(gender))\",\"\(birthDateString)\",\"\(escapeCSV(coatColor))\",\"\(weight)\",\"\(escapeCSV(notes))\",\"\(lastUpdatedString)\"\n"
+                let row = "\"\(id.uuidString)\",\"\(escapeCSV(name))\",\"\(escapeCSV(species))\",\"\(escapeCSV(gender))\",\"\(birthDateString)\",\"\(escapeCSV(coatColor))\",\"\(weight)\",\"\",\"\"\n"
                 csvString.append(row)
             }
             
@@ -71,23 +67,20 @@ class CSVDataExportManager {
     // CSVとしてワクチン記録をエクスポート
     func exportVaccineRecordsToCSV() -> URL? {
         do {
-            // 全てのワクチン記録を取得
-            let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "VaccineRecord")
-            let records = try persistenceController.container.viewContext.fetch(fetchRequest) as! [NSManagedObject]
+            // ワクチン記録をCoreDataStoreから取得
+            let records = dataStore.vaccineRecords
             
             // CSVヘッダーの生成
             var csvString = "ID,動物ID,ワクチン名,接種日,次回接種予定日,メモ\n"
             
             // 各記録を追加
             for record in records {
-                let id = record.value(forKey: "id") as? UUID ?? UUID()
-                let animalID = (record.value(forKey: "animal") as? NSManagedObject)?.value(forKey: "id") as? UUID ?? UUID()
-                let name = record.value(forKey: "name") as? String ?? ""
-                let date = record.value(forKey: "date") as? Date
-                let dateString = formatDate(date)
-                let nextDate = record.value(forKey: "nextDate") as? Date
-                let nextDateString = formatDate(nextDate)
-                let notes = record.value(forKey: "notes") as? String ?? ""
+                let id = record.id
+                let animalID = record.animalId
+                let name = record.vaccineName
+                let dateString = formatDate(record.date)
+                let nextDateString = formatDate(record.nextScheduledDate)
+                let notes = record.notes ?? ""
                 
                 // CSV行を作成
                 let row = "\"\(id.uuidString)\",\"\(animalID.uuidString)\",\"\(escapeCSV(name))\",\"\(dateString)\",\"\(nextDateString)\",\"\(escapeCSV(notes))\"\n"
@@ -115,26 +108,23 @@ class CSVDataExportManager {
     // CSVとして健康診断記録をエクスポート
     func exportCheckupRecordsToCSV() -> URL? {
         do {
-            // 全ての健康診断記録を取得
-            let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "CheckupRecord")
-            let records = try persistenceController.container.viewContext.fetch(fetchRequest) as! [NSManagedObject]
+            // 健康診断記録をCoreDataStoreから取得
+            let records = dataStore.checkupRecords
             
             // CSVヘッダーの生成
-            var csvString = "ID,動物ID,日付,獣医,診断,処方薬,メモ\n"
+            var csvString = "ID,動物ID,日付,次回予定日,検査タイプ,メモ\n"
             
             // 各記録を追加
             for record in records {
-                let id = record.value(forKey: "id") as? UUID ?? UUID()
-                let animalID = (record.value(forKey: "animal") as? NSManagedObject)?.value(forKey: "id") as? UUID ?? UUID()
-                let date = record.value(forKey: "date") as? Date
-                let dateString = formatDate(date)
-                let veterinarian = record.value(forKey: "veterinarian") as? String ?? ""
-                let diagnosis = record.value(forKey: "diagnosis") as? String ?? ""
-                let prescriptions = record.value(forKey: "prescriptions") as? String ?? ""
-                let notes = record.value(forKey: "notes") as? String ?? ""
+                let id = record.id
+                let animalID = record.animalId
+                let dateString = formatDate(record.date)
+                let nextDateString = formatDate(record.nextScheduledDate)
+                let checkupType = record.checkupType
+                let notes = record.notes ?? ""
                 
                 // CSV行を作成
-                let row = "\"\(id.uuidString)\",\"\(animalID.uuidString)\",\"\(dateString)\",\"\(escapeCSV(veterinarian))\",\"\(escapeCSV(diagnosis))\",\"\(escapeCSV(prescriptions))\",\"\(escapeCSV(notes))\"\n"
+                let row = "\"\(id.uuidString)\",\"\(animalID.uuidString)\",\"\(dateString)\",\"\(nextDateString)\",\"\(escapeCSV(checkupType))\",\"\(escapeCSV(notes))\"\n"
                 csvString.append(row)
             }
             
@@ -159,25 +149,27 @@ class CSVDataExportManager {
     // CSVとして体重記録をエクスポート
     func exportWeightRecordsToCSV() -> URL? {
         do {
-            // 全ての体重記録を取得
-            let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "WeightRecord")
-            let records = try persistenceController.container.viewContext.fetch(fetchRequest) as! [NSManagedObject]
+            // 全ての動物を取得
+            let animals = dataStore.animals
             
             // CSVヘッダーの生成
             var csvString = "ID,動物ID,日付,体重,メモ\n"
             
-            // 各記録を追加
-            for record in records {
-                let id = record.value(forKey: "id") as? UUID ?? UUID()
-                let animalID = (record.value(forKey: "animal") as? NSManagedObject)?.value(forKey: "id") as? UUID ?? UUID()
-                let date = record.value(forKey: "date") as? Date
-                let dateString = formatDate(date)
-                let weight = record.value(forKey: "weight") as? Double ?? 0.0
-                let notes = record.value(forKey: "notes") as? String ?? ""
+            // 各動物の体重記録を追加
+            for animal in animals {
+                let weightRecords = dataStore.weightRecordsForAnimal(id: animal.id)
                 
-                // CSV行を作成
-                let row = "\"\(id.uuidString)\",\"\(animalID.uuidString)\",\"\(dateString)\",\"\(weight)\",\"\(escapeCSV(notes))\"\n"
-                csvString.append(row)
+                for record in weightRecords {
+                    let id = record.id
+                    let animalID = record.animalId
+                    let dateString = formatDate(record.date)
+                    let weight = record.weight
+                    let notes = record.notes ?? ""
+                    
+                    // CSV行を作成
+                    let row = "\"\(id.uuidString)\",\"\(animalID.uuidString)\",\"\(dateString)\",\"\(weight)\",\"\(escapeCSV(notes))\"\n"
+                    csvString.append(row)
+                }
             }
             
             // ファイル名を生成

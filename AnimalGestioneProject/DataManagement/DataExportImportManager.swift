@@ -50,7 +50,7 @@ class DataExportImportManager: ObservableObject {
         
         do {
             // 全ての動物データを取得
-            let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Animal")
+            let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "AnimalEntity")
             let animals = try persistenceController.container.viewContext.fetch(fetchRequest) as! [NSManagedObject]
             
             // シリアライズ可能なディクショナリの配列に変換
@@ -82,99 +82,6 @@ class DataExportImportManager: ObservableObject {
                 }
                 
                 // 関連レコードを取得
-                
-                // ワクチン記録
-                if let vaccineRecords = animal.value(forKey: "vaccineRecords") as? NSSet {
-                    var vaccineArray: [[String: Any]] = []
-                    for vaccineRecord in vaccineRecords {
-                        if let record = vaccineRecord as? NSManagedObject {
-                            var recordDict: [String: Any] = [:]
-                            for attribute in record.entity.attributesByName {
-                                if let value = record.value(forKey: attribute.key) {
-                                    if let date = value as? Date {
-                                        recordDict[attribute.key] = date.timeIntervalSince1970
-                                    } else if let uuid = value as? UUID {
-                                        recordDict[attribute.key] = uuid.uuidString
-                                    } else {
-                                        recordDict[attribute.key] = value
-                                    }
-                                }
-                            }
-                            vaccineArray.append(recordDict)
-                        }
-                    }
-                    animalDict["vaccineRecords"] = vaccineArray
-                }
-                
-                // 健康診断記録
-                if let checkupRecords = animal.value(forKey: "checkupRecords") as? NSSet {
-                    var checkupArray: [[String: Any]] = []
-                    for checkupRecord in checkupRecords {
-                        if let record = checkupRecord as? NSManagedObject {
-                            var recordDict: [String: Any] = [:]
-                            for attribute in record.entity.attributesByName {
-                                if let value = record.value(forKey: attribute.key) {
-                                    if let date = value as? Date {
-                                        recordDict[attribute.key] = date.timeIntervalSince1970
-                                    } else if let uuid = value as? UUID {
-                                        recordDict[attribute.key] = uuid.uuidString
-                                    } else {
-                                        recordDict[attribute.key] = value
-                                    }
-                                }
-                            }
-                            checkupArray.append(recordDict)
-                        }
-                    }
-                    animalDict["checkupRecords"] = checkupArray
-                }
-                
-                // グルーミング記録
-                if let groomingRecords = animal.value(forKey: "groomingRecords") as? NSSet {
-                    var groomingArray: [[String: Any]] = []
-                    for groomingRecord in groomingRecords {
-                        if let record = groomingRecord as? NSManagedObject {
-                            var recordDict: [String: Any] = [:]
-                            for attribute in record.entity.attributesByName {
-                                if let value = record.value(forKey: attribute.key) {
-                                    if let date = value as? Date {
-                                        recordDict[attribute.key] = date.timeIntervalSince1970
-                                    } else if let uuid = value as? UUID {
-                                        recordDict[attribute.key] = uuid.uuidString
-                                    } else {
-                                        recordDict[attribute.key] = value
-                                    }
-                                }
-                            }
-                            groomingArray.append(recordDict)
-                        }
-                    }
-                    animalDict["groomingRecords"] = groomingArray
-                }
-                
-                // 体重記録
-                if let weightRecords = animal.value(forKey: "weightRecords") as? NSSet {
-                    var weightArray: [[String: Any]] = []
-                    for weightRecord in weightRecords {
-                        if let record = weightRecord as? NSManagedObject {
-                            var recordDict: [String: Any] = [:]
-                            for attribute in record.entity.attributesByName {
-                                if let value = record.value(forKey: attribute.key) {
-                                    if let date = value as? Date {
-                                        recordDict[attribute.key] = date.timeIntervalSince1970
-                                    } else if let uuid = value as? UUID {
-                                        recordDict[attribute.key] = uuid.uuidString
-                                    } else {
-                                        recordDict[attribute.key] = value
-                                    }
-                                }
-                            }
-                            weightArray.append(recordDict)
-                        }
-                    }
-                    animalDict["weightRecords"] = weightArray
-                }
-                
                 // 生理周期記録
                 if let cycleRecords = animal.value(forKey: "physiologicalCycles") as? NSSet {
                     var cycleArray: [[String: Any]] = []
@@ -196,6 +103,29 @@ class DataExportImportManager: ObservableObject {
                         }
                     }
                     animalDict["physiologicalCycles"] = cycleArray
+                }
+                
+                // 健康記録
+                if let healthRecords = animal.value(forKey: "healthRecords") as? NSSet {
+                    var healthArray: [[String: Any]] = []
+                    for healthRecord in healthRecords {
+                        if let record = healthRecord as? NSManagedObject {
+                            var recordDict: [String: Any] = [:]
+                            for attribute in record.entity.attributesByName {
+                                if let value = record.value(forKey: attribute.key) {
+                                    if let date = value as? Date {
+                                        recordDict[attribute.key] = date.timeIntervalSince1970
+                                    } else if let uuid = value as? UUID {
+                                        recordDict[attribute.key] = uuid.uuidString
+                                    } else {
+                                        recordDict[attribute.key] = value
+                                    }
+                                }
+                            }
+                            healthArray.append(recordDict)
+                        }
+                    }
+                    animalDict["healthRecords"] = healthArray
                 }
                 
                 animalDicts.append(animalDict)
@@ -271,7 +201,7 @@ class DataExportImportManager: ObservableObject {
             tempContext.parent = persistenceController.container.viewContext
             
             // 既存のデータを全て削除
-            let deleteRequests = ["Animal", "VaccineRecord", "CheckupRecord", "GroomingRecord", "WeightRecord", "PhysiologicalCycle"]
+            let deleteRequests = ["AnimalEntity", "PhysiologicalCycleEntity", "HealthRecordEntity"]
             for entityName in deleteRequests {
                 let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)
                 let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
@@ -281,12 +211,12 @@ class DataExportImportManager: ObservableObject {
             
             // 動物データをインポート
             for animalDict in animals {
-                let animal = NSEntityDescription.insertNewObject(forEntityName: "Animal", into: tempContext)
+                let animal = NSEntityDescription.insertNewObject(forEntityName: "AnimalEntity", into: tempContext)
                 
                 // 基本プロパティの設定
                 for (key, value) in animalDict {
                     // 関連レコードは別途処理
-                    if !["vaccineRecords", "checkupRecords", "groomingRecords", "weightRecords", "physiologicalCycles"].contains(key) {
+                    if !["physiologicalCycles", "healthRecords"].contains(key) {
                         // 値を適切な型に変換
                         if let attributeType = animal.entity.attributesByName[key]?.attributeType {
                             switch attributeType {
@@ -311,114 +241,36 @@ class DataExportImportManager: ObservableObject {
                     }
                 }
                 
-                // ワクチン記録のインポート
-                if let vaccineRecords = animalDict["vaccineRecords"] as? [[String: Any]] {
-                    for recordDict in vaccineRecords {
-                        let record = NSEntityDescription.insertNewObject(forEntityName: "VaccineRecord", into: tempContext)
-                        for (key, value) in recordDict {
-                            if let attributeType = record.entity.attributesByName[key]?.attributeType {
-                                switch attributeType {
-                                case .dateAttributeType:
-                                    if let timestamp = value as? Double {
-                                        record.setValue(Date(timeIntervalSince1970: timestamp), forKey: key)
-                                    }
-                                case .UUIDAttributeType:
-                                    if let uuidString = value as? String {
-                                        record.setValue(UUID(uuidString: uuidString), forKey: key)
-                                    }
-                                default:
-                                    record.setValue(value, forKey: key)
-                                }
-                            } else {
-                                record.setValue(value, forKey: key)
-                            }
-                        }
-                        record.setValue(animal, forKey: "animal")
-                    }
-                }
-                
-                // 健康診断記録のインポート
-                if let checkupRecords = animalDict["checkupRecords"] as? [[String: Any]] {
-                    for recordDict in checkupRecords {
-                        let record = NSEntityDescription.insertNewObject(forEntityName: "CheckupRecord", into: tempContext)
-                        for (key, value) in recordDict {
-                            if let attributeType = record.entity.attributesByName[key]?.attributeType {
-                                switch attributeType {
-                                case .dateAttributeType:
-                                    if let timestamp = value as? Double {
-                                        record.setValue(Date(timeIntervalSince1970: timestamp), forKey: key)
-                                    }
-                                case .UUIDAttributeType:
-                                    if let uuidString = value as? String {
-                                        record.setValue(UUID(uuidString: uuidString), forKey: key)
-                                    }
-                                default:
-                                    record.setValue(value, forKey: key)
-                                }
-                            } else {
-                                record.setValue(value, forKey: key)
-                            }
-                        }
-                        record.setValue(animal, forKey: "animal")
-                    }
-                }
-                
-                // グルーミング記録のインポート
-                if let groomingRecords = animalDict["groomingRecords"] as? [[String: Any]] {
-                    for recordDict in groomingRecords {
-                        let record = NSEntityDescription.insertNewObject(forEntityName: "GroomingRecord", into: tempContext)
-                        for (key, value) in recordDict {
-                            if let attributeType = record.entity.attributesByName[key]?.attributeType {
-                                switch attributeType {
-                                case .dateAttributeType:
-                                    if let timestamp = value as? Double {
-                                        record.setValue(Date(timeIntervalSince1970: timestamp), forKey: key)
-                                    }
-                                case .UUIDAttributeType:
-                                    if let uuidString = value as? String {
-                                        record.setValue(UUID(uuidString: uuidString), forKey: key)
-                                    }
-                                default:
-                                    record.setValue(value, forKey: key)
-                                }
-                            } else {
-                                record.setValue(value, forKey: key)
-                            }
-                        }
-                        record.setValue(animal, forKey: "animal")
-                    }
-                }
-                
-                // 体重記録のインポート
-                if let weightRecords = animalDict["weightRecords"] as? [[String: Any]] {
-                    for recordDict in weightRecords {
-                        let record = NSEntityDescription.insertNewObject(forEntityName: "WeightRecord", into: tempContext)
-                        for (key, value) in recordDict {
-                            if let attributeType = record.entity.attributesByName[key]?.attributeType {
-                                switch attributeType {
-                                case .dateAttributeType:
-                                    if let timestamp = value as? Double {
-                                        record.setValue(Date(timeIntervalSince1970: timestamp), forKey: key)
-                                    }
-                                case .UUIDAttributeType:
-                                    if let uuidString = value as? String {
-                                        record.setValue(UUID(uuidString: uuidString), forKey: key)
-                                    }
-                                default:
-                                    record.setValue(value, forKey: key)
-                                }
-                            } else {
-                                record.setValue(value, forKey: key)
-                            }
-                        }
-                        record.setValue(animal, forKey: "animal")
-                    }
-                }
-                
                 // 生理周期記録のインポート
                 if let cycleRecords = animalDict["physiologicalCycles"] as? [[String: Any]] {
                     for recordDict in cycleRecords {
-                        let record = NSEntityDescription.insertNewObject(forEntityName: "PhysiologicalCycle", into: tempContext)
+                        let record = NSEntityDescription.insertNewObject(forEntityName: "PhysiologicalCycleEntity", into: tempContext)
+                        for (key, value) in recordDict {
+                            if let attributeType = record.entity.attributesByName[key]?.attributeType {
+                                switch attributeType {
+                                case .dateAttributeType:
+                                    if let timestamp = value as? Double {
+                                        record.setValue(Date(timeIntervalSince1970: timestamp), forKey: key)
+                                    }
+                                case .UUIDAttributeType:
+                                    if let uuidString = value as? String {
+                                        record.setValue(UUID(uuidString: uuidString), forKey: key)
+                                    }
+                                default:
+                                    record.setValue(value, forKey: key)
+                                }
+                            } else {
+                                record.setValue(value, forKey: key)
+                            }
+                        }
+                        record.setValue(animal, forKey: "animal")
+                    }
+                }
+                
+                // 健康記録のインポート
+                if let healthRecords = animalDict["healthRecords"] as? [[String: Any]] {
+                    for recordDict in healthRecords {
+                        let record = NSEntityDescription.insertNewObject(forEntityName: "HealthRecordEntity", into: tempContext)
                         for (key, value) in recordDict {
                             if let attributeType = record.entity.attributesByName[key]?.attributeType {
                                 switch attributeType {

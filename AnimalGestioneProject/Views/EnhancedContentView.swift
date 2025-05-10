@@ -4,6 +4,9 @@ import CoreData
 import GoogleMobileAds
 import UserNotifications
 
+// データ管理用のビューをインポート
+import AnimalGestioneProject
+
 struct EnhancedContentView: View {
     @EnvironmentObject var dataStore: CoreDataStore
     
@@ -18,6 +21,7 @@ struct EnhancedContentView: View {
     
     // 通知表示シート
     @State private var showingNotificationSheet = false
+    @State private var showingNotificationSettings = false
     
     // フォントサイズスケール環境変数
     @Environment(\.sizeCategory) var sizeCategory
@@ -358,6 +362,7 @@ struct SettingsView: View {
     @State private var showingPremiumView = false
     @State private var showingDataManagementView = false
     @State private var showingCSVExportView = false
+    @State private var showingNotificationSettings = false
     
     // Use standard property wrapper for compatibility with older iOS versions
     @State private var reminderTime = Date(timeIntervalSince1970: 32400) // 9:00 AM
@@ -455,12 +460,6 @@ struct SettingsView: View {
                         showingCSVExportView = true
                     }) {
                         Label("データのCSVエクスポート", systemImage: "square.and.arrow.up")
-                    }
-                    
-                    Button(action: {
-                        showingNotificationSettings = true
-                    }) {
-                        Label("通知設定", systemImage: "bell")
                     }
                 }
                 
@@ -597,12 +596,12 @@ struct SettingsView: View {
         }
         // データ管理ビューを表示
         .sheet(isPresented: $showingDataManagementView) {
-            DataManagementView()
+            AnimalGestioneProject.DataManagementView()
                 .environmentObject(dataStore)
         }
         // CSVエクスポートビューを表示
         .sheet(isPresented: $showingCSVExportView) {
-            CSVExportView()
+            AnimalGestioneProject.CSVExportView()
         }
         .onAppear {
             // 通知の権限状態を確認

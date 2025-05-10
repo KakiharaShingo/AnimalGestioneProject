@@ -1,5 +1,6 @@
 import SwiftUI
 import UIKit
+import CoreData
 
 struct DataManagementView: View {
     @Environment(\.presentationMode) var presentationMode
@@ -222,7 +223,7 @@ struct DataManagementView: View {
         let context = PersistenceController.shared.container.viewContext
         
         // すべてのエンティティを削除
-        let entities = ["Animal", "VaccineRecord", "CheckupRecord", "GroomingRecord", "WeightRecord", "PhysiologicalCycle"]
+        let entities = ["AnimalEntity", "PhysiologicalCycleEntity", "HealthRecordEntity"]
         
         for entityName in entities {
             let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: entityName)

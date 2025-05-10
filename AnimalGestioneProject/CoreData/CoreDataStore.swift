@@ -34,8 +34,6 @@ class CoreDataStore: ObservableObject {
         loadAnimals()
         loadPhysiologicalCycles()
         loadHealthRecords()
-        // デバッグ出力
-        print("CoreDataStoreデータ再読み込み完了 - 動物数: \(animals.count)")
     }
     
     private func loadAnimals() {
