@@ -8,62 +8,78 @@
 
 /* Begin PBXBuildFile section */
 		1071C4671A4E39876A1F52B8 /* Pods_AnimalGestioneProject_AnimalGestioneProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770E7537FA11EE6CDB7FB7A2 /* Pods_AnimalGestioneProject_AnimalGestioneProjectUITests.framework */; };
-		2824B9BB2DCFC77B00625889 /* get-pip.py in Resources */ = {isa = PBXBuildFile; fileRef = 2824B98B2DCFC77B00625889 /* get-pip.py */; };
-		2824B9BC2DCFC77B00625889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2824B9792DCFC77B00625889 /* Assets.xcassets */; };
-		2824B9BE2DCFC77B00625889 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2824B9992DCFC77B00625889 /* Preview Assets.xcassets */; };
-		2824B9BF2DCFC77B00625889 /* DataManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9842DCFC77B00625889 /* DataManagementView.swift */; };
-		2824B9C02DCFC77B00625889 /* EnhancedAnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9AC2DCFC77B00625889 /* EnhancedAnimalListView.swift */; };
-		2824B9C12DCFC77B00625889 /* AppIconGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9782DCFC77B00625889 /* AppIconGenerator.swift */; };
-		2824B9C22DCFC77B00625889 /* DataExportImportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9832DCFC77B00625889 /* DataExportImportManager.swift */; };
-		2824B9C32DCFC77B00625889 /* PremiumPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9A12DCFC77B00625889 /* PremiumPurchaseView.swift */; };
-		2824B9C42DCFC77B00625889 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B98D2DCFC77B00625889 /* AnimalModel.swift */; };
-		2824B9C52DCFC77B00625889 /* AnimalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9A82DCFC77B00625889 /* AnimalDetailView.swift */; };
-		2824B9C62DCFC77B00625889 /* PhysiologicalCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9B42DCFC77B00625889 /* PhysiologicalCycleView.swift */; };
-		2824B9C72DCFC77B00625889 /* PremiumHealthCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9B52DCFC77B00625889 /* PremiumHealthCheckView.swift */; };
-		2824B9C82DCFC77B00625889 /* EditAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9AB2DCFC77B00625889 /* EditAnimalView.swift */; };
-		2824B9C92DCFC77B00625889 /* WeightRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9942DCFC77B00625889 /* WeightRecord.swift */; };
-		2824B9CA2DCFC77B00625889 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B97D2DCFC77B00625889 /* CoreDataStore.swift */; };
-		2824B9CB2DCFC77B00625889 /* EnhancedContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9AE2DCFC77B00625889 /* EnhancedContentView.swift */; };
-		2824B9CC2DCFC77B00625889 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B97F2DCFC77B00625889 /* PersistenceController.swift */; };
-		2824B9CD2DCFC77B00625889 /* AddAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9A72DCFC77B00625889 /* AddAnimalView.swift */; };
-		2824B9CE2DCFC77B00625889 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9A52DCFC77B00625889 /* SearchBar.swift */; };
-		2824B9CF2DCFC77B00625889 /* AppIconExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9772DCFC77B00625889 /* AppIconExporter.swift */; };
-		2824B9D02DCFC77B00625889 /* CheckupRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B98F2DCFC77B00625889 /* CheckupRecord.swift */; };
-		2824B9D12DCFC77B00625889 /* AnimalModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B98E2DCFC77B00625889 /* AnimalModel+CoreData.swift */; };
-		2824B9D22DCFC77B00625889 /* AdConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B97A2DCFC77B00625889 /* AdConfig.swift */; };
-		2824B9D32DCFC77B00625889 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9B32DCFC77B00625889 /* ImagePicker.swift */; };
-		2824B9D42DCFC77B00625889 /* AnimalDetailView+ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9A92DCFC77B00625889 /* AnimalDetailView+ColorPicker.swift */; };
-		2824B9D52DCFC77B00625889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9762DCFC77B00625889 /* AppDelegate.swift */; };
-		2824B9D62DCFC77B00625889 /* AnimalGestione.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2824B97C2DCFC77B00625889 /* AnimalGestione.xcdatamodeld */; };
-		2824B9D72DCFC77B00625889 /* CSVExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9822DCFC77B00625889 /* CSVExportView.swift */; };
-		2824B9D82DCFC77B00625889 /* EnhancedHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9AF2DCFC77B00625889 /* EnhancedHomeView.swift */; };
-		2824B9D92DCFC77B00625889 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9AA2DCFC77B00625889 /* ColorPickerView.swift */; };
-		2824B9DA2DCFC77B00625889 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9B62DCFC77B00625889 /* SplashScreen.swift */; };
-		2824B9DB2DCFC77B00625889 /* GroomingRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9B02DCFC77B00625889 /* GroomingRecordView.swift */; };
-		2824B9DC2DCFC77B00625889 /* DebugDataExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9852DCFC77B00625889 /* DebugDataExport.swift */; };
-		2824B9DD2DCFC77B00625889 /* RewardedAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9A22DCFC77B00625889 /* RewardedAdManager.swift */; };
-		2824B9DE2DCFC77B00625889 /* InAppPurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B99B2DCFC77B00625889 /* InAppPurchaseManager.swift */; };
-		2824B9DF2DCFC77B00625889 /* RewardedFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9A32DCFC77B00625889 /* RewardedFeatureView.swift */; };
-		2824B9E02DCFC77B00625889 /* AnimalGestioneProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9752DCFC77B00625889 /* AnimalGestioneProjectApp.swift */; };
-		2824B9E12DCFC77B00625889 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B99E2DCFC77B00625889 /* AdManager.swift */; };
-		2824B9E22DCFC77B00625889 /* NotificationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9972DCFC77B00625889 /* NotificationsListView.swift */; };
-		2824B9E32DCFC77B00625889 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9962DCFC77B00625889 /* NotificationManager.swift */; };
-		2824B9E42DCFC77B00625889 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9892DCFC77B00625889 /* Color+Extensions.swift */; };
-		2824B9E52DCFC77B00625889 /* VaccineRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9932DCFC77B00625889 /* VaccineRecord.swift */; };
-		2824B9E62DCFC77B00625889 /* CSVDataExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9812DCFC77B00625889 /* CSVDataExportManager.swift */; };
-		2824B9E72DCFC77B00625889 /* MedicationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9912DCFC77B00625889 /* MedicationRecord.swift */; };
-		2824B9E82DCFC77B00625889 /* AnimalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9872DCFC77B00625889 /* AnimalDataStore.swift */; };
-		2824B9E92DCFC77B00625889 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B99F2DCFC77B00625889 /* BannerAdView.swift */; };
-		2824B9EA2DCFC77B00625889 /* OtherRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9922DCFC77B00625889 /* OtherRecord.swift */; };
-		2824B9EB2DCFC77B00625889 /* WeightRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9B82DCFC77B00625889 /* WeightRecordView.swift */; };
-		2824B9EC2DCFC77B00625889 /* CoreDataStore+Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B97E2DCFC77B00625889 /* CoreDataStore+Records.swift */; };
-		2824B9ED2DCFC77B00625889 /* InterstitialAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9A02DCFC77B00625889 /* InterstitialAdManager.swift */; };
-		2824B9EE2DCFC77B00625889 /* HealthRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9B22DCFC77B00625889 /* HealthRecordView.swift */; };
-		2824B9EF2DCFC77B00625889 /* EnhancedCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9AD2DCFC77B00625889 /* EnhancedCalendarView.swift */; };
-		2824B9F02DCFC77B00625889 /* GroomingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9902DCFC77B00625889 /* GroomingRecord.swift */; };
-		2824B9F12DCFC77B00625889 /* AdContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B99D2DCFC77B00625889 /* AdContainerView.swift */; };
-		2824B9F22DCFC77B00625889 /* VaccineRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9B72DCFC77B00625889 /* VaccineRecordView.swift */; };
-		2824B9F32DCFC77B00625889 /* HealthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824B9B12DCFC77B00625889 /* HealthChartView.swift */; };
+		2824BC242DD0AD7000625889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2824BBD02DD0AD7000625889 /* Assets.xcassets */; };
+		2824BC262DD0AD7000625889 /* StoreKitTestConfiguration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 2824BBF72DD0AD7000625889 /* StoreKitTestConfiguration.storekit */; };
+		2824BC272DD0AD7000625889 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2824BBF12DD0AD7000625889 /* Preview Assets.xcassets */; };
+		2824BC282DD0AD7000625889 /* get-pip.py in Resources */ = {isa = PBXBuildFile; fileRef = 2824BBE32DD0AD7000625889 /* get-pip.py */; };
+		2824BC292DD0AD7000625889 /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBFA2DD0AD7000625889 /* AdManager.swift */; };
+		2824BC2A2DD0AD7000625889 /* VaccineRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC202DD0AD7000625889 /* VaccineRecordView.swift */; };
+		2824BC2B2DD0AD7000625889 /* CSVDataExportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBD92DD0AD7000625889 /* CSVDataExportManager.swift */; };
+		2824BC2C2DD0AD7000625889 /* AdContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBF92DD0AD7000625889 /* AdContainerView.swift */; };
+		2824BC2D2DD0AD7000625889 /* AnimalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC082DD0AD7000625889 /* AnimalDetailView.swift */; };
+		2824BC2E2DD0AD7000625889 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC142DD0AD7000625889 /* ImagePicker.swift */; };
+		2824BC2F2DD0AD7000625889 /* RewardedFeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBFF2DD0AD7000625889 /* RewardedFeatureView.swift */; };
+		2824BC302DD0AD7000625889 /* WeightRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBEC2DD0AD7000625889 /* WeightRecord.swift */; };
+		2824BC312DD0AD7000625889 /* PremiumHealthCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC182DD0AD7000625889 /* PremiumHealthCheckView.swift */; };
+		2824BC322DD0AD7000625889 /* AnimalDetailView+ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC092DD0AD7000625889 /* AnimalDetailView+ColorPicker.swift */; };
+		2824BC332DD0AD7000625889 /* EnhancedCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC0E2DD0AD7000625889 /* EnhancedCalendarView.swift */; };
+		2824BC342DD0AD7000625889 /* InlinePrivacyViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC152DD0AD7000625889 /* InlinePrivacyViews.swift */; };
+		2824BC352DD0AD7000625889 /* WeightRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC212DD0AD7000625889 /* WeightRecordView.swift */; };
+		2824BC362DD0AD7000625889 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBF42DD0AD7000625889 /* SubscriptionManager.swift */; };
+		2824BC372DD0AD7000625889 /* EnhancedAnimalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC0D2DD0AD7000625889 /* EnhancedAnimalListView.swift */; };
+		2824BC382DD0AD7000625889 /* CheckupRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBE72DD0AD7000625889 /* CheckupRecord.swift */; };
+		2824BC392DD0AD7000625889 /* FAQViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC042DD0AD7000625889 /* FAQViews.swift */; };
+		2824BC3A2DD0AD7000625889 /* PremiumSubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC192DD0AD7000625889 /* PremiumSubscriptionView.swift */; };
+		2824BC3B2DD0AD7000625889 /* AppIconExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBCE2DD0AD7000625889 /* AppIconExporter.swift */; };
+		2824BC3C2DD0AD7000625889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBCD2DD0AD7000625889 /* AppDelegate.swift */; };
+		2824BC3D2DD0AD7000625889 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC1E2DD0AD7000625889 /* SplashScreen.swift */; };
+		2824BC3E2DD0AD7000625889 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC012DD0AD7000625889 /* SearchBar.swift */; };
+		2824BC3F2DD0AD7000625889 /* PremiumPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBFD2DD0AD7000625889 /* PremiumPurchaseView.swift */; };
+		2824BC402DD0AD7000625889 /* HealthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC122DD0AD7000625889 /* HealthChartView.swift */; };
+		2824BC412DD0AD7000625889 /* AnimalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBDF2DD0AD7000625889 /* AnimalDataStore.swift */; };
+		2824BC422DD0AD7000625889 /* VaccineRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBEB2DD0AD7000625889 /* VaccineRecord.swift */; };
+		2824BC432DD0AD7000625889 /* PhysiologicalCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC172DD0AD7000625889 /* PhysiologicalCycleView.swift */; };
+		2824BC442DD0AD7000625889 /* CSVExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBDA2DD0AD7000625889 /* CSVExportView.swift */; };
+		2824BC452DD0AD7000625889 /* InAppPurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBF32DD0AD7000625889 /* InAppPurchaseManager.swift */; };
+		2824BC462DD0AD7000625889 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBEE2DD0AD7000625889 /* NotificationManager.swift */; };
+		2824BC472DD0AD7000625889 /* CoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBD52DD0AD7000625889 /* CoreDataStore.swift */; };
+		2824BC482DD0AD7000625889 /* EnhancedHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC102DD0AD7000625889 /* EnhancedHomeView.swift */; };
+		2824BC492DD0AD7000625889 /* SubscriptionProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBF52DD0AD7000625889 /* SubscriptionProduct.swift */; };
+		2824BC4A2DD0AD7000625889 /* OtherRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBEA2DD0AD7000625889 /* OtherRecord.swift */; };
+		2824BC4B2DD0AD7000625889 /* IntegratedSupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC162DD0AD7000625889 /* IntegratedSupportView.swift */; };
+		2824BC4C2DD0AD7000625889 /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC1F2DD0AD7000625889 /* SupportView.swift */; };
+		2824BC4D2DD0AD7000625889 /* ContactViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC032DD0AD7000625889 /* ContactViews.swift */; };
+		2824BC4E2DD0AD7000625889 /* AnimalGestione.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBD42DD0AD7000625889 /* AnimalGestione.xcdatamodeld */; };
+		2824BC4F2DD0AD7000625889 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBFB2DD0AD7000625889 /* BannerAdView.swift */; };
+		2824BC502DD0AD7000625889 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBE52DD0AD7000625889 /* AnimalModel.swift */; };
+		2824BC512DD0AD7000625889 /* HealthRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC132DD0AD7000625889 /* HealthRecordView.swift */; };
+		2824BC522DD0AD7000625889 /* GroomingRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC112DD0AD7000625889 /* GroomingRecordView.swift */; };
+		2824BC532DD0AD7000625889 /* EnhancedContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC0F2DD0AD7000625889 /* EnhancedContentView.swift */; };
+		2824BC542DD0AD7000625889 /* AdConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBD12DD0AD7000625889 /* AdConfig.swift */; };
+		2824BC552DD0AD7000625889 /* CoreDataStore+Records.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBD62DD0AD7000625889 /* CoreDataStore+Records.swift */; };
+		2824BC562DD0AD7000625889 /* AppIconGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBCF2DD0AD7000625889 /* AppIconGenerator.swift */; };
+		2824BC572DD0AD7000625889 /* EmbeddedPrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC0C2DD0AD7000625889 /* EmbeddedPrivacyPolicyView.swift */; };
+		2824BC582DD0AD7000625889 /* NotificationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBEF2DD0AD7000625889 /* NotificationsListView.swift */; };
+		2824BC592DD0AD7000625889 /* GuideDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC052DD0AD7000625889 /* GuideDetailView.swift */; };
+		2824BC5A2DD0AD7000625889 /* DataExportImportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBDB2DD0AD7000625889 /* DataExportImportManager.swift */; };
+		2824BC5B2DD0AD7000625889 /* AppSetupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBD22DD0AD7000625889 /* AppSetupManager.swift */; };
+		2824BC5C2DD0AD7000625889 /* AnimalGestioneProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBCC2DD0AD7000625889 /* AnimalGestioneProjectApp.swift */; };
+		2824BC5D2DD0AD7000625889 /* MedicationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBE92DD0AD7000625889 /* MedicationRecord.swift */; };
+		2824BC5E2DD0AD7000625889 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC1B2DD0AD7000625889 /* PrivacyPolicyView.swift */; };
+		2824BC5F2DD0AD7000625889 /* ScheduleEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC1C2DD0AD7000625889 /* ScheduleEditView.swift */; };
+		2824BC602DD0AD7000625889 /* PrivacyPolicyConsentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC1A2DD0AD7000625889 /* PrivacyPolicyConsentView.swift */; };
+		2824BC612DD0AD7000625889 /* InterstitialAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBFC2DD0AD7000625889 /* InterstitialAdManager.swift */; };
+		2824BC622DD0AD7000625889 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBD72DD0AD7000625889 /* PersistenceController.swift */; };
+		2824BC632DD0AD7000625889 /* DataManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBDC2DD0AD7000625889 /* DataManagementView.swift */; };
+		2824BC642DD0AD7000625889 /* RewardedAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBFE2DD0AD7000625889 /* RewardedAdManager.swift */; };
+		2824BC652DD0AD7000625889 /* DebugDataExport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBDD2DD0AD7000625889 /* DebugDataExport.swift */; };
+		2824BC662DD0AD7000625889 /* GroomingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBE82DD0AD7000625889 /* GroomingRecord.swift */; };
+		2824BC672DD0AD7000625889 /* AddAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC072DD0AD7000625889 /* AddAnimalView.swift */; };
+		2824BC682DD0AD7000625889 /* EditAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC0B2DD0AD7000625889 /* EditAnimalView.swift */; };
+		2824BC692DD0AD7000625889 /* SimplePrivacyConsent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC1D2DD0AD7000625889 /* SimplePrivacyConsent.swift */; };
+		2824BC6A2DD0AD7000625889 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BC0A2DD0AD7000625889 /* ColorPickerView.swift */; };
+		2824BC6B2DD0AD7000625889 /* AnimalModel+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBE62DD0AD7000625889 /* AnimalModel+CoreData.swift */; };
+		2824BC6C2DD0AD7000625889 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2824BBE12DD0AD7000625889 /* Color+Extensions.swift */; };
 		8712323F743F7D608F65A1D4 /* Pods_AnimalGestioneProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A339245298984A3ED5E817 /* Pods_AnimalGestioneProjectTests.framework */; };
 		C3CD51E73871342D3429AF85 /* Pods_AnimalGestioneProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF413571F0460F9FA2800BC0 /* Pods_AnimalGestioneProject.framework */; };
 /* End PBXBuildFile section */
@@ -89,63 +105,79 @@
 		2824B7852DCF368900625889 /* AnimalGestioneProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalGestioneProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2824B7862DCF368900625889 /* AnimalGestioneProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalGestioneProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2824B7872DCF368900625889 /* AnimalGestioneProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalGestioneProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2824B9752DCFC77B00625889 /* AnimalGestioneProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGestioneProjectApp.swift; sourceTree = "<group>"; };
-		2824B9762DCFC77B00625889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2824B9772DCFC77B00625889 /* AppIconExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconExporter.swift; sourceTree = "<group>"; };
-		2824B9782DCFC77B00625889 /* AppIconGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconGenerator.swift; sourceTree = "<group>"; };
-		2824B9792DCFC77B00625889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2824B97A2DCFC77B00625889 /* AdConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdConfig.swift; sourceTree = "<group>"; };
-		2824B97D2DCFC77B00625889 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
-		2824B97E2DCFC77B00625889 /* CoreDataStore+Records.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataStore+Records.swift"; sourceTree = "<group>"; };
-		2824B97F2DCFC77B00625889 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		2824B9812DCFC77B00625889 /* CSVDataExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVDataExportManager.swift; sourceTree = "<group>"; };
-		2824B9822DCFC77B00625889 /* CSVExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVExportView.swift; sourceTree = "<group>"; };
-		2824B9832DCFC77B00625889 /* DataExportImportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExportImportManager.swift; sourceTree = "<group>"; };
-		2824B9842DCFC77B00625889 /* DataManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagementView.swift; sourceTree = "<group>"; };
-		2824B9852DCFC77B00625889 /* DebugDataExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugDataExport.swift; sourceTree = "<group>"; };
-		2824B9872DCFC77B00625889 /* AnimalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDataStore.swift; sourceTree = "<group>"; };
-		2824B9892DCFC77B00625889 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
-		2824B98B2DCFC77B00625889 /* get-pip.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "get-pip.py"; sourceTree = "<group>"; };
-		2824B98C2DCFC77B00625889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2824B98D2DCFC77B00625889 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
-		2824B98E2DCFC77B00625889 /* AnimalModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalModel+CoreData.swift"; sourceTree = "<group>"; };
-		2824B98F2DCFC77B00625889 /* CheckupRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckupRecord.swift; sourceTree = "<group>"; };
-		2824B9902DCFC77B00625889 /* GroomingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroomingRecord.swift; sourceTree = "<group>"; };
-		2824B9912DCFC77B00625889 /* MedicationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationRecord.swift; sourceTree = "<group>"; };
-		2824B9922DCFC77B00625889 /* OtherRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherRecord.swift; sourceTree = "<group>"; };
-		2824B9932DCFC77B00625889 /* VaccineRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineRecord.swift; sourceTree = "<group>"; };
-		2824B9942DCFC77B00625889 /* WeightRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRecord.swift; sourceTree = "<group>"; };
-		2824B9962DCFC77B00625889 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
-		2824B9972DCFC77B00625889 /* NotificationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsListView.swift; sourceTree = "<group>"; };
-		2824B9992DCFC77B00625889 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2824B99B2DCFC77B00625889 /* InAppPurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseManager.swift; sourceTree = "<group>"; };
-		2824B99D2DCFC77B00625889 /* AdContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdContainerView.swift; sourceTree = "<group>"; };
-		2824B99E2DCFC77B00625889 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
-		2824B99F2DCFC77B00625889 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
-		2824B9A02DCFC77B00625889 /* InterstitialAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdManager.swift; sourceTree = "<group>"; };
-		2824B9A12DCFC77B00625889 /* PremiumPurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPurchaseView.swift; sourceTree = "<group>"; };
-		2824B9A22DCFC77B00625889 /* RewardedAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdManager.swift; sourceTree = "<group>"; };
-		2824B9A32DCFC77B00625889 /* RewardedFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedFeatureView.swift; sourceTree = "<group>"; };
-		2824B9A52DCFC77B00625889 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		2824B9A72DCFC77B00625889 /* AddAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnimalView.swift; sourceTree = "<group>"; };
-		2824B9A82DCFC77B00625889 /* AnimalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailView.swift; sourceTree = "<group>"; };
-		2824B9A92DCFC77B00625889 /* AnimalDetailView+ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalDetailView+ColorPicker.swift"; sourceTree = "<group>"; };
-		2824B9AA2DCFC77B00625889 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
-		2824B9AB2DCFC77B00625889 /* EditAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAnimalView.swift; sourceTree = "<group>"; };
-		2824B9AC2DCFC77B00625889 /* EnhancedAnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedAnimalListView.swift; sourceTree = "<group>"; };
-		2824B9AD2DCFC77B00625889 /* EnhancedCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedCalendarView.swift; sourceTree = "<group>"; };
-		2824B9AE2DCFC77B00625889 /* EnhancedContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedContentView.swift; sourceTree = "<group>"; };
-		2824B9AF2DCFC77B00625889 /* EnhancedHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedHomeView.swift; sourceTree = "<group>"; };
-		2824B9B02DCFC77B00625889 /* GroomingRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroomingRecordView.swift; sourceTree = "<group>"; };
-		2824B9B12DCFC77B00625889 /* HealthChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthChartView.swift; sourceTree = "<group>"; };
-		2824B9B22DCFC77B00625889 /* HealthRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthRecordView.swift; sourceTree = "<group>"; };
-		2824B9B32DCFC77B00625889 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		2824B9B42DCFC77B00625889 /* PhysiologicalCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiologicalCycleView.swift; sourceTree = "<group>"; };
-		2824B9B52DCFC77B00625889 /* PremiumHealthCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumHealthCheckView.swift; sourceTree = "<group>"; };
-		2824B9B62DCFC77B00625889 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
-		2824B9B72DCFC77B00625889 /* VaccineRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineRecordView.swift; sourceTree = "<group>"; };
-		2824B9B82DCFC77B00625889 /* WeightRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRecordView.swift; sourceTree = "<group>"; };
-		2824B9BA2DCFC77B00625889 /* AnimalGestione.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AnimalGestione.xcdatamodel; sourceTree = "<group>"; };
+		2824BBCC2DD0AD7000625889 /* AnimalGestioneProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGestioneProjectApp.swift; sourceTree = "<group>"; };
+		2824BBCD2DD0AD7000625889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2824BBCE2DD0AD7000625889 /* AppIconExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconExporter.swift; sourceTree = "<group>"; };
+		2824BBCF2DD0AD7000625889 /* AppIconGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconGenerator.swift; sourceTree = "<group>"; };
+		2824BBD02DD0AD7000625889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2824BBD12DD0AD7000625889 /* AdConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdConfig.swift; sourceTree = "<group>"; };
+		2824BBD22DD0AD7000625889 /* AppSetupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetupManager.swift; sourceTree = "<group>"; };
+		2824BBD52DD0AD7000625889 /* CoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStore.swift; sourceTree = "<group>"; };
+		2824BBD62DD0AD7000625889 /* CoreDataStore+Records.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataStore+Records.swift"; sourceTree = "<group>"; };
+		2824BBD72DD0AD7000625889 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		2824BBD92DD0AD7000625889 /* CSVDataExportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVDataExportManager.swift; sourceTree = "<group>"; };
+		2824BBDA2DD0AD7000625889 /* CSVExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVExportView.swift; sourceTree = "<group>"; };
+		2824BBDB2DD0AD7000625889 /* DataExportImportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExportImportManager.swift; sourceTree = "<group>"; };
+		2824BBDC2DD0AD7000625889 /* DataManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagementView.swift; sourceTree = "<group>"; };
+		2824BBDD2DD0AD7000625889 /* DebugDataExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugDataExport.swift; sourceTree = "<group>"; };
+		2824BBDF2DD0AD7000625889 /* AnimalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDataStore.swift; sourceTree = "<group>"; };
+		2824BBE12DD0AD7000625889 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		2824BBE32DD0AD7000625889 /* get-pip.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "get-pip.py"; sourceTree = "<group>"; };
+		2824BBE42DD0AD7000625889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2824BBE52DD0AD7000625889 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
+		2824BBE62DD0AD7000625889 /* AnimalModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalModel+CoreData.swift"; sourceTree = "<group>"; };
+		2824BBE72DD0AD7000625889 /* CheckupRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckupRecord.swift; sourceTree = "<group>"; };
+		2824BBE82DD0AD7000625889 /* GroomingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroomingRecord.swift; sourceTree = "<group>"; };
+		2824BBE92DD0AD7000625889 /* MedicationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationRecord.swift; sourceTree = "<group>"; };
+		2824BBEA2DD0AD7000625889 /* OtherRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherRecord.swift; sourceTree = "<group>"; };
+		2824BBEB2DD0AD7000625889 /* VaccineRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineRecord.swift; sourceTree = "<group>"; };
+		2824BBEC2DD0AD7000625889 /* WeightRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRecord.swift; sourceTree = "<group>"; };
+		2824BBEE2DD0AD7000625889 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		2824BBEF2DD0AD7000625889 /* NotificationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsListView.swift; sourceTree = "<group>"; };
+		2824BBF12DD0AD7000625889 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2824BBF32DD0AD7000625889 /* InAppPurchaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchaseManager.swift; sourceTree = "<group>"; };
+		2824BBF42DD0AD7000625889 /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		2824BBF52DD0AD7000625889 /* SubscriptionProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionProduct.swift; sourceTree = "<group>"; };
+		2824BBF72DD0AD7000625889 /* StoreKitTestConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitTestConfiguration.storekit; sourceTree = "<group>"; };
+		2824BBF92DD0AD7000625889 /* AdContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdContainerView.swift; sourceTree = "<group>"; };
+		2824BBFA2DD0AD7000625889 /* AdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdManager.swift; sourceTree = "<group>"; };
+		2824BBFB2DD0AD7000625889 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
+		2824BBFC2DD0AD7000625889 /* InterstitialAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdManager.swift; sourceTree = "<group>"; };
+		2824BBFD2DD0AD7000625889 /* PremiumPurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumPurchaseView.swift; sourceTree = "<group>"; };
+		2824BBFE2DD0AD7000625889 /* RewardedAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdManager.swift; sourceTree = "<group>"; };
+		2824BBFF2DD0AD7000625889 /* RewardedFeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedFeatureView.swift; sourceTree = "<group>"; };
+		2824BC012DD0AD7000625889 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		2824BC032DD0AD7000625889 /* ContactViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViews.swift; sourceTree = "<group>"; };
+		2824BC042DD0AD7000625889 /* FAQViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViews.swift; sourceTree = "<group>"; };
+		2824BC052DD0AD7000625889 /* GuideDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideDetailView.swift; sourceTree = "<group>"; };
+		2824BC072DD0AD7000625889 /* AddAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnimalView.swift; sourceTree = "<group>"; };
+		2824BC082DD0AD7000625889 /* AnimalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDetailView.swift; sourceTree = "<group>"; };
+		2824BC092DD0AD7000625889 /* AnimalDetailView+ColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalDetailView+ColorPicker.swift"; sourceTree = "<group>"; };
+		2824BC0A2DD0AD7000625889 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
+		2824BC0B2DD0AD7000625889 /* EditAnimalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAnimalView.swift; sourceTree = "<group>"; };
+		2824BC0C2DD0AD7000625889 /* EmbeddedPrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbeddedPrivacyPolicyView.swift; sourceTree = "<group>"; };
+		2824BC0D2DD0AD7000625889 /* EnhancedAnimalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedAnimalListView.swift; sourceTree = "<group>"; };
+		2824BC0E2DD0AD7000625889 /* EnhancedCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedCalendarView.swift; sourceTree = "<group>"; };
+		2824BC0F2DD0AD7000625889 /* EnhancedContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedContentView.swift; sourceTree = "<group>"; };
+		2824BC102DD0AD7000625889 /* EnhancedHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancedHomeView.swift; sourceTree = "<group>"; };
+		2824BC112DD0AD7000625889 /* GroomingRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroomingRecordView.swift; sourceTree = "<group>"; };
+		2824BC122DD0AD7000625889 /* HealthChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthChartView.swift; sourceTree = "<group>"; };
+		2824BC132DD0AD7000625889 /* HealthRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthRecordView.swift; sourceTree = "<group>"; };
+		2824BC142DD0AD7000625889 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		2824BC152DD0AD7000625889 /* InlinePrivacyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlinePrivacyViews.swift; sourceTree = "<group>"; };
+		2824BC162DD0AD7000625889 /* IntegratedSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratedSupportView.swift; sourceTree = "<group>"; };
+		2824BC172DD0AD7000625889 /* PhysiologicalCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiologicalCycleView.swift; sourceTree = "<group>"; };
+		2824BC182DD0AD7000625889 /* PremiumHealthCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumHealthCheckView.swift; sourceTree = "<group>"; };
+		2824BC192DD0AD7000625889 /* PremiumSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumSubscriptionView.swift; sourceTree = "<group>"; };
+		2824BC1A2DD0AD7000625889 /* PrivacyPolicyConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyConsentView.swift; sourceTree = "<group>"; };
+		2824BC1B2DD0AD7000625889 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		2824BC1C2DD0AD7000625889 /* ScheduleEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleEditView.swift; sourceTree = "<group>"; };
+		2824BC1D2DD0AD7000625889 /* SimplePrivacyConsent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePrivacyConsent.swift; sourceTree = "<group>"; };
+		2824BC1E2DD0AD7000625889 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		2824BC1F2DD0AD7000625889 /* SupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportView.swift; sourceTree = "<group>"; };
+		2824BC202DD0AD7000625889 /* VaccineRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineRecordView.swift; sourceTree = "<group>"; };
+		2824BC212DD0AD7000625889 /* WeightRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightRecordView.swift; sourceTree = "<group>"; };
+		2824BC232DD0AD7000625889 /* AnimalGestione.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AnimalGestione.xcdatamodel; sourceTree = "<group>"; };
 		2DE34C90300A551CE820A7BD /* Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.release.xcconfig"; path = "Target Support Files/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests/Pods-AnimalGestioneProject-AnimalGestioneProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		67BE3A616E48A669D9BC8FB0 /* Pods-AnimalGestioneProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimalGestioneProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-AnimalGestioneProjectTests/Pods-AnimalGestioneProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		770E7537FA11EE6CDB7FB7A2 /* Pods_AnimalGestioneProject_AnimalGestioneProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimalGestioneProject_AnimalGestioneProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,138 +217,168 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2824B97B2DCFC77B00625889 /* Config */ = {
+		2824BBD32DD0AD7000625889 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				2824B97A2DCFC77B00625889 /* AdConfig.swift */,
+				2824BBD12DD0AD7000625889 /* AdConfig.swift */,
+				2824BBD22DD0AD7000625889 /* AppSetupManager.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
 		};
-		2824B9802DCFC77B00625889 /* CoreData */ = {
+		2824BBD82DD0AD7000625889 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				2824B97C2DCFC77B00625889 /* AnimalGestione.xcdatamodeld */,
-				2824B97D2DCFC77B00625889 /* CoreDataStore.swift */,
-				2824B97E2DCFC77B00625889 /* CoreDataStore+Records.swift */,
-				2824B97F2DCFC77B00625889 /* PersistenceController.swift */,
+				2824BBD42DD0AD7000625889 /* AnimalGestione.xcdatamodeld */,
+				2824BBD52DD0AD7000625889 /* CoreDataStore.swift */,
+				2824BBD62DD0AD7000625889 /* CoreDataStore+Records.swift */,
+				2824BBD72DD0AD7000625889 /* PersistenceController.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		2824B9862DCFC77B00625889 /* DataManagement */ = {
+		2824BBDE2DD0AD7000625889 /* DataManagement */ = {
 			isa = PBXGroup;
 			children = (
-				2824B9812DCFC77B00625889 /* CSVDataExportManager.swift */,
-				2824B9822DCFC77B00625889 /* CSVExportView.swift */,
-				2824B9832DCFC77B00625889 /* DataExportImportManager.swift */,
-				2824B9842DCFC77B00625889 /* DataManagementView.swift */,
-				2824B9852DCFC77B00625889 /* DebugDataExport.swift */,
+				2824BBD92DD0AD7000625889 /* CSVDataExportManager.swift */,
+				2824BBDA2DD0AD7000625889 /* CSVExportView.swift */,
+				2824BBDB2DD0AD7000625889 /* DataExportImportManager.swift */,
+				2824BBDC2DD0AD7000625889 /* DataManagementView.swift */,
+				2824BBDD2DD0AD7000625889 /* DebugDataExport.swift */,
 			);
 			path = DataManagement;
 			sourceTree = "<group>";
 		};
-		2824B9882DCFC77B00625889 /* DataStore */ = {
+		2824BBE02DD0AD7000625889 /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
-				2824B9872DCFC77B00625889 /* AnimalDataStore.swift */,
+				2824BBDF2DD0AD7000625889 /* AnimalDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
 		};
-		2824B98A2DCFC77B00625889 /* Extensions */ = {
+		2824BBE22DD0AD7000625889 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2824B9892DCFC77B00625889 /* Color+Extensions.swift */,
+				2824BBE12DD0AD7000625889 /* Color+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		2824B9952DCFC77B00625889 /* Models */ = {
+		2824BBED2DD0AD7000625889 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2824B98D2DCFC77B00625889 /* AnimalModel.swift */,
-				2824B98E2DCFC77B00625889 /* AnimalModel+CoreData.swift */,
-				2824B98F2DCFC77B00625889 /* CheckupRecord.swift */,
-				2824B9902DCFC77B00625889 /* GroomingRecord.swift */,
-				2824B9912DCFC77B00625889 /* MedicationRecord.swift */,
-				2824B9922DCFC77B00625889 /* OtherRecord.swift */,
-				2824B9932DCFC77B00625889 /* VaccineRecord.swift */,
-				2824B9942DCFC77B00625889 /* WeightRecord.swift */,
+				2824BBE52DD0AD7000625889 /* AnimalModel.swift */,
+				2824BBE62DD0AD7000625889 /* AnimalModel+CoreData.swift */,
+				2824BBE72DD0AD7000625889 /* CheckupRecord.swift */,
+				2824BBE82DD0AD7000625889 /* GroomingRecord.swift */,
+				2824BBE92DD0AD7000625889 /* MedicationRecord.swift */,
+				2824BBEA2DD0AD7000625889 /* OtherRecord.swift */,
+				2824BBEB2DD0AD7000625889 /* VaccineRecord.swift */,
+				2824BBEC2DD0AD7000625889 /* WeightRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		2824B9982DCFC77B00625889 /* Notifications */ = {
+		2824BBF02DD0AD7000625889 /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
-				2824B9962DCFC77B00625889 /* NotificationManager.swift */,
-				2824B9972DCFC77B00625889 /* NotificationsListView.swift */,
+				2824BBEE2DD0AD7000625889 /* NotificationManager.swift */,
+				2824BBEF2DD0AD7000625889 /* NotificationsListView.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
 		};
-		2824B99A2DCFC77B00625889 /* Preview Content */ = {
+		2824BBF22DD0AD7000625889 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				2824B9992DCFC77B00625889 /* Preview Assets.xcassets */,
+				2824BBF12DD0AD7000625889 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2824B99C2DCFC77B00625889 /* StoreKit */ = {
+		2824BBF62DD0AD7000625889 /* StoreKit */ = {
 			isa = PBXGroup;
 			children = (
-				2824B99B2DCFC77B00625889 /* InAppPurchaseManager.swift */,
+				2824BBF32DD0AD7000625889 /* InAppPurchaseManager.swift */,
+				2824BBF42DD0AD7000625889 /* SubscriptionManager.swift */,
+				2824BBF52DD0AD7000625889 /* SubscriptionProduct.swift */,
 			);
 			path = StoreKit;
 			sourceTree = "<group>";
 		};
-		2824B9A42DCFC77B00625889 /* Ads */ = {
+		2824BBF82DD0AD7000625889 /* Subscription */ = {
 			isa = PBXGroup;
 			children = (
-				2824B99D2DCFC77B00625889 /* AdContainerView.swift */,
-				2824B99E2DCFC77B00625889 /* AdManager.swift */,
-				2824B99F2DCFC77B00625889 /* BannerAdView.swift */,
-				2824B9A02DCFC77B00625889 /* InterstitialAdManager.swift */,
-				2824B9A12DCFC77B00625889 /* PremiumPurchaseView.swift */,
-				2824B9A22DCFC77B00625889 /* RewardedAdManager.swift */,
-				2824B9A32DCFC77B00625889 /* RewardedFeatureView.swift */,
+			);
+			path = Subscription;
+			sourceTree = "<group>";
+		};
+		2824BC002DD0AD7000625889 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				2824BBF92DD0AD7000625889 /* AdContainerView.swift */,
+				2824BBFA2DD0AD7000625889 /* AdManager.swift */,
+				2824BBFB2DD0AD7000625889 /* BannerAdView.swift */,
+				2824BBFC2DD0AD7000625889 /* InterstitialAdManager.swift */,
+				2824BBFD2DD0AD7000625889 /* PremiumPurchaseView.swift */,
+				2824BBFE2DD0AD7000625889 /* RewardedAdManager.swift */,
+				2824BBFF2DD0AD7000625889 /* RewardedFeatureView.swift */,
 			);
 			path = Ads;
 			sourceTree = "<group>";
 		};
-		2824B9A62DCFC77B00625889 /* Components */ = {
+		2824BC022DD0AD7000625889 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				2824B9A52DCFC77B00625889 /* SearchBar.swift */,
+				2824BC012DD0AD7000625889 /* SearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		2824B9B92DCFC77B00625889 /* Views */ = {
+		2824BC062DD0AD7000625889 /* SupportViews */ = {
 			isa = PBXGroup;
 			children = (
-				2824B9A42DCFC77B00625889 /* Ads */,
-				2824B9A62DCFC77B00625889 /* Components */,
-				2824B9A72DCFC77B00625889 /* AddAnimalView.swift */,
-				2824B9A82DCFC77B00625889 /* AnimalDetailView.swift */,
-				2824B9A92DCFC77B00625889 /* AnimalDetailView+ColorPicker.swift */,
-				2824B9AA2DCFC77B00625889 /* ColorPickerView.swift */,
-				2824B9AB2DCFC77B00625889 /* EditAnimalView.swift */,
-				2824B9AC2DCFC77B00625889 /* EnhancedAnimalListView.swift */,
-				2824B9AD2DCFC77B00625889 /* EnhancedCalendarView.swift */,
-				2824B9AE2DCFC77B00625889 /* EnhancedContentView.swift */,
-				2824B9AF2DCFC77B00625889 /* EnhancedHomeView.swift */,
-				2824B9B02DCFC77B00625889 /* GroomingRecordView.swift */,
-				2824B9B12DCFC77B00625889 /* HealthChartView.swift */,
-				2824B9B22DCFC77B00625889 /* HealthRecordView.swift */,
-				2824B9B32DCFC77B00625889 /* ImagePicker.swift */,
-				2824B9B42DCFC77B00625889 /* PhysiologicalCycleView.swift */,
-				2824B9B52DCFC77B00625889 /* PremiumHealthCheckView.swift */,
-				2824B9B62DCFC77B00625889 /* SplashScreen.swift */,
-				2824B9B72DCFC77B00625889 /* VaccineRecordView.swift */,
-				2824B9B82DCFC77B00625889 /* WeightRecordView.swift */,
+				2824BC032DD0AD7000625889 /* ContactViews.swift */,
+				2824BC042DD0AD7000625889 /* FAQViews.swift */,
+				2824BC052DD0AD7000625889 /* GuideDetailView.swift */,
+			);
+			path = SupportViews;
+			sourceTree = "<group>";
+		};
+		2824BC222DD0AD7000625889 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2824BC002DD0AD7000625889 /* Ads */,
+				2824BC022DD0AD7000625889 /* Components */,
+				2824BC062DD0AD7000625889 /* SupportViews */,
+				2824BC072DD0AD7000625889 /* AddAnimalView.swift */,
+				2824BC082DD0AD7000625889 /* AnimalDetailView.swift */,
+				2824BC092DD0AD7000625889 /* AnimalDetailView+ColorPicker.swift */,
+				2824BC0A2DD0AD7000625889 /* ColorPickerView.swift */,
+				2824BC0B2DD0AD7000625889 /* EditAnimalView.swift */,
+				2824BC0C2DD0AD7000625889 /* EmbeddedPrivacyPolicyView.swift */,
+				2824BC0D2DD0AD7000625889 /* EnhancedAnimalListView.swift */,
+				2824BC0E2DD0AD7000625889 /* EnhancedCalendarView.swift */,
+				2824BC0F2DD0AD7000625889 /* EnhancedContentView.swift */,
+				2824BC102DD0AD7000625889 /* EnhancedHomeView.swift */,
+				2824BC112DD0AD7000625889 /* GroomingRecordView.swift */,
+				2824BC122DD0AD7000625889 /* HealthChartView.swift */,
+				2824BC132DD0AD7000625889 /* HealthRecordView.swift */,
+				2824BC142DD0AD7000625889 /* ImagePicker.swift */,
+				2824BC152DD0AD7000625889 /* InlinePrivacyViews.swift */,
+				2824BC162DD0AD7000625889 /* IntegratedSupportView.swift */,
+				2824BC172DD0AD7000625889 /* PhysiologicalCycleView.swift */,
+				2824BC182DD0AD7000625889 /* PremiumHealthCheckView.swift */,
+				2824BC192DD0AD7000625889 /* PremiumSubscriptionView.swift */,
+				2824BC1A2DD0AD7000625889 /* PrivacyPolicyConsentView.swift */,
+				2824BC1B2DD0AD7000625889 /* PrivacyPolicyView.swift */,
+				2824BC1C2DD0AD7000625889 /* ScheduleEditView.swift */,
+				2824BC1D2DD0AD7000625889 /* SimplePrivacyConsent.swift */,
+				2824BC1E2DD0AD7000625889 /* SplashScreen.swift */,
+				2824BC1F2DD0AD7000625889 /* SupportView.swift */,
+				2824BC202DD0AD7000625889 /* VaccineRecordView.swift */,
+				2824BC212DD0AD7000625889 /* WeightRecordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -324,23 +386,25 @@
 		28A3D3222DCF26CB001F6D36 /* AnimalGestioneProject */ = {
 			isa = PBXGroup;
 			children = (
-				2824B9752DCFC77B00625889 /* AnimalGestioneProjectApp.swift */,
-				2824B9762DCFC77B00625889 /* AppDelegate.swift */,
-				2824B9772DCFC77B00625889 /* AppIconExporter.swift */,
-				2824B9782DCFC77B00625889 /* AppIconGenerator.swift */,
-				2824B9792DCFC77B00625889 /* Assets.xcassets */,
-				2824B97B2DCFC77B00625889 /* Config */,
-				2824B9802DCFC77B00625889 /* CoreData */,
-				2824B9862DCFC77B00625889 /* DataManagement */,
-				2824B9882DCFC77B00625889 /* DataStore */,
-				2824B98A2DCFC77B00625889 /* Extensions */,
-				2824B98B2DCFC77B00625889 /* get-pip.py */,
-				2824B98C2DCFC77B00625889 /* Info.plist */,
-				2824B9952DCFC77B00625889 /* Models */,
-				2824B9982DCFC77B00625889 /* Notifications */,
-				2824B99A2DCFC77B00625889 /* Preview Content */,
-				2824B99C2DCFC77B00625889 /* StoreKit */,
-				2824B9B92DCFC77B00625889 /* Views */,
+				2824BBCC2DD0AD7000625889 /* AnimalGestioneProjectApp.swift */,
+				2824BBCD2DD0AD7000625889 /* AppDelegate.swift */,
+				2824BBCE2DD0AD7000625889 /* AppIconExporter.swift */,
+				2824BBCF2DD0AD7000625889 /* AppIconGenerator.swift */,
+				2824BBD02DD0AD7000625889 /* Assets.xcassets */,
+				2824BBD32DD0AD7000625889 /* Config */,
+				2824BBD82DD0AD7000625889 /* CoreData */,
+				2824BBDE2DD0AD7000625889 /* DataManagement */,
+				2824BBE02DD0AD7000625889 /* DataStore */,
+				2824BBE22DD0AD7000625889 /* Extensions */,
+				2824BBE32DD0AD7000625889 /* get-pip.py */,
+				2824BBE42DD0AD7000625889 /* Info.plist */,
+				2824BBED2DD0AD7000625889 /* Models */,
+				2824BBF02DD0AD7000625889 /* Notifications */,
+				2824BBF22DD0AD7000625889 /* Preview Content */,
+				2824BBF62DD0AD7000625889 /* StoreKit */,
+				2824BBF72DD0AD7000625889 /* StoreKitTestConfiguration.storekit */,
+				2824BBF82DD0AD7000625889 /* Subscription */,
+				2824BC222DD0AD7000625889 /* Views */,
 			);
 			path = AnimalGestioneProject;
 			sourceTree = "<group>";
@@ -489,9 +553,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2824B9BB2DCFC77B00625889 /* get-pip.py in Resources */,
-				2824B9BC2DCFC77B00625889 /* Assets.xcassets in Resources */,
-				2824B9BE2DCFC77B00625889 /* Preview Assets.xcassets in Resources */,
+				2824BC242DD0AD7000625889 /* Assets.xcassets in Resources */,
+				2824BC262DD0AD7000625889 /* StoreKitTestConfiguration.storekit in Resources */,
+				2824BC272DD0AD7000625889 /* Preview Assets.xcassets in Resources */,
+				2824BC282DD0AD7000625889 /* get-pip.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,59 +692,74 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2824B9BF2DCFC77B00625889 /* DataManagementView.swift in Sources */,
-				2824B9C02DCFC77B00625889 /* EnhancedAnimalListView.swift in Sources */,
-				2824B9C12DCFC77B00625889 /* AppIconGenerator.swift in Sources */,
-				2824B9C22DCFC77B00625889 /* DataExportImportManager.swift in Sources */,
-				2824B9C32DCFC77B00625889 /* PremiumPurchaseView.swift in Sources */,
-				2824B9C42DCFC77B00625889 /* AnimalModel.swift in Sources */,
-				2824B9C52DCFC77B00625889 /* AnimalDetailView.swift in Sources */,
-				2824B9C62DCFC77B00625889 /* PhysiologicalCycleView.swift in Sources */,
-				2824B9C72DCFC77B00625889 /* PremiumHealthCheckView.swift in Sources */,
-				2824B9C82DCFC77B00625889 /* EditAnimalView.swift in Sources */,
-				2824B9C92DCFC77B00625889 /* WeightRecord.swift in Sources */,
-				2824B9CA2DCFC77B00625889 /* CoreDataStore.swift in Sources */,
-				2824B9CB2DCFC77B00625889 /* EnhancedContentView.swift in Sources */,
-				2824B9CC2DCFC77B00625889 /* PersistenceController.swift in Sources */,
-				2824B9CD2DCFC77B00625889 /* AddAnimalView.swift in Sources */,
-				2824B9CE2DCFC77B00625889 /* SearchBar.swift in Sources */,
-				2824B9CF2DCFC77B00625889 /* AppIconExporter.swift in Sources */,
-				2824B9D02DCFC77B00625889 /* CheckupRecord.swift in Sources */,
-				2824B9D12DCFC77B00625889 /* AnimalModel+CoreData.swift in Sources */,
-				2824B9D22DCFC77B00625889 /* AdConfig.swift in Sources */,
-				2824B9D32DCFC77B00625889 /* ImagePicker.swift in Sources */,
-				2824B9D42DCFC77B00625889 /* AnimalDetailView+ColorPicker.swift in Sources */,
-				2824B9D52DCFC77B00625889 /* AppDelegate.swift in Sources */,
-				2824B9D62DCFC77B00625889 /* AnimalGestione.xcdatamodeld in Sources */,
-				2824B9D72DCFC77B00625889 /* CSVExportView.swift in Sources */,
-				2824B9D82DCFC77B00625889 /* EnhancedHomeView.swift in Sources */,
-				2824B9D92DCFC77B00625889 /* ColorPickerView.swift in Sources */,
-				2824B9DA2DCFC77B00625889 /* SplashScreen.swift in Sources */,
-				2824B9DB2DCFC77B00625889 /* GroomingRecordView.swift in Sources */,
-				2824B9DC2DCFC77B00625889 /* DebugDataExport.swift in Sources */,
-				2824B9DD2DCFC77B00625889 /* RewardedAdManager.swift in Sources */,
-				2824B9DE2DCFC77B00625889 /* InAppPurchaseManager.swift in Sources */,
-				2824B9DF2DCFC77B00625889 /* RewardedFeatureView.swift in Sources */,
-				2824B9E02DCFC77B00625889 /* AnimalGestioneProjectApp.swift in Sources */,
-				2824B9E12DCFC77B00625889 /* AdManager.swift in Sources */,
-				2824B9E22DCFC77B00625889 /* NotificationsListView.swift in Sources */,
-				2824B9E32DCFC77B00625889 /* NotificationManager.swift in Sources */,
-				2824B9E42DCFC77B00625889 /* Color+Extensions.swift in Sources */,
-				2824B9E52DCFC77B00625889 /* VaccineRecord.swift in Sources */,
-				2824B9E62DCFC77B00625889 /* CSVDataExportManager.swift in Sources */,
-				2824B9E72DCFC77B00625889 /* MedicationRecord.swift in Sources */,
-				2824B9E82DCFC77B00625889 /* AnimalDataStore.swift in Sources */,
-				2824B9E92DCFC77B00625889 /* BannerAdView.swift in Sources */,
-				2824B9EA2DCFC77B00625889 /* OtherRecord.swift in Sources */,
-				2824B9EB2DCFC77B00625889 /* WeightRecordView.swift in Sources */,
-				2824B9EC2DCFC77B00625889 /* CoreDataStore+Records.swift in Sources */,
-				2824B9ED2DCFC77B00625889 /* InterstitialAdManager.swift in Sources */,
-				2824B9EE2DCFC77B00625889 /* HealthRecordView.swift in Sources */,
-				2824B9EF2DCFC77B00625889 /* EnhancedCalendarView.swift in Sources */,
-				2824B9F02DCFC77B00625889 /* GroomingRecord.swift in Sources */,
-				2824B9F12DCFC77B00625889 /* AdContainerView.swift in Sources */,
-				2824B9F22DCFC77B00625889 /* VaccineRecordView.swift in Sources */,
-				2824B9F32DCFC77B00625889 /* HealthChartView.swift in Sources */,
+				2824BC292DD0AD7000625889 /* AdManager.swift in Sources */,
+				2824BC2A2DD0AD7000625889 /* VaccineRecordView.swift in Sources */,
+				2824BC2B2DD0AD7000625889 /* CSVDataExportManager.swift in Sources */,
+				2824BC2C2DD0AD7000625889 /* AdContainerView.swift in Sources */,
+				2824BC2D2DD0AD7000625889 /* AnimalDetailView.swift in Sources */,
+				2824BC2E2DD0AD7000625889 /* ImagePicker.swift in Sources */,
+				2824BC2F2DD0AD7000625889 /* RewardedFeatureView.swift in Sources */,
+				2824BC302DD0AD7000625889 /* WeightRecord.swift in Sources */,
+				2824BC312DD0AD7000625889 /* PremiumHealthCheckView.swift in Sources */,
+				2824BC322DD0AD7000625889 /* AnimalDetailView+ColorPicker.swift in Sources */,
+				2824BC332DD0AD7000625889 /* EnhancedCalendarView.swift in Sources */,
+				2824BC342DD0AD7000625889 /* InlinePrivacyViews.swift in Sources */,
+				2824BC352DD0AD7000625889 /* WeightRecordView.swift in Sources */,
+				2824BC362DD0AD7000625889 /* SubscriptionManager.swift in Sources */,
+				2824BC372DD0AD7000625889 /* EnhancedAnimalListView.swift in Sources */,
+				2824BC382DD0AD7000625889 /* CheckupRecord.swift in Sources */,
+				2824BC392DD0AD7000625889 /* FAQViews.swift in Sources */,
+				2824BC3A2DD0AD7000625889 /* PremiumSubscriptionView.swift in Sources */,
+				2824BC3B2DD0AD7000625889 /* AppIconExporter.swift in Sources */,
+				2824BC3C2DD0AD7000625889 /* AppDelegate.swift in Sources */,
+				2824BC3D2DD0AD7000625889 /* SplashScreen.swift in Sources */,
+				2824BC3E2DD0AD7000625889 /* SearchBar.swift in Sources */,
+				2824BC3F2DD0AD7000625889 /* PremiumPurchaseView.swift in Sources */,
+				2824BC402DD0AD7000625889 /* HealthChartView.swift in Sources */,
+				2824BC412DD0AD7000625889 /* AnimalDataStore.swift in Sources */,
+				2824BC422DD0AD7000625889 /* VaccineRecord.swift in Sources */,
+				2824BC432DD0AD7000625889 /* PhysiologicalCycleView.swift in Sources */,
+				2824BC442DD0AD7000625889 /* CSVExportView.swift in Sources */,
+				2824BC452DD0AD7000625889 /* InAppPurchaseManager.swift in Sources */,
+				2824BC462DD0AD7000625889 /* NotificationManager.swift in Sources */,
+				2824BC472DD0AD7000625889 /* CoreDataStore.swift in Sources */,
+				2824BC482DD0AD7000625889 /* EnhancedHomeView.swift in Sources */,
+				2824BC492DD0AD7000625889 /* SubscriptionProduct.swift in Sources */,
+				2824BC4A2DD0AD7000625889 /* OtherRecord.swift in Sources */,
+				2824BC4B2DD0AD7000625889 /* IntegratedSupportView.swift in Sources */,
+				2824BC4C2DD0AD7000625889 /* SupportView.swift in Sources */,
+				2824BC4D2DD0AD7000625889 /* ContactViews.swift in Sources */,
+				2824BC4E2DD0AD7000625889 /* AnimalGestione.xcdatamodeld in Sources */,
+				2824BC4F2DD0AD7000625889 /* BannerAdView.swift in Sources */,
+				2824BC502DD0AD7000625889 /* AnimalModel.swift in Sources */,
+				2824BC512DD0AD7000625889 /* HealthRecordView.swift in Sources */,
+				2824BC522DD0AD7000625889 /* GroomingRecordView.swift in Sources */,
+				2824BC532DD0AD7000625889 /* EnhancedContentView.swift in Sources */,
+				2824BC542DD0AD7000625889 /* AdConfig.swift in Sources */,
+				2824BC552DD0AD7000625889 /* CoreDataStore+Records.swift in Sources */,
+				2824BC562DD0AD7000625889 /* AppIconGenerator.swift in Sources */,
+				2824BC572DD0AD7000625889 /* EmbeddedPrivacyPolicyView.swift in Sources */,
+				2824BC582DD0AD7000625889 /* NotificationsListView.swift in Sources */,
+				2824BC592DD0AD7000625889 /* GuideDetailView.swift in Sources */,
+				2824BC5A2DD0AD7000625889 /* DataExportImportManager.swift in Sources */,
+				2824BC5B2DD0AD7000625889 /* AppSetupManager.swift in Sources */,
+				2824BC5C2DD0AD7000625889 /* AnimalGestioneProjectApp.swift in Sources */,
+				2824BC5D2DD0AD7000625889 /* MedicationRecord.swift in Sources */,
+				2824BC5E2DD0AD7000625889 /* PrivacyPolicyView.swift in Sources */,
+				2824BC5F2DD0AD7000625889 /* ScheduleEditView.swift in Sources */,
+				2824BC602DD0AD7000625889 /* PrivacyPolicyConsentView.swift in Sources */,
+				2824BC612DD0AD7000625889 /* InterstitialAdManager.swift in Sources */,
+				2824BC622DD0AD7000625889 /* PersistenceController.swift in Sources */,
+				2824BC632DD0AD7000625889 /* DataManagementView.swift in Sources */,
+				2824BC642DD0AD7000625889 /* RewardedAdManager.swift in Sources */,
+				2824BC652DD0AD7000625889 /* DebugDataExport.swift in Sources */,
+				2824BC662DD0AD7000625889 /* GroomingRecord.swift in Sources */,
+				2824BC672DD0AD7000625889 /* AddAnimalView.swift in Sources */,
+				2824BC682DD0AD7000625889 /* EditAnimalView.swift in Sources */,
+				2824BC692DD0AD7000625889 /* SimplePrivacyConsent.swift in Sources */,
+				2824BC6A2DD0AD7000625889 /* ColorPickerView.swift in Sources */,
+				2824BC6B2DD0AD7000625889 /* AnimalModel+CoreData.swift in Sources */,
+				2824BC6C2DD0AD7000625889 /* Color+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1012,12 +1092,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2824B97C2DCFC77B00625889 /* AnimalGestione.xcdatamodeld */ = {
+		2824BBD42DD0AD7000625889 /* AnimalGestione.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2824B9BA2DCFC77B00625889 /* AnimalGestione.xcdatamodel */,
+				2824BC232DD0AD7000625889 /* AnimalGestione.xcdatamodel */,
 			);
-			currentVersion = 2824B9BA2DCFC77B00625889 /* AnimalGestione.xcdatamodel */;
+			currentVersion = 2824BC232DD0AD7000625889 /* AnimalGestione.xcdatamodel */;
 			path = AnimalGestione.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

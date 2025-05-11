@@ -1,0 +1,114 @@
+{
+  "identifier" : "67E0AD97",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "9800",
+      "internalID" : "F3A4DE27",
+      "localizations" : [
+        {
+          "description" : "一度のお支払いで永続的にプレミアム機能を利用できます",
+          "displayName" : "永久プレミアム",
+          "locale" : "ja"
+        },
+        {
+          "description" : "Get premium features permanently with a one-time payment",
+          "displayName" : "Lifetime Premium",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.yourdomain.animalgestione.premium_lifetime",
+      "referenceName" : "永久プレミアム",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "com.yourdomain.animalgestione",
+    "_developerTeamID" : "ABCDEFGHIJ",
+    "_lastSynchronizedDate" : 707610456.72177696
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "20245612",
+      "localizations" : [
+        {
+          "description" : "プレミアム機能へのサブスクリプション",
+          "displayName" : "プレミアムプラン",
+          "locale" : "ja"
+        },
+        {
+          "description" : "Subscription to premium features",
+          "displayName" : "Premium Plan",
+          "locale" : "en_US"
+        }
+      ],
+      "name" : "Premium Plans",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "480",
+          "groupNumber" : 1,
+          "internalID" : "C2F3D4E5",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "月額プランでプレミアム機能をお楽しみいただけます",
+              "displayName" : "月額プレミアム",
+              "locale" : "ja"
+            },
+            {
+              "description" : "Enjoy premium features with monthly subscription",
+              "displayName" : "Monthly Premium",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.yourdomain.animalgestione.premium_monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "月額プレミアム",
+          "subscriptionGroupID" : "20245612",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "4800",
+          "groupNumber" : 2,
+          "internalID" : "A1B2C3D4",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "年額プランでプレミアム機能をお楽しみいただけます（2ヶ月分無料）",
+              "displayName" : "年間プレミアム",
+              "locale" : "ja"
+            },
+            {
+              "description" : "Enjoy premium features with yearly subscription (2 months free)",
+              "displayName" : "Yearly Premium",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.yourdomain.animalgestione.premium_yearly",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "年間プレミアム",
+          "subscriptionGroupID" : "20245612",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}
