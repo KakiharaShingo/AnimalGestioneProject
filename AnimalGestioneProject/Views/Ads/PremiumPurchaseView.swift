@@ -1,12 +1,21 @@
 import SwiftUI
 import StoreKit
 
+// プレミアム購入画面を表示するか確認する拡張関数
+func shouldShowPremiumPurchaseView() -> Bool {
+    return InAppPurchaseManager.showPremiumFeatures
+}
+
 struct PremiumPurchaseView: View {
-    @EnvironmentObject var purchaseManager: InAppPurchaseManager
+    // EnvironmentObjectから直接インスタンスに変更
+    private let purchaseManager = InAppPurchaseManager.shared
     @State private var isProcessing = false
     @State private var errorMessage: String?
     @State private var showAlert = false
     @Environment(\.presentationMode) var presentationMode
+    
+    // ObservableObjectを監視するためのオブジェクト追加
+    @ObservedObject private var observablePurchaseManager = InAppPurchaseManager.shared
     
     var body: some View {
         NavigationView {
@@ -26,9 +35,11 @@ struct PremiumPurchaseView: View {
                 
                 // 特典の説明
                 VStack(alignment: .leading, spacing: 15) {
-                    FeatureRow(icon: "xmark.circle.fill", title: "広告非表示", description: "アプリ内の広告をすべて非表示にします")
-                    FeatureRow(icon: "plus.circle.fill", title: "新機能へのアクセス", description: "今後追加される予定の機能にアクセスできます")
-                    FeatureRow(icon: "heart.circle.fill", title: "開発者をサポート", description: "アプリ開発の継続をサポートできます")
+                    LegacyFeatureRow(icon: "xmark.circle.fill", title: "広告非表示", description: "アプリ内の広告をすべて非表示にします")
+                    LegacyFeatureRow(icon: "plus.circle.fill", title: "動物登録数制限解除", description: "3匹以上の動物を登録できるようになります")
+                    LegacyFeatureRow(icon: "star.circle.fill", title: "プレミアム機能へのアクセス", description: "今後追加される予定の機能にアクセスできます")
+                    LegacyFeatureRow(icon: "heart.circle.fill", title: "開発者をサポート", description: "アプリ開発の継続をサポートできます")
+                    LegacyFeatureRow(icon: "questionmark.circle.fill", title: "キャンセルについて", description: "サブスクリプションはいつでもApp Storeから解約できます")
                 }
                 .padding()
                 .background(Color(.systemGray6))
@@ -44,7 +55,7 @@ struct PremiumPurchaseView: View {
                         .foregroundColor(.green)
                         .padding()
                 } else {
-                    if purchaseManager.products.isEmpty && !isProcessing {
+                    if observablePurchaseManager.products.isEmpty && !isProcessing {
                         Button("製品情報を読み込む") {
                             loadProducts()
                         }
@@ -56,15 +67,23 @@ struct PremiumPurchaseView: View {
                         ProgressView()
                             .padding()
                     } else {
-                        ForEach(purchaseManager.products, id: \.productIdentifier) { product in
+                        ForEach(observablePurchaseManager.products, id: \.productIdentifier) { product in
                             Button(action: {
                                 purchaseProduct(product)
                             }) {
                                 HStack {
-                                    Text("プレミアムを購入")
-                                        .fontWeight(.bold)
+                                    VStack(alignment: .leading) {
+                                        Text(product.productIdentifier.contains("monthly") ? "月額サブスクリプション" : "永久購入")
+                                            .fontWeight(.bold)
+                                        
+                                        // サブスクリプションか一時購入かによってメッセージを変更
+                                        Text(product.productIdentifier.contains("monthly") ? "月額500円で広告非表示" : "一度のお支払いで永久に広告非表示")
+                                            .font(.caption)
+                                            .foregroundColor(.gray)
+                                    }
                                     Spacer()
                                     Text(product.priceLocale.currencySymbol ?? "" + product.price.stringValue)
+                                        .fontWeight(.bold)
                                 }
                                 .padding()
                                 .frame(maxWidth: .infinity)
@@ -153,7 +172,7 @@ struct PremiumPurchaseView: View {
 }
 
 // 特典の説明用の行コンポーネント
-struct FeatureRow: View {
+struct LegacyFeatureRow: View {
     let icon: String
     let title: String
     let description: String
@@ -179,6 +198,5 @@ struct FeatureRow: View {
 struct PremiumPurchaseView_Previews: PreviewProvider {
     static var previews: some View {
         PremiumPurchaseView()
-            .environmentObject(InAppPurchaseManager.shared)
     }
 }

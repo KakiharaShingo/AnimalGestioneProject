@@ -3,6 +3,8 @@ import SwiftUI
 struct AddAnimalView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var dataStore: CoreDataStore
+    @State private var showPremiumPurchase = false
+    @State private var showLimitAlert = false
     
     @State private var name = ""
     @State private var species = ""
@@ -13,6 +15,9 @@ struct AddAnimalView: View {
     @State private var hasBirthDate = false
     @State private var image: UIImage?
     @State private var showImagePicker = false
+    
+    // 購入管理インスタンス
+    private let purchaseManager = InAppPurchaseManager.shared
     
     var body: some View {
         NavigationView {
@@ -69,13 +74,31 @@ struct AddAnimalView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("保存") {
-                        saveAnimal()
+                        // 登録制限のチェック
+                        if !purchaseManager.canRegisterMoreAnimals(currentCount: dataStore.animals.count) {
+                            showLimitAlert = true
+                        } else {
+                            saveAnimal()
+                        }
                     }
                     .disabled(name.isEmpty || species.isEmpty)
                 }
             }
             .sheet(isPresented: $showImagePicker) {
                 ImagePicker(image: $image)
+            }
+            .sheet(isPresented: $showPremiumPurchase) {
+                PremiumPurchaseView()
+            }
+            .alert(isPresented: $showLimitAlert) {
+                Alert(
+                    title: Text("登録数制限"),
+                    message: Text("無料版では\(InAppPurchaseManager.freeUserAnimalLimit)匹までしか登録できません。プレミアム版にアップグレードして制限を解除しますか？"),
+                    primaryButton: .default(Text("アップグレード")) {
+                        showPremiumPurchase = true
+                    },
+                    secondaryButton: .cancel(Text("キャンセル"))
+                )
             }
         }
     }

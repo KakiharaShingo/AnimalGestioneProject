@@ -6,6 +6,8 @@ public struct EnhancedCalendarView: View {
     @State private var monthOffset = 0
     @State private var eventsForSelectedDate: [ScheduledEvent] = []
     @State private var showingAddSchedule = false
+    @State private var selectedEventForEdit: ScheduledEvent? = nil
+    @State private var showingEditSheet = false
     
     // イニシャライザを明示的に宣言してpublicにする
     public init(selectedDate: Binding<Date>) {
@@ -181,10 +183,13 @@ public struct EnhancedCalendarView: View {
                                 
                                 // 該当動物のイベントを表示
                                 ForEach(events) { event in
-                                    EventCard(event: event)
-                                        .onTapGesture {
-                                            navigateToEventDetail(event)
-                                        }
+                                    EventCard(event: event, onDelete: {
+                                        updateEvents()
+                                    })
+                                    .onTapGesture {
+                                        selectedEventForEdit = event
+                                        showingEditSheet = true
+                                    }
                                 }
                             }
                             .padding(.bottom, 10)
@@ -210,6 +215,15 @@ public struct EnhancedCalendarView: View {
             ScheduleAddView(animalId: nil, date: selectedDate, onSave: {
                 updateEvents()
             })
+        }
+        .sheet(isPresented: $showingEditSheet, onDismiss: {
+            selectedEventForEdit = nil
+        }) {
+            if let event = selectedEventForEdit {
+                ScheduleEditView(event: event, onSave: {
+                    updateEvents()
+                })
+            }
         }
     }
     
@@ -276,10 +290,7 @@ public struct EnhancedCalendarView: View {
         eventsForSelectedDate = dataStore.scheduledEventsOn(date: selectedDate)
     }
     
-    private func navigateToEventDetail(_ event: ScheduledEvent) {
-        // タイプによって違う詳細画面に遷移
-        // 実装例: シート表示や画面遷移など
-    }
+
     
     // 日付に関連する動物の色を取得
     private func getAccentColorForDate(_ date: Date) -> Color {
@@ -302,6 +313,9 @@ public struct EnhancedCalendarView: View {
 // イベントカード表示用
 struct EventCard: View {
     let event: ScheduledEvent
+    @State private var showDeleteConfirmation = false
+    @EnvironmentObject var dataStore: CoreDataStore
+    var onDelete: (() -> Void)? = nil
     
     var body: some View {
         HStack(spacing: 12) {
@@ -334,6 +348,17 @@ struct EventCard: View {
             Text(formatTime(event.date))
                 .font(.caption)
                 .foregroundColor(.secondary)
+                
+            // 削除ボタンを追加
+            Button(action: {
+                showDeleteConfirmation = true
+            }) {
+                Image(systemName: "trash")
+                    .foregroundColor(Color.red.opacity(0.7))
+                    .font(.caption)
+                    .padding(8)
+            }
+            .buttonStyle(BorderlessButtonStyle())
         }
         .padding()
         .background(event.color.opacity(0.05))
@@ -342,6 +367,16 @@ struct EventCard: View {
             RoundedRectangle(cornerRadius: 12)
                 .stroke(event.color.opacity(0.2), lineWidth: 1)
         )
+        .alert(isPresented: $showDeleteConfirmation) {
+            Alert(
+                title: Text("予定を削除"),
+                message: Text("この予定を削除してもよろしいですか？"),
+                primaryButton: .destructive(Text("削除")) {
+                    deleteEvent()
+                },
+                secondaryButton: .cancel(Text("キャンセル"))
+            )
+        }
     }
     
     private func formatTime(_ date: Date) -> String {
@@ -356,6 +391,30 @@ struct EventCard: View {
             return "終日"
         } else {
             return formatter.string(from: date)
+        }
+    }
+    
+    private func deleteEvent() {
+        switch event.type {
+        case .vaccine(let record):
+            dataStore.deleteVaccineRecord(record)
+        case .grooming(let record):
+            dataStore.deleteGroomingRecord(record)
+        case .checkup(let record):
+            dataStore.deleteCheckupRecord(record)
+        case .medication(let record):
+            dataStore.deleteMedicationRecord(record)
+        case .other(let record):
+            dataStore.deleteOtherRecord(record)
+        case .physiologicalCycle(let cycle, _, _):
+            if let cycle = cycle {
+                dataStore.deleteCycle(id: cycle.id)
+            }
+        }
+        
+        // 削除後にイベントリストを更新するコールバックを実行
+        if let onDelete = onDelete {
+            onDelete()
         }
     }
 }
@@ -375,7 +434,8 @@ struct ScheduleAddView: View {
     @State private var scheduledDate: Date
     @State private var notes = ""
     
-    enum ScheduleType: String, CaseIterable, Identifiable {
+    // 再利用できるように列挙型をStructの外部に移動
+enum ScheduleType: String, CaseIterable, Identifiable {
         case vaccine = "ワクチン"
         case grooming = "トリミング"
         case checkup = "健康診断"

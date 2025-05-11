@@ -80,20 +80,31 @@ struct PremiumHealthCheckView: View {
                 }
                 .padding(.horizontal)
                 
-                Button(action: {
-                    // プレミアム購入画面を表示
-                    showPremiumPurchaseView()
-                }) {
-                    HStack {
-                        Image(systemName: "crown.fill")
-                        Text("プレミアムへアップグレード")
+                // プレミアム機能の表示が有効な場合のみ表示
+                if InAppPurchaseManager.showPremiumFeatures {
+                    Button(action: {
+                        // プレミアム購入画面を表示
+                        showPremiumPurchaseView()
+                    }) {
+                        HStack {
+                            Image(systemName: "crown.fill")
+                            Text("プレミアムへアップグレード")
+                        }
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding()
+                        .background(Color.yellow)
+                        .foregroundColor(.black)
+                        .cornerRadius(12)
+                        .padding(.horizontal)
                     }
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .padding()
-                    .background(Color.yellow)
-                    .foregroundColor(.black)
-                    .cornerRadius(12)
-                    .padding(.horizontal)
+                } else {
+                    Text("サポートありがとうございます")
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding()
+                        .background(Color(.systemGray5))
+                        .foregroundColor(.gray)
+                        .cornerRadius(12)
+                        .padding(.horizontal)
                 }
             }
         }

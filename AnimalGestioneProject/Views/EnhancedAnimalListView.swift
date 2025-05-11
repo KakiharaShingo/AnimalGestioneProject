@@ -4,11 +4,16 @@ struct EnhancedAnimalListView: View {
     @EnvironmentObject var dataStore: CoreDataStore
     @Binding var selectedDate: Date
     @State private var showingAddAnimal = false
+    @State private var showPremiumPurchase = false
+    @State private var showLimitAlert = false
     @State private var searchText = ""
     @State private var viewMode: ViewMode = .grid
     @State private var selectedAnimalId: UUID? = nil
     @State private var showHealthRecord = false
     @State private var refreshID = UUID() // 再描画用のID
+    
+    // 購入管理インスタンス
+    private let purchaseManager = InAppPurchaseManager.shared
     
     // 動物アイコンの設定を取得
     @AppStorage("animalIcon") private var animalIcon = "pawprint"
@@ -82,7 +87,7 @@ struct EnhancedAnimalListView: View {
                                 .padding(.horizontal)
                             
                             Button(action: {
-                                showingAddAnimal = true
+                                addAnimalWithCheck()
                             }) {
                                 Text("ペットを追加")
                                     .font(.headline)
@@ -120,6 +125,43 @@ struct EnhancedAnimalListView: View {
                                 }
                                 .padding()
                             }
+                            
+                            // プレミアム機能の案内（無料ユーザーかつ上限数に達した場合）
+                            if !purchaseManager.hasRemoveAdsPurchased() && 
+                               dataStore.animals.count >= InAppPurchaseManager.freeUserAnimalLimit {
+                                VStack(spacing: 12) {
+                                    HStack {
+                                        Image(systemName: "crown.fill")
+                                            .foregroundColor(.yellow)
+                                        Text("プレミアム機能")
+                                            .font(.headline)
+                                            .foregroundColor(.primary)
+                                    }
+                                    
+                                    Text("プレミアム版にアップグレードすると、\(InAppPurchaseManager.freeUserAnimalLimit)匹以上のペットを登録できるようになります。")
+                                        .font(.subheadline)
+                                        .foregroundColor(.secondary)
+                                        .multilineTextAlignment(.center)
+                                    
+                                    Button(action: {
+                                        showPremiumPurchase = true
+                                    }) {
+                                        Text("プレミアムにアップグレード")
+                                            .font(.headline)
+                                            .foregroundColor(.white)
+                                            .padding(.vertical, 10)
+                                            .padding(.horizontal, 20)
+                                            .background(Color.blue)
+                                            .cornerRadius(8)
+                                    }
+                                    .padding(.top, 8)
+                                }
+                                .padding()
+                                .background(Color.white)
+                                .cornerRadius(12)
+                                .shadow(color: Color.black.opacity(0.05), radius: 5, x: 0, y: 2)
+                                .padding()
+                            }
                         }
                     }
                 }
@@ -128,7 +170,7 @@ struct EnhancedAnimalListView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        showingAddAnimal = true
+                        addAnimalWithCheck()
                     } label: {
                         Image(systemName: "plus")
                             .foregroundColor(.gray)
@@ -138,9 +180,31 @@ struct EnhancedAnimalListView: View {
             .sheet(isPresented: $showingAddAnimal) {
                 AddAnimalView()
             }
+            .sheet(isPresented: $showPremiumPurchase) {
+                PremiumPurchaseView()
+            }
+            .alert(isPresented: $showLimitAlert) {
+                Alert(
+                    title: Text("登録数制限"),
+                    message: Text("無料版では\(InAppPurchaseManager.freeUserAnimalLimit)匹までしか登録できません。プレミアム版にアップグレードして制限を解除しますか？"),
+                    primaryButton: .default(Text("アップグレード")) {
+                        showPremiumPurchase = true
+                    },
+                    secondaryButton: .cancel(Text("キャンセル"))
+                )
+            }
         }
         .onAppear {
             setupNotificationObservers()
+        }
+    }
+    
+    // 動物追加時に登録上限をチェックするメソッド
+    private func addAnimalWithCheck() {
+        if !purchaseManager.canRegisterMoreAnimals(currentCount: dataStore.animals.count) {
+            showLimitAlert = true
+        } else {
+            showingAddAnimal = true
         }
     }
     

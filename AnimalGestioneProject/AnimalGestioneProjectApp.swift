@@ -1,6 +1,7 @@
 import SwiftUI
 import CoreData
 import GoogleMobileAds
+import UIKit
 
 @main
 struct AnimalGestioneProjectApp: App {
@@ -14,6 +15,7 @@ struct AnimalGestioneProjectApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     @State private var showSplash = true // スプラッシュ画面表示管理
+    @State private var showPrivacyConsent = false // プライバシーポリシー同意画面表示管理
     
     var body: some Scene {
         WindowGroup {
@@ -23,12 +25,25 @@ struct AnimalGestioneProjectApp: App {
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
                     .environmentObject(dataStore)
                     // ダークモードをサポートするため、明示的な色指定を削除
+                    .blur(radius: showPrivacyConsent ? 5 : 0) // プライバシーポリシー表示時にぼかす
+                    .disabled(showPrivacyConsent) // プライバシーポリシー表示時に操作を無効化
                 
                 // スプラッシュ画面（条件付きで表示）
                 if showSplash {
                     SplashScreen(showSplash: $showSplash)
                         .transition(.opacity)
                         .zIndex(1)
+                        .onDisappear {
+                            // スプラッシュ画面の後に必要に応じてプライバシーポリシー同意画面を表示
+                            checkPrivacyPolicyConsent()
+                        }
+                }
+                
+                // プライバシーポリシー同意画面（必要な場合に表示）
+                if showPrivacyConsent {
+                    SimplePrivacyConsentView(showConsentView: $showPrivacyConsent)
+                        .transition(AnyTransition.opacity)
+                        .zIndex(2)
                 }
             }
             .onAppear {
@@ -68,6 +83,21 @@ struct AnimalGestioneProjectApp: App {
         // 動物アイコン（デフォルトは肉球）
         if defaults.string(forKey: "animalIcon") == nil {
             defaults.set("pawprint", forKey: "animalIcon")
+        }
+    }
+    
+    // プライバシーポリシー同意状態を確認
+    private func checkPrivacyPolicyConsent() {
+        let defaults = UserDefaults.standard
+        
+        // プライバシーポリシーに同意済みかチェック
+        let hasAgreedToPrivacyPolicy = defaults.bool(forKey: "privacyPolicyAccepted")
+        
+        if !hasAgreedToPrivacyPolicy {
+            // 同意していなければ同意画面を表示
+            DispatchQueue.main.async {
+                self.showPrivacyConsent = true
+            }
         }
     }
 }

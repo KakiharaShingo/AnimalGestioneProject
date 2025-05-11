@@ -9,6 +9,7 @@ struct VaccineRecord: Identifiable, Codable {
     var interval: Int? // 日数単位での接種間隔
     var notes: String?
     var color: Color?
+    var isCompleted: Bool = false
     
     var scheduledDate: Date {
         return nextScheduledDate ?? Date()
@@ -16,10 +17,10 @@ struct VaccineRecord: Identifiable, Codable {
     
     // ColorはCodableに準拠していないため、カスタムエンコーディングが必要
     enum CodingKeys: String, CodingKey {
-        case id, animalId, date, vaccineName, nextScheduledDate, interval, notes, colorHex
+        case id, animalId, date, vaccineName, nextScheduledDate, interval, notes, colorHex, isCompleted
     }
     
-    init(id: UUID, animalId: UUID, date: Date, vaccineName: String, nextScheduledDate: Date? = nil, interval: Int? = nil, notes: String? = nil, color: Color? = nil) {
+    init(id: UUID, animalId: UUID, date: Date, vaccineName: String, nextScheduledDate: Date? = nil, interval: Int? = nil, notes: String? = nil, color: Color? = nil, isCompleted: Bool = false) {
         self.id = id
         self.animalId = animalId
         self.date = date
@@ -28,6 +29,7 @@ struct VaccineRecord: Identifiable, Codable {
         self.interval = interval
         self.notes = notes
         self.color = color
+        self.isCompleted = isCompleted
     }
     
     init(from decoder: Decoder) throws {
@@ -39,6 +41,7 @@ struct VaccineRecord: Identifiable, Codable {
         nextScheduledDate = try container.decodeIfPresent(Date.self, forKey: .nextScheduledDate)
         interval = try container.decodeIfPresent(Int.self, forKey: .interval)
         notes = try container.decodeIfPresent(String.self, forKey: .notes)
+        isCompleted = try container.decodeIfPresent(Bool.self, forKey: .isCompleted) ?? false
         
         if let colorHex = try container.decodeIfPresent(String.self, forKey: .colorHex) {
             color = Color(hex: colorHex)
@@ -56,6 +59,7 @@ struct VaccineRecord: Identifiable, Codable {
         try container.encodeIfPresent(nextScheduledDate, forKey: .nextScheduledDate)
         try container.encodeIfPresent(interval, forKey: .interval)
         try container.encodeIfPresent(notes, forKey: .notes)
+        try container.encode(isCompleted, forKey: .isCompleted)
         
         if let color = color {
             try container.encode(color.toHex(), forKey: .colorHex)

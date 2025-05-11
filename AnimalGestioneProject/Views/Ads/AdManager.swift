@@ -1,7 +1,9 @@
 import SwiftUI
 import GoogleMobileAds
+import StoreKit
 
 /// アプリ全体の広告表示を管理するシングルトンクラス
+@MainActor // MainActor注釈を追加
 class AdManager: ObservableObject {
     static let shared = AdManager()
     
@@ -9,7 +11,7 @@ class AdManager: ObservableObject {
     @Published var interstitialAdManager: InterstitialAdManager
     @Published var rewardedAdManager: RewardedAdManager
     
-    // アプリ内課金マネージャー
+    // アプリ内課金マネージャー（後方互換性のために古いクラスも維持）
     @Published var purchaseManager = InAppPurchaseManager.shared
     
     // 広告表示のカウンター
@@ -29,8 +31,13 @@ class AdManager: ObservableObject {
         GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = AdConfig.testDeviceIds
     }
     
-    // 広告を表示するべきかどうかを判断（広告削除購入済みの場合は表示しない）
+    // 広告を表示するべきかどうかを判断
     func shouldShowAds() -> Bool {
+        // プレミアム機能が非表示の場合は広告の表示/非表示の判定もデバッグフラグだけで行う
+        if !InAppPurchaseManager.showPremiumFeatures {
+            return !purchaseManager.debugPremiumEnabled
+        }
+        // プレミアム機能が表示されている場合は通常の購入確認を使用
         return !purchaseManager.hasRemoveAdsPurchased()
     }
     

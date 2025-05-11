@@ -1,185 +1,160 @@
 import Foundation
 import StoreKit
 
-/// アプリ内課金を管理するクラス
+/// アプリ内課金を管理するクラス（StoreKit 2をラップしてレガシーコードとの互換性を提供）
+@MainActor  // MainActor注釈を追加
 class InAppPurchaseManager: NSObject, ObservableObject {
     static let shared = InAppPurchaseManager()
     
-    // 利用可能な商品のID
-    let removeAdsProductID = "com.yourdomain.animalgestione.removeads"
+    // StoreKit 2 マネージャー
+    private let subscriptionManager = SubscriptionManager.shared
     
+    // デバッグモード用設定（StoreKit 2マネージャーから移譲）
+    var debugPremiumEnabled: Bool {
+        get { return subscriptionManager.debugPremiumEnabled }
+        set { subscriptionManager.debugPremiumEnabled = newValue }
+    }
+    
+    // 購入履歴をクリア
+    func clearPurchases() {
+        purchasedProducts.removeAll()
+        // SubscriptionManagerにも委託
+        subscriptionManager.clearPurchasedProducts()
+        objectWillChange.send()
+    }
+    
+    // プレミアム機能の表示/非表示を管理するフラグ
+    static let showPremiumFeatures = SubscriptionManager.showPremiumFeatures
+    
+    // 利用可能な商品のID（StoreKit 2で使用している新しいIDにマッピング）
+    let monthlySubscriptionID = "com.yourdomain.animalgestione.premium_monthly"
+    let removeAdsProductID = "com.yourdomain.animalgestione.premium_lifetime"
+    
+    // 互換性のためのダミー変数
     @Published var products: [SKProduct] = []
     @Published var purchasedProducts: [String] = []
     @Published var isLoading = false
     
-    private var productRequest: SKProductsRequest?
     private var completionHandler: ((Result<Bool, Error>) -> Void)?
     
     override init() {
         super.init()
-        
-        // トランザクションオブザーバーを設定
-        SKPaymentQueue.default().add(self)
-        
-        // 過去の購入を復元
-        loadPurchasedProducts()
+        // 古いStoreKit 1の初期化コードは削除し、StoreKit 2を使用
     }
     
-    // 過去の購入を読み込む
-    private func loadPurchasedProducts() {
-        if let savedProducts = UserDefaults.standard.array(forKey: "PurchasedProducts") as? [String] {
-            purchasedProducts = savedProducts
-        }
-    }
-    
-    // 購入を保存する
-    private func savePurchasedProducts() {
-        UserDefaults.standard.set(purchasedProducts, forKey: "PurchasedProducts")
-    }
-    
-    // 製品情報をリクエスト
+    // 製品情報をリクエスト（StoreKit 2で実装）
     func requestProducts() {
         isLoading = true
-        let productIDs = Set([removeAdsProductID])
-        productRequest = SKProductsRequest(productIdentifiers: productIDs)
-        productRequest?.delegate = self
-        productRequest?.start()
-    }
-    
-    // 購入を開始
-    func purchase(product: SKProduct, completion: @escaping (Result<Bool, Error>) -> Void) {
-        guard SKPaymentQueue.canMakePayments() else {
-            completion(.failure(NSError(domain: "InAppPurchase", code: 0, userInfo: [NSLocalizedDescriptionKey: "このデバイスでは購入できません"])))
-            return
-        }
         
-        self.completionHandler = completion
-        let payment = SKPayment(product: product)
-        SKPaymentQueue.default().add(payment)
+        // StoreKit 2を使用して商品情報を取得
+        Task {
+            await subscriptionManager.loadProducts()
+            // 互換性のためダミーの完了通知
+            DispatchQueue.main.async { [weak self] in
+                self?.isLoading = false
+            }
+        }
     }
     
-    // 過去の購入を復元
+    // 購入を開始（StoreKit 2で実装）
+    func purchase(product: SKProduct, completion: @escaping (Result<Bool, Error>) -> Void) {
+        self.completionHandler = completion
+        
+        // StoreKit 2の実装にリダイレクト
+        // 旧式のSKProductは使用せず、ID文字列に基づいてStoreKit 2の商品を探す
+        Task {
+            do {
+                if let storeKitProduct = subscriptionManager.products.first(where: { $0.id == product.productIdentifier }) {
+                    let transaction = try await subscriptionManager.purchase(storeKitProduct)
+                    DispatchQueue.main.async {
+                        completion(.success(transaction != nil))
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        completion(.failure(NSError(domain: "InAppPurchase", code: 1, userInfo: [NSLocalizedDescriptionKey: "製品が見つかりませんでした"])))
+                    }
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+        }
+    }
+    
+    // 過去の購入を復元（StoreKit 2で実装）
     func restorePurchases(completion: @escaping (Result<Bool, Error>) -> Void) {
         self.completionHandler = completion
-        SKPaymentQueue.default().restoreCompletedTransactions()
+        
+        // StoreKit 2の実装にリダイレクト
+        Task {
+            do {
+                try await subscriptionManager.restorePurchases()
+                
+                // 復元後にプレミアムステータス通知を送信
+                DispatchQueue.main.async {
+                    NotificationCenter.default.post(name: NSNotification.Name("PremiumStatusChanged"), object: nil)
+                    self.objectWillChange.send()
+                    completion(.success(true))
+                }
+            } catch {
+                DispatchQueue.main.async {
+                    completion(.failure(error))
+                }
+            }
+        }
     }
     
-    // 広告削除オプションを購入しているかどうか
+    // 広告削除オプションを購入しているかどうか（StoreKit 2を使用）
     func hasRemoveAdsPurchased() -> Bool {
-        return purchasedProducts.contains(removeAdsProductID)
+        // ディレクトにSubscriptionManagerに委譲
+        return subscriptionManager.hasRemoveAdsPurchased()
+    }
+    
+    // 無料版の動物登録数上限
+    static let freeUserAnimalLimit = 3
+    
+    // 動物登録数の上限を超えて登録できるかどうか（StoreKit 2を使用）
+    func canRegisterMoreAnimals(currentCount: Int) -> Bool {
+        // ディレクトにSubscriptionManagerに委譲
+        return subscriptionManager.canRegisterMoreAnimals(currentCount: currentCount)
+    }
+    
+    // サブスクリプションがアクティブかどうかをチェック（StoreKit 2を使用）
+    func hasActiveSubscription() -> Bool {
+        // ディレクトにSubscriptionManagerに委譲
+        return subscriptionManager.hasActiveSubscription
+    }
+    
+    // サブスクリプションの有効期限を設定（互換性のため残す）
+    func setSubscriptionExpiryDate(date: Date) {
+        // StoreKit 2では必要ないが、互換性のために通知だけ出す
+        NotificationCenter.default.post(name: Notification.Name("SubscriptionStatusChanged"), object: nil)
     }
 }
 
-// SKProductsRequestDelegateプロトコルの実装
+// 下位互換性のためのダミー実装（StoreKit 2では不要）
 extension InAppPurchaseManager: SKProductsRequestDelegate {
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        DispatchQueue.main.async { [weak self] in
-            self?.products = response.products
-            self?.isLoading = false
-            
-            if !response.invalidProductIdentifiers.isEmpty {
-                print("無効な製品ID: \(response.invalidProductIdentifiers)")
-            }
-        }
+        // 何もしない（StoreKit 2を使用）
     }
     
     func request(_ request: SKRequest, didFailWithError error: Error) {
-        DispatchQueue.main.async { [weak self] in
-            self?.isLoading = false
-            print("製品リクエストに失敗しました: \(error.localizedDescription)")
-        }
+        // 何もしない（StoreKit 2を使用）
     }
 }
 
-// SKPaymentTransactionObserverプロトコルの実装
+// 下位互換性のためのダミー実装（StoreKit 2では不要）
 extension InAppPurchaseManager: SKPaymentTransactionObserver {
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        for transaction in transactions {
-            switch transaction.transactionState {
-            case .purchased:
-                handlePurchasedTransaction(transaction)
-            case .restored:
-                handleRestoredTransaction(transaction)
-            case .failed:
-                handleFailedTransaction(transaction)
-            case .deferred, .purchasing:
-                // これらの状態は特に何もする必要がありません
-                break
-            @unknown default:
-                break
-            }
-        }
-    }
-    
-    private func handlePurchasedTransaction(_ transaction: SKPaymentTransaction) {
-        let productID = transaction.payment.productIdentifier
-        
-        // 購入リストに追加
-        if !purchasedProducts.contains(productID) {
-            purchasedProducts.append(productID)
-            savePurchasedProducts()
-        }
-        
-        // トランザクションを完了としてマーク
-        SKPaymentQueue.default().finishTransaction(transaction)
-        
-        // 完了ハンドラーを呼び出す
-        DispatchQueue.main.async { [weak self] in
-            self?.completionHandler?(.success(true))
-            self?.completionHandler = nil
-        }
-    }
-    
-    private func handleRestoredTransaction(_ transaction: SKPaymentTransaction) {
-        if let productID = transaction.original?.payment.productIdentifier {
-            // 購入リストに追加
-            if !purchasedProducts.contains(productID) {
-                purchasedProducts.append(productID)
-                savePurchasedProducts()
-            }
-        }
-        
-        // トランザクションを完了としてマーク
-        SKPaymentQueue.default().finishTransaction(transaction)
-        
-        // 完了ハンドラーを呼び出す
-        DispatchQueue.main.async { [weak self] in
-            self?.completionHandler?(.success(true))
-            self?.completionHandler = nil
-        }
-    }
-    
-    private func handleFailedTransaction(_ transaction: SKPaymentTransaction) {
-        // エラーがあればログに出力
-        if let error = transaction.error {
-            print("トランザクションに失敗しました: \(error.localizedDescription)")
-        }
-        
-        // トランザクションを完了としてマーク
-        SKPaymentQueue.default().finishTransaction(transaction)
-        
-        // 完了ハンドラーを呼び出す
-        DispatchQueue.main.async { [weak self] in
-            if let error = transaction.error {
-                self?.completionHandler?(.failure(error))
-            } else {
-                self?.completionHandler?(.failure(NSError(domain: "InAppPurchase", code: 0, userInfo: [NSLocalizedDescriptionKey: "購入に失敗しました"])))
-            }
-            self?.completionHandler = nil
-        }
+        // 何もしない（StoreKit 2を使用）
     }
     
     func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
-        DispatchQueue.main.async { [weak self] in
-            self?.completionHandler?(.success(true))
-            self?.completionHandler = nil
-        }
+        // 何もしない（StoreKit 2を使用）
     }
     
     func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
-        DispatchQueue.main.async { [weak self] in
-            self?.completionHandler?(.failure(error))
-            self?.completionHandler = nil
-        }
+        // 何もしない（StoreKit 2を使用）
     }
 }

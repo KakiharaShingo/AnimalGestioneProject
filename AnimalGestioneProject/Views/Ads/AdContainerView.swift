@@ -5,6 +5,9 @@ struct AdContainerView: View {
     @ObservedObject private var adManager = AdManager.shared
     @ObservedObject private var purchaseManager = InAppPurchaseManager.shared
     
+    // 自分自身の更新用トリガー
+    @State private var updateTrigger = UUID()
+    
     // 固定の広告高さ
     let adHeight: CGFloat = 50
     // メニューからの余白
@@ -26,6 +29,7 @@ struct AdContainerView: View {
                 // 広告を表示
                 VStack(spacing: 0) {
                     Spacer()
+                    
                     BannerAdView(adUnitID: AdConfig.bannerAdUnitId)
                         .frame(height: adHeight)
                         .transition(.opacity)
@@ -33,11 +37,22 @@ struct AdContainerView: View {
                 }
                 .padding(.bottom, menuPadding) // メニューが隔やらないように下部に余白を追加
             } else {
-                // スペースなし（0の高さ）
+                // プレミアムユーザーの場合は表示なし
                 EmptyView()
                     .frame(height: 0)
             }
         }
+        // プレミアムステータスが変更されたときに再読み込み
+        .onChange(of: purchaseManager.debugPremiumEnabled) { _ in
+            // ビューを強制更新
+            updateTrigger = UUID()
+        }
+        .onReceive(NotificationCenter.default.publisher(for: NSNotification.Name("PremiumStatusChanged"))) { _ in
+            // ビューを強制更新
+            updateTrigger = UUID()
+        }
+        // 下記のモディファイアは実際には表示されませんが、ステートの変更をビューに伝えるために必要です
+        .id(updateTrigger)
     }
 }
 

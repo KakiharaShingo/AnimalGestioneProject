@@ -13,6 +13,8 @@ struct AnimalDetailView: View {
     @State private var showingGroomingRecord = false
     @State private var showingColorPicker = false
     @State private var selectedColor: Color
+    @State private var showingDeleteConfirmation = false
+    @Environment(\.presentationMode) var presentationMode
     
     // タブアイコンの設定を取得
     @AppStorage("animalIcon") private var animalIcon = "pawprint"
@@ -270,6 +272,24 @@ struct AnimalDetailView: View {
                     }
                     .padding(.vertical)
                 }
+                
+                // 削除ボタン
+                GroupBox {
+                    Button(action: {
+                        showingDeleteConfirmation = true
+                    }) {
+                        HStack {
+                            Spacer()
+                            Image(systemName: "trash")
+                                .foregroundColor(.red)
+                            Text("このペットを削除")
+                                .foregroundColor(.red)
+                            Spacer()
+                        }
+                        .padding(.vertical, 12)
+                    }
+                }
+                .padding(.top, 20)
             }
             .padding()
         }
@@ -349,6 +369,24 @@ struct AnimalDetailView: View {
                 Spacer()
             }
             .padding()
+        }
+        .alert(isPresented: $showingDeleteConfirmation) {
+            Alert(
+                title: Text("ペットを削除"),
+                message: Text("\(animal.name)を削除しますか？この操作は取り消せません。関連するすべての記録も削除されます。"),
+                primaryButton: .destructive(Text("削除")) {
+                    // 削除処理
+                    dataStore.deleteAnimal(id: animal.id)
+                    // 前の画面に戻る
+                    presentationMode.wrappedValue.dismiss()
+                    // 削除完了の通知
+                    NotificationCenter.default.post(
+                        name: NSNotification.Name("AnimalDeleted"),
+                        object: animal.id
+                    )
+                },
+                secondaryButton: .cancel(Text("キャンセル"))
+            )
         }
     }
     

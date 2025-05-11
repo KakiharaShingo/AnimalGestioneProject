@@ -332,8 +332,15 @@ class DataExportImportManager: ObservableObject {
     
     // バックアップファイルの削除
     func deleteBackup(url: URL) -> Bool {
+        // ファイルが存在するか確認
+        guard FileManager.default.fileExists(atPath: url.path) else {
+            print("バックアップファイルが存在しません: \(url.path)")
+            return false
+        }
+        
         do {
             try FileManager.default.removeItem(at: url)
+            print("バックアップファイルを削除しました: \(url.lastPathComponent)")
             return true
         } catch {
             print("バックアップ削除エラー: \(error.localizedDescription)")

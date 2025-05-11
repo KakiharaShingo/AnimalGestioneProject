@@ -1,8 +1,8 @@
-// カスタムビューのインポート
 import SwiftUI
 import CoreData
 import GoogleMobileAds
 import UserNotifications
+import StoreKit
 
 // データ管理用のビューをインポート
 import AnimalGestioneProject
@@ -361,6 +361,8 @@ struct SettingsView: View {
     @ObservedObject private var adManager = AdManager.shared
     @State private var showingPremiumView = false
     @State private var showingDataManagementView = false
+    @State private var showingPrivacyPolicy = false
+    @State private var showingSupportView = false
     @State private var showingCSVExportView = false
     @State private var showingNotificationSettings = false
     
@@ -471,42 +473,86 @@ struct SettingsView: View {
                             .foregroundColor(.secondary)
                     }
                     
-                    Link(destination: URL(string: "https://example.com/support")!) {
+                    Button(action: {
+                        showingSupportView = true
+                    }) {
                         Label("サポート", systemImage: "questionmark.circle")
                     }
                     
-                    Link(destination: URL(string: "https://example.com/privacy")!) {
+                    Button(action: {
+                        showingPrivacyPolicy = true
+                    }) {
                         Label("プライバシーポリシー", systemImage: "hand.raised")
                     }
                 }
                 
                 Section(header: Text("広告")) {
-                    if purchaseManager.hasRemoveAdsPurchased() {
-                        HStack {
-                            Text("プレミアムユーザー")
-                            Spacer()
-                            Image(systemName: "crown.fill")
-                                .foregroundColor(.yellow)
+                    // 現在のプレミアムステータスを表示
+                    HStack {
+                        Text("ステータス")
+                        Spacer()
+                        if purchaseManager.hasRemoveAdsPurchased() {
+                            HStack(spacing: 4) {
+                                Image(systemName: "crown.fill")
+                                    .foregroundColor(.yellow)
+                                    .font(.caption)
+                                Text("プレミアム")
+                                    .foregroundColor(.yellow)
+                                    .font(.caption.bold())
+                            }
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(Color.yellow.opacity(0.2))
+                            .cornerRadius(8)
+                        } else if purchaseManager.debugPremiumEnabled {
+                            HStack(spacing: 4) {
+                                Image(systemName: "ladybug.fill")
+                                    .foregroundColor(.green)
+                                    .font(.caption)
+                                Text("デバッグモード")
+                                    .foregroundColor(.green)
+                                    .font(.caption.bold())
+                            }
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(Color.green.opacity(0.2))
+                            .cornerRadius(8)
+                        } else {
+                            Text("無料版")
+                                .foregroundColor(.gray)
+                                .font(.caption.bold())
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 4)
+                                .background(Color.gray.opacity(0.2))
+                                .cornerRadius(8)
                         }
-                        
+                    }
+                    
+                    if purchaseManager.hasRemoveAdsPurchased() || purchaseManager.debugPremiumEnabled {
                         Text("広告は表示されません")
                             .font(.caption)
                             .foregroundColor(.secondary)
                     } else {
-                        Button(action: {
-                            showingPremiumView = true
-                        }) {
-                            HStack {
-                                Text("広告を非表示にする")
-                                Spacer()
-                                Text("プレミアムにアップグレード")
-                                    .font(.caption)
-                                    .padding(.horizontal, 8)
-                                    .padding(.vertical, 4)
-                                    .background(Color.yellow)
-                                    .foregroundColor(.black)
-                                    .cornerRadius(8)
+                        // プレミアム機能の表示フラグがオンの場合のみ購入ボタンを表示
+                        if InAppPurchaseManager.showPremiumFeatures {
+                            Button(action: {
+                                showingPremiumView = true
+                            }) {
+                                HStack {
+                                    Text("広告を非表示にする")
+                                    Spacer()
+                                    Text("プレミアムにアップグレード")
+                                        .font(.caption)
+                                        .padding(.horizontal, 8)
+                                        .padding(.vertical, 4)
+                                        .background(Color.yellow)
+                                        .foregroundColor(.black)
+                                        .cornerRadius(8)
+                                }
                             }
+                        } else {
+                            Text("広告はアプリの実行をサポートしています")
+                                .font(.caption)
                         }
                         
                         Text("このアプリは広告によって支援されています")
@@ -520,21 +566,81 @@ struct SettingsView: View {
                     }
                 }
                 
-                Section {
-                    Button(action: {
-                        // ログアウト機能（未実装）
-                    }) {
-                        Text("ログアウト")
-                            .foregroundColor(.red)
+                // デバッグセクション
+                #if DEBUG
+                // プレミアム機能の表示フラグがtrueの場合のみ表示
+                if InAppPurchaseManager.showPremiumFeatures {
+                    Section(header: Text("デバッグ設定")) {
+                        Toggle("プレミアムモード", isOn: $purchaseManager.debugPremiumEnabled)
+                            .toggleStyle(SwitchToggleStyle(tint: .green))
+                            .onChange(of: purchaseManager.debugPremiumEnabled) { newValue in
+                                print("デバッグプレミアムモード: \(newValue)")
+                                // 通知を手動で送信
+                                NotificationCenter.default.post(name: NSNotification.Name("PremiumStatusChanged"), object: nil)
+                                // UIを即時更新
+                                self.updateUI()
+                            }
+                        
+                        if purchaseManager.debugPremiumEnabled {
+                            Text("デバッグ用のプレミアムモードが有効です")
+                                .font(.caption)
+                                .foregroundColor(.green)
+                        }
+                        
+                        // 購入のリセットボタンを追加
+                        Button(action: {
+                            // iOS 15以上のみでサポート
+                            if #available(iOS 15.0, *) {
+                                Task {
+                                    await resetPurchases()
+                                }
+                            }
+                        }) {
+                            HStack {
+                                Image(systemName: "trash")
+                                    .foregroundColor(.red)
+                                    .font(.caption)
+                                Text("サブスクリプション購入をリセット")
+                                    .foregroundColor(.red)
+                            }
+                        }
+                    }
+                    .onAppear {
+                        // 画面が表示されたときに通知を購読
+                        setupPremiumNotifications()
+                    }
+                    .onDisappear {
+                        // 画面が非表示されたときに購読を解除
+                        NotificationCenter.default.removeObserver(self)
                     }
                 }
+                #endif
+
             }
             .navigationTitle("設定")
             .listStyle(InsetGroupedListStyle())
         }
         .sheet(isPresented: $showingPremiumView) {
-            PremiumPurchaseView()
-                .environmentObject(purchaseManager)
+            // プレミアム機能の表示フラグがオンの場合のみ表示
+            if InAppPurchaseManager.showPremiumFeatures {
+                // 新しいStoreKit 2に基づく購入画面を表示
+                PremiumSubscriptionView()
+            } else {
+                // プレミアム機能が無効な場合は単純なメッセージを表示
+                VStack(spacing: 20) {
+                    Text("この機能は現在利用できません")
+                        .font(.headline)
+                    
+                    Button("閉じる") {
+                        showingPremiumView = false
+                    }
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                }
+                .padding()
+            }
         }
         .sheet(isPresented: $showingNotificationSettings) {
             NavigationView {
@@ -603,11 +709,85 @@ struct SettingsView: View {
         .sheet(isPresented: $showingCSVExportView) {
             AnimalGestioneProject.CSVExportView()
         }
+        // プライバシーポリシービューを表示
+        .sheet(isPresented: $showingPrivacyPolicy) {
+            NavigationView {
+                PrivacyPolicyView()
+            }
+        }
+        // サポートビューを表示
+        .sheet(isPresented: $showingSupportView) {
+            NavigationView {
+                SupportView()
+            }
+        }
         .onAppear {
             // 通知の権限状態を確認
             UNUserNotificationCenter.current().getNotificationSettings { settings in
                 print("通知設定状態: \(settings.authorizationStatus.rawValue)")
             }
+        }
+    }
+    
+    // プレミアムステータス変更の通知設定
+    private func setupPremiumNotifications() {
+        // プレミアムステータス変更通知を購読
+        NotificationCenter.default.addObserver(
+            forName: NSNotification.Name("PremiumStatusChanged"),
+            object: nil,
+            queue: .main
+        ) { _ in
+            // 即座に画面をリロードする
+            self.updateUI()
+        }
+        
+        // プレミアム購入完了通知を購読
+        NotificationCenter.default.addObserver(
+            forName: NSNotification.Name("PremiumPurchaseCompleted"),
+            object: nil,
+            queue: .main
+        ) { _ in
+            // プレミアムビューを閉じて画面を更新
+            self.showingPremiumView = false
+            self.updateUI()
+        }
+    }
+    
+    // UI更新用メソッド
+    private func updateUI() {
+        // 強制的にビューを再描画させるためのState変更を追加
+        @State var refreshTrigger = UUID()
+        refreshTrigger = UUID()
+        // ビューを再描画する別の方法でUI更新を行う
+        DispatchQueue.main.async {
+            // ViewをRefreshする
+            self.purchaseManager.objectWillChange.send()
+            // 広告状態も更新
+            AdManager.shared.objectWillChange.send()
+        }
+    }
+    
+    // サブスクリプション購入をリセットする関数
+    @available(iOS 15.0, *)
+    private func resetPurchases() async {
+        // InAppPurchaseManagerのクリアメソッドを利用
+        purchaseManager.clearPurchases()
+        
+        // UserDefaultsに保存された可能性のある購入情報もクリア
+        UserDefaults.standard.removeObject(forKey: "purchasedProductIDs")
+        UserDefaults.standard.removeObject(forKey: "purchaseReceipt")
+        UserDefaults.standard.removeObject(forKey: "subscriptionExpiryDate")
+        UserDefaults.standard.synchronize()
+        
+        // 詳細なログを出力
+        print("サブスクリプション情報をリセットしました")
+        
+        // UIを即時更新
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: NSNotification.Name("PremiumStatusChanged"), object: nil)
+            AdManager.shared.objectWillChange.send()
+            self.purchaseManager.objectWillChange.send()
+            self.updateUI()
         }
     }
 }

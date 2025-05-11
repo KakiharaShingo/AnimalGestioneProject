@@ -297,7 +297,7 @@ extension CoreDataStore {
                         animalName: animal.name,
                         date: calendar.isDate(vaccine.date, inSameDayAs: date) ? vaccine.date : vaccine.nextScheduledDate!,
                         type: eventType,
-                        title: "\(animal.name)の\(vaccine.vaccineName)接種"
+                        title: vaccine.vaccineName
                     )
                     events.append(event)
                 }
@@ -320,7 +320,7 @@ extension CoreDataStore {
                         animalName: animal.name,
                         date: calendar.isDate(grooming.date, inSameDayAs: date) ? grooming.date : grooming.nextScheduledDate!,
                         type: eventType,
-                        title: "\(animal.name)の\(groomingTypeStr)"
+                        title: groomingTypeStr
                     )
                     events.append(event)
                 }
@@ -342,7 +342,7 @@ extension CoreDataStore {
                         animalName: animal.name,
                         date: calendar.isDate(checkup.date, inSameDayAs: date) ? checkup.date : checkup.nextScheduledDate!,
                         type: eventType,
-                        title: "\(animal.name)の\(checkup.checkupType)"
+                        title: checkup.checkupType
                     )
                     events.append(event)
                 }
@@ -364,7 +364,7 @@ extension CoreDataStore {
                         animalName: animal.name,
                         date: calendar.isDate(medication.date, inSameDayAs: date) ? medication.date : medication.nextScheduledDate!,
                         type: eventType,
-                        title: "\(animal.name)の\(medication.medicationName)投与"
+                        title: medication.medicationName
                     )
                     events.append(event)
                 }
@@ -386,7 +386,7 @@ extension CoreDataStore {
                         animalName: animal.name,
                         date: calendar.isDate(other.date, inSameDayAs: date) ? other.date : other.nextScheduledDate!,
                         type: eventType,
-                        title: "\(animal.name)の\(other.title)"
+                        title: other.title
                     )
                     events.append(event)
                 }
@@ -398,7 +398,7 @@ extension CoreDataStore {
         for (animal, cycle) in cycleEvents {
             let isForecast = cycle == nil
             let eventType = EventType.physiologicalCycle(cycle, isForecast: isForecast, animalColor: animal.color)
-            let title = isForecast ? "\(animal.name)の生理予測" : "\(animal.name)の生理周期"
+            let title = isForecast ? "生理周期予測" : "生理周期"
             
             let event = ScheduledEvent(
                 id: UUID(),

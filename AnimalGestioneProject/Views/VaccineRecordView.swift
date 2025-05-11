@@ -78,11 +78,21 @@ struct VaccineRecordView: View {
                                 
                                 Spacer()
                                 
-                                Button("完了") {
-                                    markAsCompleted(nextVaccine)
+                                if !nextVaccine.isCompleted {
+                                    Button("完了") {
+                                        markAsCompleted(nextVaccine)
+                                    }
+                                    .buttonStyle(BorderedButtonStyle())
+                                    .font(.caption)
+                                } else {
+                                    Text("完了済み")
+                                        .font(.caption)
+                                        .foregroundColor(.gray)
+                                        .padding(.horizontal, 10)
+                                        .padding(.vertical, 5)
+                                        .background(Color(.systemGray5))
+                                        .cornerRadius(5)
                                 }
-                                .buttonStyle(BorderedButtonStyle())
-                                .font(.caption)
                             }
                         }
                         .padding(.vertical, 4)
@@ -217,11 +227,16 @@ struct VaccineRecordView: View {
             return allRecords
         case .upcoming:
             return allRecords.filter { record in
+                // 次回予定があり、未完了で、日付が今日以降
                 guard let nextDate = record.nextScheduledDate else { return false }
-                return nextDate >= Date()
+                return !record.isCompleted && nextDate >= Date()
             }
         case .past:
             return allRecords.filter { record in
+                // 完了済みまたは日付が過去
+                if record.isCompleted {
+                    return true
+                }
                 if let nextDate = record.nextScheduledDate {
                     return nextDate < Date()
                 }
@@ -231,21 +246,27 @@ struct VaccineRecordView: View {
     }
     
     private func markAsCompleted(_ vaccine: VaccineRecord) {
-        // 完了としてマークする（現在の日付で新しい記録を作成）
-        let newRecord = VaccineRecord(
-            id: UUID(),
-            animalId: animalId,
-            date: Date(),
-            vaccineName: vaccine.vaccineName,
-            nextScheduledDate: calculateNextDate(from: Date(), interval: vaccine.interval ?? 365),
-            interval: vaccine.interval,
-            notes: "前回の予定を完了としてマーク"
-        )
+        // 元の記録を完了済みに更新
+        var updatedVaccine = vaccine
+        updatedVaccine.isCompleted = true
+        dataStore.updateVaccineRecord(updatedVaccine)
         
-        dataStore.addVaccineRecord(newRecord)
-        
-        // 元の予定を削除する場合もあり
-        // dataStore.deleteVaccineRecord(vaccine)
+        // 次回予定がある場合は新しい記録を作成
+        if let interval = vaccine.interval, interval > 0 {
+            let newDate = calculateNextDate(from: Date(), interval: interval)
+            let newRecord = VaccineRecord(
+                id: UUID(),
+                animalId: animalId,
+                date: Date(),
+                vaccineName: vaccine.vaccineName,
+                nextScheduledDate: newDate,
+                interval: interval,
+                notes: "前回の予定から自動生成された次回予定",
+                isCompleted: false
+            )
+            
+            dataStore.addVaccineRecord(newRecord)
+        }
     }
     
     private func calculateNextDate(from date: Date, interval: Int) -> Date {
