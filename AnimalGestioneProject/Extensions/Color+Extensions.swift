@@ -23,6 +23,7 @@ extension Color {
         })
     }
     
+    // 16進数カラーコードからColorを初期化するイニシャライザ
     init(hex: String) {
         let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
         var int: UInt64 = 0
@@ -48,16 +49,21 @@ extension Color {
         )
     }
     
+    // ColorをHex文字列に変換するメソッド
     func toHex() -> String {
-        let components = UIColor(self).cgColor.components
-        let r: CGFloat = components?[0] ?? 0.0
-        let g: CGFloat = components?[1] ?? 0.0
-        let b: CGFloat = components?[2] ?? 0.0
-
-        let hexString = String.init(format: "#%02lX%02lX%02lX",
-                                    lroundf(Float(r * 255)),
-                                    lroundf(Float(g * 255)),
-                                    lroundf(Float(b * 255)))
-        return hexString
+        guard let components = UIColor(self).cgColor.components, components.count >= 3 else {
+            return "000000"
+        }
+        
+        let r = Float(components[0])
+        let g = Float(components[1])
+        let b = Float(components[2])
+        
+        return String(
+            format: "%02lX%02lX%02lX",
+            lroundf(r * 255),
+            lroundf(g * 255),
+            lroundf(b * 255)
+        )
     }
 }

@@ -1,5 +1,9 @@
 import SwiftUI
 
+// このビューは利用されません - 削除予定
+// 一時的にコンパイルエラーを回避するためにコメントアウトしています
+
+/*
 // AnimalDetailViewの拡張として、ColorPickerViewを別ファイルに分離
 extension AnimalDetailView {
     struct ColorPickerView: View {
@@ -11,35 +15,35 @@ extension AnimalDetailView {
         private let presetColors: [[Color]] = [
             // 明るい色
             [
-                Color(hex: "#FF9AA2"), // ライトピンク
-                Color(hex: "#FFB7B2"), // ピーチ
-                Color(hex: "#FFDAC1"), // アプリコット
-                Color(hex: "#E2F0CB"), // ライトグリーン
-                Color(hex: "#B5EAD7"), // ミント
+                Color(.red), // ライトピンク
+                Color(.orange), // ピーチ
+                Color(.yellow), // アプリコット
+                Color(.green), // ライトグリーン
+                Color(.mint), // ミント
             ],
             // 中間色
             [
-                Color(hex: "#C7CEEA"), // ラベンダー
-                Color(hex: "#FF9F1C"), // オレンジ
-                Color(hex: "#2EC4B6"), // ティール
-                Color(hex: "#FF6B6B"), // コーラル
-                Color(hex: "#4EA8DE"), // スカイブルー
+                Color(.blue), // ラベンダー
+                Color(.orange), // オレンジ
+                Color(.teal), // ティール
+                Color(.red), // コーラル
+                Color(.blue), // スカイブルー
             ],
             // 濃い色
             [
-                Color(hex: "#CB997E"), // タン
-                Color(hex: "#A5A58D"), // セージ
-                Color(hex: "#6B705C"), // オリーブ
-                Color(hex: "#B7B7A4"), // カーキ
-                Color(hex: "#FFE8D6"), // クリーム
+                Color(.brown), // タン
+                Color(.gray), // セージ
+                Color(.gray), // オリーブ
+                Color(.gray), // カーキ
+                Color(.white), // クリーム
             ],
             // 追加色
             [
-                Color(hex: "#023E8A"), // ネイビー
-                Color(hex: "#D62828"), // レッド
-                Color(hex: "#1B4332"), // フォレスト
-                Color(hex: "#9D4EDD"), // パープル
-                Color(hex: "#647AA3"), // スレート
+                Color(.blue), // ネイビー
+                Color(.red), // レッド
+                Color(.green), // フォレスト
+                Color(.purple), // パープル
+                Color(.blue), // スレート
             ]
         ]
         
@@ -83,7 +87,7 @@ extension AnimalDetailView {
                                                 .stroke(Color.white, lineWidth: 2)
                                                 .frame(width: 50, height: 50)
                                             
-                                            if color.toHex() == presetColor.toHex() {
+                                            if color == presetColor {
                                                 Circle()
                                                     .stroke(Color.white, lineWidth: 3)
                                                     .frame(width: 42, height: 42)
@@ -136,3 +140,4 @@ extension AnimalDetailView {
         }
     }
 }
+*/

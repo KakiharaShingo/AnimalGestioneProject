@@ -1,4 +1,49 @@
 import SwiftUI
+import MessageUI
+
+// メール送信用のラッパー
+// MessageUIとSwiftUIの連携のためのラッパークラス
+struct MailView: UIViewControllerRepresentable {
+    @Binding var isShowing: Bool
+    @Binding var result: Result<MFMailComposeResult, Error>?
+    
+    var recipients: [String]
+    var subject: String
+    var messageBody: String
+    
+    func makeUIViewController(context: Context) -> MFMailComposeViewController {
+        let mailComposer = MFMailComposeViewController()
+        mailComposer.mailComposeDelegate = context.coordinator
+        mailComposer.setToRecipients(recipients)
+        mailComposer.setSubject(subject)
+        mailComposer.setMessageBody(messageBody, isHTML: false)
+        return mailComposer
+    }
+    
+    func updateUIViewController(_ uiViewController: MFMailComposeViewController, context: Context) {}
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
+        let parent: MailView
+        
+        init(_ parent: MailView) {
+            self.parent = parent
+        }
+        
+        func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+            if let error = error {
+                parent.result = .failure(error)
+            } else {
+                parent.result = .success(result)
+            }
+            parent.isShowing = false
+            controller.dismiss(animated: true)
+        }
+    }
+}
 
 // お問い合わせビュー
 struct ContactSupportView: View {
@@ -54,16 +99,6 @@ struct ContactSupportView: View {
                     Divider()
                     
                     HStack {
-                        Image(systemName: "globe")
-                            .frame(width: 30)
-                        Text("www.animalgestioneproject.com/support")
-                            .foregroundColor(.blue)
-                        Spacer()
-                    }
-                    
-                    Divider()
-                    
-                    HStack {
                         Image(systemName: "doc.text")
                             .frame(width: 30)
                         Text("よくある質問（FAQ）を確認する")
@@ -89,6 +124,10 @@ struct ContactFormView: View {
     @State private var message = ""
     @State private var includeDeviceInfo = true
     @State private var showingConfirmation = false
+    
+    // メールに関連するステート
+    @State private var isShowingMailView = false
+    @State private var mailResult: Result<MFMailComposeResult, Error>? = nil
     
     let subjectOptions = ["技術的な問題", "機能追加の要望", "その他の質問", "バグの報告"]
     
@@ -129,14 +168,30 @@ struct ContactFormView: View {
                 
                 Section {
                     Button(action: {
-                        // フォーム送信処理
+                        // メール送信処理
                         submitForm()
                     }) {
                         Text("送信")
                             .frame(maxWidth: .infinity)
                             .multilineTextAlignment(.center)
                     }
-                    .disabled(name.isEmpty || email.isEmpty || message.isEmpty)
+                    .disabled(name.isEmpty || email.isEmpty || message.isEmpty || !MFMailComposeViewController.canSendMail())
+                    
+                    // メールが送信できない場合の代替オプション
+                    if !MFMailComposeViewController.canSendMail() {
+                        Text("メールアプリが設定されていないため、メールを送信できません。")
+                            .font(.caption)
+                            .foregroundColor(.secondary)
+                        
+                        Button(action: {
+                            // メールアドレスをクリップボードにコピー
+                            UIPasteboard.general.string = "sk.shingo.10@gmail.com"
+                            showCopiedAlert()
+                        }) {
+                            Text("メールアドレスをコピーする")
+                                .foregroundColor(.blue)
+                        }
+                    }
                 }
             }
             .navigationBarTitle("お問い合わせ", displayMode: .inline)
@@ -154,12 +209,74 @@ struct ContactFormView: View {
                     }
                 )
             }
+            .sheet(isPresented: $isShowingMailView) {
+                // メール送信ビュー
+                MailView(
+                    isShowing: $isShowingMailView,
+                    result: $mailResult,
+                    recipients: ["sk.shingo.10@gmail.com"],
+                    subject: "[お問い合わせ] " + subject,
+                    messageBody: createEmailBody()
+                )
+            }
         }
     }
     
+    // メール本文の作成
+    private func createEmailBody() -> String {
+        var body = "お名前: \(name)\n"
+        body += "メールアドレス: \(email)\n"
+        body += "カテゴリ: \(subject)\n\n"
+        body += "お問い合わせ内容:\n\(message)\n\n"
+        
+        // デバイス情報を含める場合
+        if includeDeviceInfo {
+            let device = UIDevice.current
+            body += "\n--- デバイス情報 ---\n"
+            body += "デバイスモデル: \(device.model)\n"
+            body += "デバイス名: \(device.name)\n"
+            body += "OSバージョン: \(device.systemName) \(device.systemVersion)\n"
+            
+            // アプリのバージョン情報
+            if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
+               let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String {
+                body += "アプリバージョン: \(appVersion) (\(buildNumber))\n"
+            }
+        }
+        
+        return body
+    }
+    
+    // フォーム送信処理
     private func submitForm() {
-        // ここでは送信が成功したと想定してアラートを表示
-        // 実際の実装では、メール送信やサーバーへのデータ送信などの処理を行う
-        showingConfirmation = true
+        if MFMailComposeViewController.canSendMail() {
+            // メールアプリが設定されている場合
+            isShowingMailView = true
+        } else {
+            // メールアプリが設定されていない場合
+            // メールアドレスをコピーするなどの代替手段を提供
+            UIPasteboard.general.string = "sk.shingo.10@gmail.com"
+            showCopiedAlert()
+        }
+    }
+    
+    // コピー完了アラートを表示
+    private func showCopiedAlert() {
+        let alert = UIAlertController(
+            title: "メールアドレスをコピーしました",
+            message: "sk.shingo.10@gmail.com\nお使いのメールアプリでお問い合わせを送信してください。",
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        
+        // アラートを表示
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootVC = windowScene.windows.first?.rootViewController {
+            var topVC = rootVC
+            while let presentedVC = topVC.presentedViewController {
+                topVC = presentedVC
+            }
+            topVC.present(alert, animated: true)
+        }
     }
 }

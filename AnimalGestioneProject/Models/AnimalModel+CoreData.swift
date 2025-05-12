@@ -43,7 +43,8 @@ extension Animal {
             do {
                 let results = try context.fetch(fetchRequest)
                 if let entity = results.first, let hexColor = entity.colorHex {
-                    return Color(hex: hexColor)
+                    // Hexカラー文字列からColorを作成
+                    return Color(hex: hexColor) // 正しく定義したinitを使用
                 }
             } catch {
                 print("Failed to fetch animal color: \(error)")
@@ -60,7 +61,8 @@ extension Animal {
             do {
                 let results = try context.fetch(fetchRequest)
                 if let entity = results.first {
-                    entity.colorHex = newValue.toHex()
+                    // ColorをHex文字列に変換
+                    entity.colorHex = newValue.toHex() // 正しく定義したtoHexメソッドを使用
                     try context.save()
                 }
             } catch {

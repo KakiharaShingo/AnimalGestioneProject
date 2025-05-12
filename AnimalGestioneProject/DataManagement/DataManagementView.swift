@@ -9,12 +9,23 @@ struct DataManagementView: View {
     
     @State private var showingDocumentPicker = false
     @State private var showingShareSheet = false
-    @State private var showingDeleteAlert = false
     @State private var selectedBackup: URL?
-    @State private var showingImportConfirmation = false
     @State private var backupFiles: [URL] = []
-    @State private var showingDeleteAllConfirmation = false
-    @State private var showingBackupActionSheet = false
+    @State private var alertType: AlertType? = nil
+    
+    enum AlertType: Identifiable {
+        case deleteBackup(URL)
+        case importConfirmation(URL)
+        case deleteAllData
+        
+        var id: Int {
+            switch self {
+            case .deleteBackup: return 1
+            case .importConfirmation: return 2
+            case .deleteAllData: return 3
+            }
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -25,7 +36,14 @@ struct DataManagementView: View {
                         if let url = dataManager.exportData() {
                             // エクスポート成功
                             selectedBackup = url
-                            showingShareSheet = true
+                            
+                            // バックアップファイル一覧を更新
+                            refreshBackupFiles()
+                            
+                            // UIを更新してから共有シートを表示
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                                showingShareSheet = true
+                            }
                         }
                     }) {
                         HStack {
@@ -83,30 +101,67 @@ struct DataManagementView: View {
                 }
                 
                 // 既存のバックアップファイル一覧
-                Section(header: Text("バックアップファイル"), footer: Text("バックアップファイルをタップして操作を選択できます。")) {
-                ForEach(0..<backupFiles.count, id: \.self) { index in
-                    let url = backupFiles[index]
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(url.lastPathComponent)
-                            .font(.subheadline)
-                        if let date = try? url.resourceValues(forKeys: [.contentModificationDateKey]).contentModificationDate {
-                            Text(formattedDate(date))
-                                .font(.caption)
-                                .foregroundColor(.secondary)
+                Section(header: Text("バックアップファイル")) {
+                    ForEach(backupFiles, id: \.absoluteString) { url in
+                        HStack(spacing: 12) {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(url.lastPathComponent)
+                                    .font(.subheadline)
+                                if let date = try? url.resourceValues(forKeys: [.contentModificationDateKey]).contentModificationDate {
+                                    Text(formattedDate(date))
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                }
+                                if let fileSize = try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize {
+                                    Text(formatFileSize(fileSize))
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                }
+                            }
+                            
+                            Spacer()
+                            
+                            HStack(spacing: 8) {
+                                Button(action: {
+                                    alertType = .importConfirmation(url)
+                                }) {
+                                    Image(systemName: "square.and.arrow.down")
+                                        .foregroundColor(.blue)
+                                        .padding(8)
+                                        .background(Color.blue.opacity(0.1))
+                                        .cornerRadius(6)
+                                }
+                                .buttonStyle(BorderlessButtonStyle())
+                                
+                                Button(action: {
+                                    // UIを更新してから共有シートを表示
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                        showingShareSheet = true
+                                        selectedBackup = url
+                                    }
+                                }) {
+                                    Image(systemName: "square.and.arrow.up")
+                                        .foregroundColor(.green)
+                                        .padding(8)
+                                        .background(Color.green.opacity(0.1))
+                                        .cornerRadius(6)
+                                }
+                                .buttonStyle(BorderlessButtonStyle())
+                                
+                                Button(action: {
+                                    alertType = .deleteBackup(url)
+                                }) {
+                                    Image(systemName: "trash")
+                                        .foregroundColor(.red)
+                                        .padding(8)
+                                        .background(Color.red.opacity(0.1))
+                                        .cornerRadius(6)
+                                }
+                                .buttonStyle(BorderlessButtonStyle())
+                            }
                         }
-                        if let fileSize = try? url.resourceValues(forKeys: [.fileSizeKey]).fileSize {
-                            Text(formatFileSize(fileSize))
-                                .font(.caption)
-                                .foregroundColor(.secondary)
-                        }
+                        .padding(.vertical, 4)
                     }
-                    .padding(.vertical, 4)
-                    .contentShape(Rectangle())
-                    .onTapGesture {
-                        selectedBackup = url
-                        showingBackupActionSheet = true
-                    }
-                }
                     
                     if backupFiles.isEmpty {
                         Text("バックアップファイルがありません")
@@ -118,7 +173,7 @@ struct DataManagementView: View {
                 // データ削除セクション
                 Section(header: Text("データ管理"), footer: Text("警告：「すべてのデータを削除」を選択すると、アプリ内のすべての情報（動物データ、健康記録、予定、写真など）が完全に消去されます。削除されたデータはバックアップからも回復できません。この操作は元に戻せません。")) {
                     Button(action: {
-                        showingDeleteAllConfirmation = true
+                        alertType = .deleteAllData
                     }) {
                         HStack {
                             Image(systemName: "trash")
@@ -142,79 +197,48 @@ struct DataManagementView: View {
                     importBackup(from: url)
                 }
             }
-            .alert(isPresented: $showingImportConfirmation) {
-                Alert(
-                    title: Text("バックアップのインポート"),
-                    message: Text("このバックアップをインポートしますか？現在のデータはすべて置き換えられます。"),
-                    primaryButton: .destructive(Text("インポート")) {
-                        if let url = selectedBackup {
-                            importBackup(from: url)
-                        }
-                    },
-                    secondaryButton: .cancel(Text("キャンセル"))
-                )
-            }
-            .alert(isPresented: $showingDeleteAlert) {
-                Alert(
-                    title: Text("バックアップの削除"),
-                    message: Text(selectedBackup != nil ? "このバックアップファイルを削除しますか？\n\nファイル名：\n\(selectedBackup!.lastPathComponent)" : "バックアップを削除しますか？"),
-                    primaryButton: .destructive(Text("削除")) {
-                        if let url = selectedBackup {
+            .alert(item: $alertType) { type in
+                switch type {
+                case .deleteBackup(let url):
+                    return Alert(
+                        title: Text("バックアップの削除"),
+                        message: Text("このバックアップファイルを削除しますか？\n\nファイル名：\n\(url.lastPathComponent)"),
+                        primaryButton: .destructive(Text("削除")) {
                             if dataManager.deleteBackup(url: url) {
                                 // ファイル一覧を再読み込み
                                 refreshBackupFiles()
                             }
-                        }
-                    },
-                    secondaryButton: .cancel(Text("キャンセル"))
-                )
-            }
-            .alert(isPresented: $showingDeleteAllConfirmation) {
-                Alert(
-                    title: Text("全データの削除"),
-                    message: Text("本当にアプリ内のすべてのデータを削除しますか？\n\n・すべての動物情報\n・健康記録\n・予防接種履歴\n・写真・画像\n・その他すべてのデータ\n\nこれらの情報は完全に削除され、バックアップからも回復できません。この操作は元に戻せません。"),
-                    primaryButton: .destructive(Text("すべてのデータを削除")) {
-                        deleteAllData()
-                    },
-                    secondaryButton: .cancel(Text("キャンセル"))
-                )
-            }
-            .actionSheet(isPresented: $showingBackupActionSheet) {
-                guard let url = selectedBackup else {
-                    return ActionSheet(
-                        title: Text("エラー"),
-                        message: Text("ファイルを選択できませんでした"),
-                        buttons: [.cancel()]
+                        },
+                        secondaryButton: .cancel(Text("キャンセル"))
+                    )
+                    
+                case .importConfirmation(let url):
+                    return Alert(
+                        title: Text("バックアップのインポート"),
+                        message: Text("このバックアップをインポートしますか？現在のデータはすべて置き換えられます。"),
+                        primaryButton: .destructive(Text("インポート")) {
+                            importBackup(from: url)
+                        },
+                        secondaryButton: .cancel(Text("キャンセル"))
+                    )
+                    
+                case .deleteAllData:
+                    return Alert(
+                        title: Text("全データの削除"),
+                        message: Text("本当にアプリ内のすべてのデータを削除しますか？\n\n・すべての動物情報\n・健康記録\n・予防接種履歴\n・写真・画像\n・その他すべてのデータ\n\nこれらの情報は完全に削除され、バックアップからも回復できません。この操作は元に戻せません。"),
+                        primaryButton: .destructive(Text("すべてのデータを削除")) {
+                            deleteAllData()
+                        },
+                        secondaryButton: .cancel(Text("キャンセル"))
                     )
                 }
-                
-                return ActionSheet(
-                    title: Text("バックアップファイルの操作"),
-                    message: Text(url.lastPathComponent),
-                    buttons: [
-                        .default(Text("インポート")) {
-                            showingImportConfirmation = true
-                        },
-                        .default(Text("共有")) {
-                            // シェアシートを表示
-                            showingShareSheet = true
-                        },
-                        .destructive(Text("削除")) {
-                            showingDeleteAlert = true
-                        },
-                        .cancel()
-                    ]
-                )
             }
         }
-        .background(
-            // ShareSheetを表示するための隠しビュー
-            EmptyView().sheet(isPresented: $showingShareSheet) {
-                if let url = selectedBackup {
-                    ShareSheet(activityItems: [url])
-                }
-            }
-        )
+        .sheet(isPresented: $showingShareSheet) {
+        if let url = selectedBackup {
+            ShareSheet(activityItems: [url])
+        }
+        }
     }
     
     // バックアップファイル一覧を更新
@@ -232,10 +256,56 @@ struct DataManagementView: View {
     
     // バックアップファイルをインポート
     private func importBackup(from url: URL) {
+        print("#### バックアップファイルのインポート開始: \(url.lastPathComponent)")
+        
         dataManager.importData(from: url) { success, message in
+            print("#### バックアップインポート結果: \(success ? "成功" : "失敗") - \(message)")
+            
             if success {
-                // データを再読み込み
-                dataStore.loadData()
+                DispatchQueue.main.async {
+                    // データを再読み込み
+                    self.dataStore.loadData()
+                    
+                    // 成功メッセージを表示
+                    let alert = UIAlertController(
+                        title: "インポート成功",
+                        message: "バックアップデータのインポートが完了しました。",
+                        preferredStyle: .alert
+                    )
+                    alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+                        // OKボタンが押されたらファイル一覧を更新
+                        self.refreshBackupFiles()
+                    })
+                    
+                    // 最前面のViewControllerを取得して表示
+                    if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                       let rootVC = windowScene.windows.first?.rootViewController {
+                        var topVC = rootVC
+                        while let presentedVC = topVC.presentedViewController {
+                            topVC = presentedVC
+                        }
+                        topVC.present(alert, animated: true)
+                    }
+                }
+            } else {
+                // 失敗時のメッセージ表示
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(
+                        title: "インポート失敗",
+                        message: message,
+                        preferredStyle: .alert
+                    )
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                    
+                    if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                       let rootVC = windowScene.windows.first?.rootViewController {
+                        var topVC = rootVC
+                        while let presentedVC = topVC.presentedViewController {
+                            topVC = presentedVC
+                        }
+                        topVC.present(alert, animated: true)
+                    }
+                }
             }
         }
     }
@@ -289,11 +359,28 @@ struct ShareSheet: UIViewControllerRepresentable {
     var activityItems: [Any]
     var applicationActivities: [UIActivity]? = nil
     
+    @Environment(\.presentationMode) var presentationMode
+    
     func makeUIViewController(context: Context) -> UIActivityViewController {
         let controller = UIActivityViewController(
             activityItems: activityItems,
             applicationActivities: applicationActivities
         )
+        
+        // 共有が完了した時の処理
+        controller.completionWithItemsHandler = { (activityType, completed, returnedItems, error) in
+            // 共有操作が完了したらシートを閉じる
+            DispatchQueue.main.async {
+                self.presentationMode.wrappedValue.dismiss()
+            }
+        }
+        
+        // iPadでの表示位置調整
+        if let popover = controller.popoverPresentationController {
+            popover.permittedArrowDirections = .any
+            popover.canOverlapSourceViewRect = true
+        }
+        
         return controller
     }
     

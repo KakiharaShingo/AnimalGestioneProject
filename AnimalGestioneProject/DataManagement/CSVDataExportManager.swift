@@ -210,30 +210,101 @@ class CSVDataExportManager {
         }
     }
     
-    // すべてのデータをCSVとしてエクスポート（アーカイブ形式）
+    // すべてのデータをCSVとしてエクスポート（統合形式）
     func exportAllDataToCSVArchive() -> URL? {
-        // 一時ディレクトリにCSVファイルを作成
-        let tempDir = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)
-        try? FileManager.default.createDirectory(at: tempDir, withIntermediateDirectories: true)
-        
-        // 各種データをCSVとしてエクスポート
-        let animalURL = exportAnimalsToTempDir(tempDir)
-        let vaccineURL = exportVaccineRecordsToTempDir(tempDir)
-        let checkupURL = exportCheckupRecordsToTempDir(tempDir)
-        let weightURL = exportWeightRecordsToTempDir(tempDir)
-        let groomingURL = exportGroomingRecordsToTempDir(tempDir)
-        let physiologicalURL = exportPhysiologicalCyclesToTempDir(tempDir)
-        
-        // Zipアーカイブの作成
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyyMMdd_HHmmss"
-        let timestamp = dateFormatter.string(from: Date())
-        let zipFileName = "AnimalGestione_AllData_\(timestamp).zip"
-        let zipURL = exportDirectory.appendingPathComponent(zipFileName)
-        
-        // TODO: 実装する場合はZipパッケージをインポートする必要があります
-        // ここではサンプルとして、単一のCSV出力に代えています
-        return animalURL // 実際のzipURL
+        do {
+            // 統合CSVの作成
+            var csvString = "# AnimalGestione アプリ データエクスポート\n"
+            csvString += "# エクスポート日時: \(Date())\n\n"
+            
+            // 動物データセクション
+            csvString += "## 動物データ\n"
+            csvString += "ID,名前,種別,性別,誕生日,毛色,品種\n"
+            
+            let animals = dataStore.animals
+            for animal in animals {
+                let id = animal.id.uuidString
+                let name = escapeCSV(animal.name)
+                let species = escapeCSV(animal.species)
+                let gender = escapeCSV(animal.gender.rawValue)
+                let birthDateString = formatDate(animal.birthDate)
+                let coatColor = ""
+                let breed = escapeCSV(animal.breed ?? "")
+                
+                let row = "\"\(id)\",\"\(name)\",\"\(species)\",\"\(gender)\",\"\(birthDateString)\",\"\(coatColor)\",\"\(breed)\"\n"
+                csvString.append(row)
+            }
+            
+            // 体重記録セクション
+            csvString += "\n## 体重記録\n"
+            csvString += "動物ID,動物名,日付,体重,メモ\n"
+            
+            for animal in animals {
+                let weightRecords = dataStore.weightRecordsForAnimal(id: animal.id)
+                for record in weightRecords {
+                    let animalID = record.animalId.uuidString
+                    let animalName = escapeCSV(animal.name)
+                    let dateString = formatDate(record.date)
+                    let weight = record.weight
+                    let notes = escapeCSV(record.notes ?? "")
+                    
+                    let row = "\"\(animalID)\",\"\(animalName)\",\"\(dateString)\",\"\(weight)\",\"\(notes)\"\n"
+                    csvString.append(row)
+                }
+            }
+            
+            // ワクチン記録セクション
+            csvString += "\n## ワクチン記録\n"
+            csvString += "動物ID,動物名,ワクチン名,接種日,次回接種予定日,メモ\n"
+            
+            let vaccineRecords = dataStore.vaccineRecords
+            for record in vaccineRecords {
+                let animalID = record.animalId.uuidString
+                // 動物名を取得
+                let animalName = dataStore.animals.first(where: { $0.id == record.animalId })?.name ?? ""
+                let name = escapeCSV(record.vaccineName)
+                let dateString = formatDate(record.date)
+                let nextDateString = formatDate(record.nextScheduledDate)
+                let notes = escapeCSV(record.notes ?? "")
+                
+                let row = "\"\(animalID)\",\"\(escapeCSV(animalName))\",\"\(name)\",\"\(dateString)\",\"\(nextDateString)\",\"\(notes)\"\n"
+                csvString.append(row)
+            }
+            
+            // 健康診断記録セクション
+            csvString += "\n## 健康診断記録\n"
+            csvString += "動物ID,動物名,日付,次回予定日,検査タイプ,メモ\n"
+            
+            let checkupRecords = dataStore.checkupRecords
+            for record in checkupRecords {
+                let animalID = record.animalId.uuidString
+                // 動物名を取得
+                let animalName = dataStore.animals.first(where: { $0.id == record.animalId })?.name ?? ""
+                let dateString = formatDate(record.date)
+                let nextDateString = formatDate(record.nextScheduledDate)
+                let checkupType = escapeCSV(record.checkupType)
+                let notes = escapeCSV(record.notes ?? "")
+                
+                let row = "\"\(animalID)\",\"\(escapeCSV(animalName))\",\"\(dateString)\",\"\(nextDateString)\",\"\(checkupType)\",\"\(notes)\"\n"
+                csvString.append(row)
+            }
+            
+            // ファイル名を生成
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyyMMdd_HHmmss"
+            let timestamp = dateFormatter.string(from: Date())
+            let fileName = "AnimalGestione_AllData_\(timestamp).csv"
+            
+            // ファイルを保存
+            let fileURL = exportDirectory.appendingPathComponent(fileName)
+            try csvString.write(to: fileURL, atomically: true, encoding: .utf8)
+            
+            return fileURL
+            
+        } catch {
+            print("すべてのデータCSVエクスポートエラー: \(error.localizedDescription)")
+            return nil
+        }
     }
     
     // ヘルパーメソッド: 一時ディレクトリに動物データをエクスポート

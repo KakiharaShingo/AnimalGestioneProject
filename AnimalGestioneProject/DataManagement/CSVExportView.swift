@@ -1,6 +1,41 @@
 import SwiftUI
 import UIKit
 
+// この画面でもShareSheetを使えるように定義
+struct CSVShareSheet: UIViewControllerRepresentable {
+    var activityItems: [Any]
+    var applicationActivities: [UIActivity]? = nil
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    func makeUIViewController(context: Context) -> UIActivityViewController {
+        let controller = UIActivityViewController(
+            activityItems: activityItems,
+            applicationActivities: applicationActivities
+        )
+        
+        // 共有が完了した時の処理
+        controller.completionWithItemsHandler = { (activityType, completed, returnedItems, error) in
+            // 共有操作が完了したらシートを閉じる
+            DispatchQueue.main.async {
+                self.presentationMode.wrappedValue.dismiss()
+            }
+        }
+        
+        // iPadでの表示位置調整
+        if let popover = controller.popoverPresentationController {
+            popover.permittedArrowDirections = .any
+            popover.canOverlapSourceViewRect = true
+        }
+        
+        return controller
+    }
+    
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {
+        // 更新は不要
+    }
+}
+
 struct CSVExportView: View {
     @Environment(\.presentationMode) var presentationMode
     
@@ -69,7 +104,7 @@ struct CSVExportView: View {
                 // 既存のCSVファイル一覧
                 Section(header: Text("エクスポート済みCSVファイル")) {
                     ForEach(csvFiles, id: \.absoluteString) { url in
-                        HStack {
+                        HStack(spacing: 12) {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(url.lastPathComponent)
                                     .font(.subheadline)
@@ -82,20 +117,32 @@ struct CSVExportView: View {
                             
                             Spacer()
                             
-                            Button(action: {
-                                selectedFile = url
-                                showingShareSheet = true
-                            }) {
-                                Image(systemName: "square.and.arrow.up")
-                                    .foregroundColor(.green)
-                            }
-                            
-                            Button(action: {
-                                selectedFile = url
-                                showingDeleteAlert = true
-                            }) {
-                                Image(systemName: "trash")
-                                    .foregroundColor(.red)
+                            HStack(spacing: 8) {
+                                Button(action: {
+                                    selectedFile = url
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                        showingShareSheet = true
+                                    }
+                                }) {
+                                    Image(systemName: "square.and.arrow.up")
+                                        .foregroundColor(.green)
+                                        .padding(8)
+                                        .background(Color.green.opacity(0.1))
+                                        .cornerRadius(6)
+                                }
+                                .buttonStyle(BorderlessButtonStyle())
+                                
+                                Button(action: {
+                                    selectedFile = url
+                                    showingDeleteAlert = true
+                                }) {
+                                    Image(systemName: "trash")
+                                        .foregroundColor(.red)
+                                        .padding(8)
+                                        .background(Color.red.opacity(0.1))
+                                        .cornerRadius(6)
+                                }
+                                .buttonStyle(BorderlessButtonStyle())
                             }
                         }
                         .padding(.vertical, 4)
@@ -135,13 +182,11 @@ struct CSVExportView: View {
                     secondaryButton: .cancel(Text("キャンセル"))
                 )
             }
-            .background(
-                EmptyView().sheet(isPresented: $showingShareSheet) {
-                    if let url = selectedFile {
-                        ShareSheet(activityItems: [url])
-                    }
+            .sheet(isPresented: $showingShareSheet) {
+                if let url = selectedFile {
+                    CSVShareSheet(activityItems: [url])
                 }
-            )
+            }
         }
     }
     

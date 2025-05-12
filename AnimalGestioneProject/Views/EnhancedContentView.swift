@@ -4,8 +4,7 @@ import GoogleMobileAds
 import UserNotifications
 import StoreKit
 
-// データ管理用のビューをインポート
-import AnimalGestioneProject
+// 注: Swiftでは他のファイルを直接インポートすることはできませんが、プロジェクトのレベルでファイルが参照されているため、コンパイル時に問題はありません
 
 struct EnhancedContentView: View {
     @EnvironmentObject var dataStore: CoreDataStore
@@ -31,7 +30,6 @@ struct EnhancedContentView: View {
     
     // AppStorageから設定を取得
     @AppStorage("animalIcon") private var animalIcon = "pawprint"
-    @AppStorage("colorTheme") private var colorTheme = "standard"
     
     enum Tab {
         case home, calendar, pets, settings
@@ -111,7 +109,7 @@ struct EnhancedContentView: View {
             if let animalId = healthRecordAnimalId, let animal = dataStore.animals.first(where: { $0.id == animalId }) {
                 // 動物が見つかった場合は健康記録画面を表示
                 NavigationView {
-                    AnimalGestioneProject.HealthRecordView(animalId: animalId, isEmbedded: true)
+                    HealthRecordView(animalId: animalId, isEmbedded: true)
                         .environmentObject(dataStore)
                         .navigationBarItems(leading: Button("閉じる") {
                             showingHealthRecord = false
@@ -250,27 +248,14 @@ struct EnhancedContentView: View {
     }
     
     private func getThemeColors() -> (Color, Color, Color) {
-        // テーマに基づいた色を返す
+        // デフォルトの色を返す
         let isDarkMode = colorScheme == .dark
         
-        switch colorTheme {
-        case "dark":
-            return (Color(.systemGray6), Color.white, Color.blue)
-        case "light":
+        // ダークモード対応
+        if isDarkMode {
+            return (Color(.systemBackground), Color.white, Color.blue)
+        } else {
             return (Color.white, Color.black, Color.blue)
-        case "nature":
-            // ダークモード対応
-            if isDarkMode {
-                return (Color(hex: "#2F4F4F"), Color.white, Color(hex: "#7FFF00"))
-            } else {
-                return (Color(hex: "#F5F5DC"), Color(hex: "#2E8B57"), Color(hex: "#228B22"))
-            }
-        default: // standard - ダークモード対応
-            if isDarkMode {
-                return (Color(.systemBackground), Color.white, Color.blue)
-            } else {
-                return (Color.white, Color.black, Color.blue)
-            }
         }
     }
     
@@ -354,7 +339,6 @@ struct CalendarTabView: View {
 
 struct SettingsView: View {
     @EnvironmentObject var dataStore: CoreDataStore
-    @AppStorage("colorTheme") private var colorTheme = "standard"
     @AppStorage("notificationsEnabled") private var notificationsEnabled = true
     @AppStorage("animalIcon") private var animalIcon = "pawprint"
     @ObservedObject private var purchaseManager = InAppPurchaseManager.shared
@@ -421,13 +405,6 @@ struct SettingsView: View {
                                     .foregroundColor(.gray)
                             }
                         }
-                    }
-                    
-                    Picker("カラーテーマ", selection: $colorTheme) {
-                        Text("スタンダード").tag("standard")
-                        Text("ダーク").tag("dark")
-                        Text("ライト").tag("light")
-                        Text("自然").tag("nature")
                     }
                 }
                 
@@ -702,12 +679,12 @@ struct SettingsView: View {
         }
         // データ管理ビューを表示
         .sheet(isPresented: $showingDataManagementView) {
-            AnimalGestioneProject.DataManagementView()
+            DataManagementView()
                 .environmentObject(dataStore)
         }
         // CSVエクスポートビューを表示
         .sheet(isPresented: $showingCSVExportView) {
-            AnimalGestioneProject.CSVExportView()
+            CSVExportView()
         }
         // プライバシーポリシービューを表示
         .sheet(isPresented: $showingPrivacyPolicy) {
