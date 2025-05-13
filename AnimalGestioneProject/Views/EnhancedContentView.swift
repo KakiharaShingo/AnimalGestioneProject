@@ -12,6 +12,13 @@ struct EnhancedContentView: View {
     // AdManagerのインスタンスを使用
     @ObservedObject private var adManager = AdManager.shared
     
+    // デバッグビルドかどうかを示す定数
+    #if DEBUG
+    private let isDebug = true
+    #else
+    private let isDebug = false
+    #endif
+    
     @State private var selectedTab: Tab = .home
     @State private var selectedDate = Date()
     @State private var showingHealthRecord = false
@@ -341,13 +348,22 @@ struct SettingsView: View {
     @EnvironmentObject var dataStore: CoreDataStore
     @AppStorage("notificationsEnabled") private var notificationsEnabled = true
     @AppStorage("animalIcon") private var animalIcon = "pawprint"
+    @AppStorage("developerModeEnabled") private var developerModeEnabled = false
     @ObservedObject private var purchaseManager = InAppPurchaseManager.shared
     @ObservedObject private var adManager = AdManager.shared
+    
+    // デバッグビルドかどうかを示す定数
+    #if DEBUG
+    private let isDebug = true
+    #else
+    private let isDebug = false
+    #endif
     @State private var showingPremiumView = false
     @State private var showingDataManagementView = false
     @State private var showingPrivacyPolicy = false
     @State private var showingPrivacyPolicyURL = false
     @State private var showingSupportView = false
+    @State private var showingSupportURL = false
     @State private var showingCSVExportView = false
     @State private var showingNotificationSettings = false
     
@@ -457,16 +473,26 @@ struct SettingsView: View {
                         Label("サポート", systemImage: "questionmark.circle")
                     }
                     
+                    if developerModeEnabled || isDebug {
+                        Button(action: {
+                            showingSupportURL = true
+                        }) {
+                            Label("サポートURL (開発者用)", systemImage: "link")
+                        }
+                    }
+                    
                     Button(action: {
                         showingPrivacyPolicy = true
                     }) {
                         Label("プライバシーポリシー", systemImage: "hand.raised")
                     }
                     
-                    Button(action: {
-                        showingPrivacyPolicyURL = true
-                    }) {
-                        Label("プライバシーポリシーURL (開発者用)", systemImage: "link")
+                    if developerModeEnabled || isDebug {
+                        Button(action: {
+                            showingPrivacyPolicyURL = true
+                        }) {
+                            Label("プライバシーポリシーURL (開発者用)", systemImage: "link")
+                        }
                     }
                 }
                 
@@ -555,6 +581,9 @@ struct SettingsView: View {
                 // プレミアム機能の表示フラグがtrueの場合のみ表示
                 if InAppPurchaseManager.showPremiumFeatures {
                     Section(header: Text("デバッグ設定")) {
+                        Toggle("開発者モード", isOn: $developerModeEnabled)
+                            .toggleStyle(SwitchToggleStyle(tint: .purple))
+                        
                         Toggle("プレミアムモード", isOn: $purchaseManager.debugPremiumEnabled)
                             .toggleStyle(SwitchToggleStyle(tint: .green))
                             .onChange(of: purchaseManager.debugPremiumEnabled) { newValue in
@@ -564,6 +593,12 @@ struct SettingsView: View {
                                 // UIを即時更新
                                 self.updateUI()
                             }
+                        
+                        if developerModeEnabled {
+                            Text("開発者モードが有効です")
+                                .font(.caption)
+                                .foregroundColor(.purple)
+                        }
                         
                         if purchaseManager.debugPremiumEnabled {
                             Text("デバッグ用のプレミアムモードが有効です")
@@ -702,6 +737,10 @@ struct SettingsView: View {
         // プライバシーポリシーURLビューを表示
         .sheet(isPresented: $showingPrivacyPolicyURL) {
             PrivacyPolicyURLView()
+        }
+        // サポートURLビューを表示
+        .sheet(isPresented: $showingSupportURL) {
+            SupportURLView()
         }
         // サポートビューを表示
         .sheet(isPresented: $showingSupportView) {

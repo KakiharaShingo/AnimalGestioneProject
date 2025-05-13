@@ -7,6 +7,10 @@ public struct URLProvider {
     /// Appleのアプリリリース用プライバシーポリシーURLとして使用
     public static let privacyPolicyURL = "https://[GitHubユーザー名].github.io/AnimalGestioneProject/"
     
+    /// GitHubで公開しているサポートページのURL
+    /// Appleのアプリリリース用サポートURLとして使用
+    public static let supportURL = "https://[GitHubユーザー名].github.io/AnimalGestioneProject/support.html"
+    
     /// GitHub上のプライバシーポリシーの元リポジトリURL
     public static let gitHubRepoURL = "https://github.com/[GitHubユーザー名]/AnimalGestioneProject"
     
