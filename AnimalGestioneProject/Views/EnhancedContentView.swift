@@ -348,7 +348,7 @@ struct SettingsView: View {
     @EnvironmentObject var dataStore: CoreDataStore
     @AppStorage("notificationsEnabled") private var notificationsEnabled = true
     @AppStorage("animalIcon") private var animalIcon = "pawprint"
-    @AppStorage("developerModeEnabled") private var developerModeEnabled = false
+    @State private var isProductionEnvironment = false
     @ObservedObject private var purchaseManager = InAppPurchaseManager.shared
     @ObservedObject private var adManager = AdManager.shared
     
@@ -361,9 +361,7 @@ struct SettingsView: View {
     @State private var showingPremiumView = false
     @State private var showingDataManagementView = false
     @State private var showingPrivacyPolicy = false
-    @State private var showingPrivacyPolicyURL = false
     @State private var showingSupportView = false
-    @State private var showingSupportURL = false
     @State private var showingCSVExportView = false
     @State private var showingNotificationSettings = false
     
@@ -473,26 +471,10 @@ struct SettingsView: View {
                         Label("サポート", systemImage: "questionmark.circle")
                     }
                     
-                    if developerModeEnabled || isDebug {
-                        Button(action: {
-                            showingSupportURL = true
-                        }) {
-                            Label("サポートURL (開発者用)", systemImage: "link")
-                        }
-                    }
-                    
                     Button(action: {
                         showingPrivacyPolicy = true
                     }) {
                         Label("プライバシーポリシー", systemImage: "hand.raised")
-                    }
-                    
-                    if developerModeEnabled || isDebug {
-                        Button(action: {
-                            showingPrivacyPolicyURL = true
-                        }) {
-                            Label("プライバシーポリシーURL (開発者用)", systemImage: "link")
-                        }
                     }
                 }
                 
@@ -581,9 +563,6 @@ struct SettingsView: View {
                 // プレミアム機能の表示フラグがtrueの場合のみ表示
                 if InAppPurchaseManager.showPremiumFeatures {
                     Section(header: Text("デバッグ設定")) {
-                        Toggle("開発者モード", isOn: $developerModeEnabled)
-                            .toggleStyle(SwitchToggleStyle(tint: .purple))
-                        
                         Toggle("プレミアムモード", isOn: $purchaseManager.debugPremiumEnabled)
                             .toggleStyle(SwitchToggleStyle(tint: .green))
                             .onChange(of: purchaseManager.debugPremiumEnabled) { newValue in
@@ -594,11 +573,49 @@ struct SettingsView: View {
                                 self.updateUI()
                             }
                         
-                        if developerModeEnabled {
-                            Text("開発者モードが有効です")
+                        // 環境切り替えトグル
+                        Toggle("本番環境", isOn: $isProductionEnvironment)
+                            .toggleStyle(SwitchToggleStyle(tint: .orange))
+                            .onChange(of: isProductionEnvironment) { newValue in
+                                print("本番環境モード: \(newValue)")
+                                
+                                // SubscriptionManagerの環境を切り替え
+                                let environment: SubscriptionEnvironment = newValue ? .production : .debug
+                                SubscriptionManager.shared.switchEnvironment(to: environment)
+                                
+                                // UIを即時更新
+                                self.updateUI()
+                            }
+                        
+                        if isProductionEnvironment {
+                            Text("本番環境のプロダクトIDが使用されます")
                                 .font(.caption)
-                                .foregroundColor(.purple)
+                                .foregroundColor(.orange)
+                        } else {
+                            Text("開発環境のプロダクトIDが使用されます")
+                                .font(.caption)
+                                .foregroundColor(.blue)
                         }
+                        
+                        // 本番環境のプロダクトID表示
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("本番環境のプロダクトID:")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            
+                            Text("月額: SerenoSystem_animalgestione.premium_monthly")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            
+                            Text("年額: SerenoSystem_animalgestione.premium_yearly_two")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                            
+                            Text("永久: SerenoSystem_animalgestione.premium_lifetime")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                        .padding(.vertical, 4)
                         
                         if purchaseManager.debugPremiumEnabled {
                             Text("デバッグ用のプレミアムモードが有効です")
@@ -733,14 +750,6 @@ struct SettingsView: View {
             NavigationView {
                 PrivacyPolicyView()
             }
-        }
-        // プライバシーポリシーURLビューを表示
-        .sheet(isPresented: $showingPrivacyPolicyURL) {
-            PrivacyPolicyURLView()
-        }
-        // サポートURLビューを表示
-        .sheet(isPresented: $showingSupportURL) {
-            SupportURLView()
         }
         // サポートビューを表示
         .sheet(isPresented: $showingSupportView) {

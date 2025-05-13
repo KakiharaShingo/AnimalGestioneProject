@@ -4,15 +4,55 @@ import SwiftUI
 /// StoreKit 2のTransaction型を明示的に指定
 typealias StoreTransaction = StoreKit.Transaction
 
+/// 環境モード
+enum SubscriptionEnvironment {
+    case debug    // デバッグ環境
+    case production // 本番環境
+}
+
 /// サブスクリプションと課金を管理するクラス
 @MainActor
 class SubscriptionManager: ObservableObject {
     static let shared = SubscriptionManager()
     
-    // 商品ID - App Store Connectで設定する商品IDに変更してください
-    let premiumMonthlyID = "com.yourdomain.animalgestione.premium_monthly"
-    let premiumYearlyID = "com.yourdomain.animalgestione.premium_yearly"
-    let premiumLifetimeID = "com.yourdomain.animalgestione.premium_lifetime"
+    // 現在の環境設定
+    @Published var environment: SubscriptionEnvironment = .production {
+        didSet {
+            // 環境が変更されたら通知を送信
+            if oldValue != environment {
+                print("サブスクリプション環境を変更: \(environment == .debug ? "デバッグ" : "本番")")
+                // 購入状態を更新
+                Task {
+                    await updatePurchasedProducts()
+                }
+                // UI更新通知を送信
+                NotificationCenter.default.post(name: NSNotification.Name("PremiumStatusChanged"), object: nil)
+            }
+        }
+    }
+    
+    // デバッグ環境用商品ID
+    private let debugMonthlyID = "com.yourdomain.animalgestione.premium_monthly"
+    private let debugYearlyID = "com.yourdomain.animalgestione.premium_yearly"
+    private let debugLifetimeID = "com.yourdomain.animalgestione.premium_lifetime"
+    
+    // 本番環境用商品ID
+    private let productionMonthlyID = "SerenoSystem_animalgestione.premium_monthly"
+    private let productionYearlyID = "SerenoSystem_animalgestione.premium_yearly_two"
+    private let productionLifetimeID = "SerenoSystem_animalgestione.premium_lifetime"
+    
+    // 現在の環境に基づく商品ID
+    var premiumMonthlyID: String {
+        return environment == .debug ? debugMonthlyID : productionMonthlyID
+    }
+    
+    var premiumYearlyID: String {
+        return environment == .debug ? debugYearlyID : productionYearlyID
+    }
+    
+    var premiumLifetimeID: String {
+        return environment == .debug ? debugLifetimeID : productionLifetimeID
+    }
     
     /// デバッグモード用設定（既存のInAppPurchaseManagerから移行）
     @Published var debugPremiumEnabled = true {
@@ -62,6 +102,18 @@ class SubscriptionManager: ObservableObject {
     
     deinit {
         updateListenerTask?.cancel()
+    }
+    
+    /// 環境を切り替える
+    func switchEnvironment(to newEnvironment: SubscriptionEnvironment) {
+        if environment != newEnvironment {
+            environment = newEnvironment
+            
+            // 環境が変わったら商品情報を再読み込み
+            Task {
+                await loadProducts()
+            }
+        }
     }
     
     /// デバッグ用：購入履歴をクリアする
@@ -217,6 +269,11 @@ class SubscriptionManager: ObservableObject {
     
     /// プレミアム機能が利用可能かどうか（いずれかのプレミアム商品を購入済み）
     var isPremiumUser: Bool {
+        // デバッグモードが有効な場合は、デバッグ設定を優先
+        if debugPremiumEnabled && environment == .debug {
+            return true
+        }
+        
         return isPurchased(premiumMonthlyID) || 
                isPurchased(premiumYearlyID) || 
                isPurchased(premiumLifetimeID)
@@ -224,6 +281,7 @@ class SubscriptionManager: ObservableObject {
     
     /// デバッグ用の購入状態表示
     func printPurchaseStatus() {
+        print("現在の環境: \(environment == .debug ? "デバッグ" : "本番")")
         print("現在のプレミアム状態: \(isPremiumUser ? "プレミアム" : "無料")")
         print("購入済み商品: \(purchasedProductIDs)")
     }
@@ -231,7 +289,7 @@ class SubscriptionManager: ObservableObject {
     /// 広告削除オプションを購入しているかどうか (InAppPurchaseManagerとの互換性用)
     func hasRemoveAdsPurchased() -> Bool {
         // デバッグモードが有効な場合は、デバッグ設定を優先
-        if debugPremiumEnabled {
+        if debugPremiumEnabled && environment == .debug {
             return true
         }
         return isPremiumUser
@@ -240,7 +298,7 @@ class SubscriptionManager: ObservableObject {
     /// 動物登録数の上限を超えて登録できるかどうか (InAppPurchaseManagerとの互換性用)
     func canRegisterMoreAnimals(currentCount: Int) -> Bool {
         // デバッグモードが有効な場合は、デバッグ設定を優先
-        if debugPremiumEnabled {
+        if debugPremiumEnabled && environment == .debug {
             return true
         }
         

@@ -84,6 +84,20 @@ struct AnimalGestioneProjectApp: App {
         if defaults.string(forKey: "animalIcon") == nil {
             defaults.set("pawprint", forKey: "animalIcon")
         }
+        
+        // 開発者モード関連の設定をクリア
+        defaults.removeObject(forKey: "developerModeEnabled")
+        
+        // サブスクリプション環境の初期設定
+        #if DEBUG
+        // デバッグビルドでは開発環境をデフォルトに設定
+        SubscriptionManager.shared.environment = .debug
+        print("サブスクリプション環境: 開発環境（デバッグ）")
+        #else
+        // リリースビルドでは本番環境をデフォルトに設定
+        SubscriptionManager.shared.environment = .production
+        print("サブスクリプション環境: 本番環境（リリース）")
+        #endif
     }
     
     // プライバシーポリシー同意状態を確認
