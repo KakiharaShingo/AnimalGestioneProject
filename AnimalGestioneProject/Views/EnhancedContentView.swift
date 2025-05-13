@@ -346,6 +346,7 @@ struct SettingsView: View {
     @State private var showingPremiumView = false
     @State private var showingDataManagementView = false
     @State private var showingPrivacyPolicy = false
+    @State private var showingPrivacyPolicyURL = false
     @State private var showingSupportView = false
     @State private var showingCSVExportView = false
     @State private var showingNotificationSettings = false
@@ -460,6 +461,12 @@ struct SettingsView: View {
                         showingPrivacyPolicy = true
                     }) {
                         Label("プライバシーポリシー", systemImage: "hand.raised")
+                    }
+                    
+                    Button(action: {
+                        showingPrivacyPolicyURL = true
+                    }) {
+                        Label("プライバシーポリシーURL (開発者用)", systemImage: "link")
                     }
                 }
                 
@@ -691,6 +698,10 @@ struct SettingsView: View {
             NavigationView {
                 PrivacyPolicyView()
             }
+        }
+        // プライバシーポリシーURLビューを表示
+        .sheet(isPresented: $showingPrivacyPolicyURL) {
+            PrivacyPolicyURLView()
         }
         // サポートビューを表示
         .sheet(isPresented: $showingSupportView) {

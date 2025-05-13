@@ -13,6 +13,8 @@ class AppSetupManager: ObservableObject {
     private let privacyPolicyAcceptedKey = "privacyPolicyAccepted"
     private let privacyPolicyVersionKey = "privacyPolicyVersion"
     
+    // プライバシーポリシーのURLはURLProviderクラスで管理
+    
     private init() {
         checkAppVersion()
     }

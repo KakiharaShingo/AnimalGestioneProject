@@ -106,7 +106,7 @@ struct PremiumPurchaseView: View {
             }
             .padding()
             .navigationBarTitle("", displayMode: .inline)
-            .navigationBarItems(trailing: Button("閉じる") {
+            .navigationBarItems(leading: Button("閉じる") {
                 presentationMode.wrappedValue.dismiss()
             })
             .alert(isPresented: $showAlert) {

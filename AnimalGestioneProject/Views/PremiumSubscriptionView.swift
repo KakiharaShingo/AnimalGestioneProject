@@ -30,7 +30,7 @@ struct PremiumSubscriptionView: View {
             .navigationTitle("プレミアムプラン")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button("閉じる") {
                         dismiss()
                     }

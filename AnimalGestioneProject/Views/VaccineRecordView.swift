@@ -35,25 +35,38 @@ struct VaccineRecordView: View {
                 
                 // 次回予定セクション（フィルターが「すべて」または「予定」の場合のみ表示）
                 if selectedFilter != .past, let nextVaccine = dataStore.getNextScheduledVaccine(animalId: animalId) {
-                    Section {
-                        VStack(alignment: .leading, spacing: 10) {
-                            HStack {
-                                Image(systemName: "calendar.badge.clock")
+                Section {
+                VStack(alignment: .leading, spacing: 10) {
+                HStack {
+                Image(systemName: "calendar.badge.clock")
+                .foregroundColor(.blue)
+                Text("次回予定")
+                .font(.headline)
+                }
+                
+                HStack {
+                Text(nextVaccine.vaccineName)
+                .font(.subheadline)
+                .fontWeight(.medium)
+                
+                // カスタムワクチンの場合はラベルを表示
+                if !["混合ワクチン(DHPP)", "狂犬病", "ボルデテラ", "レプトスピラ", "ライム病", 
+                    "猫江白血球減少症(FPV)", "猫カリシウイルス(FCV)", "猫ヘルペスウイルス(FHV)", 
+                "猫白血病ウイルス(FeLV)", "猫免疫不全ウイルス(FIV)"].contains(nextVaccine.vaccineName) {
+                        Text("カスタム")
+                                    .font(.caption)
+                                    .padding(.horizontal, 6)
+                                    .padding(.vertical, 2)
+                                    .background(Color.blue.opacity(0.2))
                                     .foregroundColor(.blue)
-                                Text("次回予定")
-                                    .font(.headline)
+                                    .cornerRadius(4)
                             }
                             
-                            HStack {
-                                Text(nextVaccine.vaccineName)
-                                    .font(.subheadline)
-                                    .fontWeight(.medium)
-                                
-                                Spacer()
-                                
-                                Text(formatDate(nextVaccine.scheduledDate))
-                                    .font(.subheadline)
-                            }
+                            Spacer()
+                            
+                            Text(formatDate(nextVaccine.scheduledDate))
+                                .font(.subheadline)
+                        }
                             
                             // 残り日数の計算と表示
                             let daysRemaining = Calendar.current.dateComponents([.day], from: Date(), to: nextVaccine.scheduledDate).day ?? 0
@@ -116,18 +129,31 @@ struct VaccineRecordView: View {
                                 selectedRecord = record
                                 showingEditSheet = true
                             }) {
-                                VStack(alignment: .leading, spacing: 4) {
-                                    HStack {
-                                        Text(record.vaccineName)
-                                            .font(.subheadline)
-                                            .fontWeight(.medium)
-                                        
-                                        Spacer()
-                                        
-                                        Text(formatDate(record.date))
+                            VStack(alignment: .leading, spacing: 4) {
+                                HStack {
+                                    Text(record.vaccineName)
+                                        .font(.subheadline)
+                                        .fontWeight(.medium)
+                                    
+                                    // 通常のワクチンリストにない場合は「カスタム」と表示
+                                    if !["混合ワクチン(DHPP)", "狂犬病", "ボルデテラ", "レプトスピラ", "ライム病", 
+                                         "猫江白血球減少症(FPV)", "猫カリシウイルス(FCV)", "猫ヘルペスウイルス(FHV)", 
+                                         "猫白血病ウイルス(FeLV)", "猫免疫不全ウイルス(FIV)"].contains(record.vaccineName) {
+                                        Text("カスタム")
                                             .font(.caption)
-                                            .foregroundColor(.secondary)
+                                            .padding(.horizontal, 6)
+                                            .padding(.vertical, 2)
+                                            .background(Color.blue.opacity(0.2))
+                                            .foregroundColor(.blue)
+                                            .cornerRadius(4)
                                     }
+                                    
+                                    Spacer()
+                                    
+                                    Text(formatDate(record.date))
+                                        .font(.caption)
+                                        .foregroundColor(.secondary)
+                                }
                                     
                                     if let nextDate = record.nextScheduledDate {
                                         HStack {
@@ -289,6 +315,8 @@ struct AddVaccineRecordView: View {
     let animalId: UUID
     
     @State private var vaccineName = ""
+    @State private var customVaccineName = ""
+    @State private var vaccineType = ""
     @State private var date = Date()
     @State private var scheduleNextVaccine = true
     @State private var interval = "365" // デフォルトは1年
@@ -312,18 +340,30 @@ struct AddVaccineRecordView: View {
         "その他"
     ]
     
+    // ページ表示時の初期化
     var body: some View {
         NavigationView {
             Form {
                 Section {
-                    Picker("ワクチン種類", selection: $vaccineName) {
+                    Picker("ワクチン種類", selection: $vaccineType) {
                         ForEach(vaccineOptions, id: \.self) { vaccine in
                             Text(vaccine).tag(vaccine)
                         }
                     }
+                    .onChange(of: vaccineType) { newValue in
+                        if newValue == "その他" {
+                            vaccineName = customVaccineName
+                        } else {
+                            vaccineName = newValue
+                        }
+                    }
                     
-                    if vaccineName == "その他" {
-                        TextField("ワクチン名を入力", text: $vaccineName)
+                    // その他を選択した場合はカスタム名を使用
+                    if vaccineType == "その他" {
+                        TextField("ワクチン名を入力", text: $customVaccineName)
+                            .onChange(of: customVaccineName) { newValue in
+                                vaccineName = newValue
+                            }
                     }
                     
                     DatePicker("接種日", selection: $date, displayedComponents: .date)
@@ -380,11 +420,24 @@ struct AddVaccineRecordView: View {
                     dismissButton: .default(Text("OK"))
                 )
             }
+            .onAppear {
+                // 初期設定
+                vaccineType = vaccineOptions.first ?? ""
+                vaccineName = vaccineType
+            }
         }
     }
     
     private func saveRecord() {
-        if vaccineName.isEmpty {
+        // その他を選択した場合はカスタム名を使用
+        var finalVaccineName = vaccineName
+        if vaccineType == "その他" {
+            finalVaccineName = customVaccineName.isEmpty ? "カスタムワクチン" : customVaccineName
+            // カスタムワクチン名を更新
+            vaccineName = finalVaccineName
+        }
+        
+        if finalVaccineName.isEmpty {
             alertMessage = "ワクチン名を入力してください"
             showingAlert = true
             return
@@ -400,14 +453,17 @@ struct AddVaccineRecordView: View {
             intervalValue = value
         }
         
+        // メモが空であれば、その他の場合はカスタム名をメモに含める
+        var recordNotes = notes
+        
         let newRecord = VaccineRecord(
             id: UUID(),
             animalId: animalId,
             date: date,
-            vaccineName: vaccineName,
+            vaccineName: finalVaccineName,
             nextScheduledDate: scheduleNextVaccine ? nextDate : nil,
             interval: intervalValue,
-            notes: notes.isEmpty ? nil : notes
+            notes: recordNotes.isEmpty ? nil : recordNotes
         )
         
         dataStore.addVaccineRecord(newRecord)
@@ -422,6 +478,8 @@ struct EditVaccineRecordView: View {
     let record: VaccineRecord
     
     @State private var vaccineName: String
+    @State private var customVaccineName: String
+    @State private var vaccineType: String
     @State private var date: Date
     @State private var scheduleNextVaccine: Bool
     @State private var interval: String
@@ -449,6 +507,18 @@ struct EditVaccineRecordView: View {
         self.record = record
         
         _vaccineName = State(initialValue: record.vaccineName)
+        
+        // ワクチンタイプとカスタム名の初期化
+        if let existingType = ["混合ワクチン(DHPP)", "狂犬病", "ボルデテラ", "レプトスピラ", "ライム病", 
+                           "猫汎白血球減少症(FPV)", "猫カリシウイルス(FCV)", "猫ヘルペスウイルス(FHV)", 
+                           "猫白血病ウイルス(FeLV)", "猫免疫不全ウイルス(FIV)"].first(where: { $0 == record.vaccineName }) {
+            _vaccineType = State(initialValue: existingType)
+            _customVaccineName = State(initialValue: "")
+        } else {
+            _vaccineType = State(initialValue: "その他")
+            _customVaccineName = State(initialValue: record.vaccineName)
+        }
+        
         _date = State(initialValue: record.date)
         _scheduleNextVaccine = State(initialValue: record.nextScheduledDate != nil)
         
@@ -473,19 +543,24 @@ struct EditVaccineRecordView: View {
         NavigationView {
             Form {
                 Section {
-                    Picker("ワクチン種類", selection: $vaccineName) {
+                    Picker("ワクチン種類", selection: $vaccineType) {
                         ForEach(vaccineOptions, id: \.self) { vaccine in
                             Text(vaccine).tag(vaccine)
                         }
-                        
-                        // 一般的なオプションにないカスタム値の場合
-                        if !vaccineOptions.contains(vaccineName) && vaccineName != "その他" {
-                            Text(vaccineName).tag(vaccineName)
+                    }
+                    .onChange(of: vaccineType) { newValue in
+                        if newValue == "その他" {
+                            // カスタム入力フィールド用あ
+                        } else {
+                            vaccineName = newValue
                         }
                     }
                     
-                    if vaccineName == "その他" || !vaccineOptions.contains(vaccineName) {
-                        TextField("ワクチン名を入力", text: $vaccineName)
+                    if vaccineType == "その他" {
+                        TextField("ワクチン名を入力", text: $customVaccineName)
+                            .onChange(of: customVaccineName) { newValue in
+                                vaccineName = newValue
+                            }
                     }
                     
                     DatePicker("接種日", selection: $date, displayedComponents: .date)
@@ -546,7 +621,15 @@ struct EditVaccineRecordView: View {
     }
     
     private func saveRecord() {
-        if vaccineName.isEmpty {
+        // その他を選択した場合はカスタム名を使用
+        var finalVaccineName = vaccineName
+        if vaccineType == "その他" {
+            finalVaccineName = customVaccineName.isEmpty ? "カスタムワクチン" : customVaccineName
+            // カスタムワクチン名を更新
+            vaccineName = finalVaccineName
+        }
+        
+        if finalVaccineName.isEmpty {
             alertMessage = "ワクチン名を入力してください"
             showingAlert = true
             return
@@ -561,9 +644,9 @@ struct EditVaccineRecordView: View {
             }
             intervalValue = value
         }
-        
+
         var updatedRecord = record
-        updatedRecord.vaccineName = vaccineName
+        updatedRecord.vaccineName = finalVaccineName
         updatedRecord.date = date
         updatedRecord.nextScheduledDate = scheduleNextVaccine ? nextDate : nil
         updatedRecord.interval = intervalValue
