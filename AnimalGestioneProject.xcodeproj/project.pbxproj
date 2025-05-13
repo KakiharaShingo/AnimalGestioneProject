@@ -12,7 +12,6 @@
 		28FE96192DD33AC400ECAE5B /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE95DF2DD33AC400ECAE5B /* NotificationManager.swift */; };
 		28FE961A2DD33AC400ECAE5B /* AnimalGestione.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28FE95C52DD33AC400ECAE5B /* AnimalGestione.xcdatamodeld */; };
 		28FE961B2DD33AC400ECAE5B /* SupportURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE96122DD33AC400ECAE5B /* SupportURLView.swift */; };
-		28FE961C2DD33AC400ECAE5B /* AppIconGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE95BF2DD33AC400ECAE5B /* AppIconGenerator.swift */; };
 		28FE961D2DD33AC400ECAE5B /* PrivacyPolicyURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE960C2DD33AC400ECAE5B /* PrivacyPolicyURLView.swift */; };
 		28FE961E2DD33AC400ECAE5B /* AddAnimalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE95F82DD33AC400ECAE5B /* AddAnimalView.swift */; };
 		28FE961F2DD33AC400ECAE5B /* HealthChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE96032DD33AC400ECAE5B /* HealthChartView.swift */; };
@@ -36,7 +35,6 @@
 		28FE96312DD33AC400ECAE5B /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE95EC2DD33AC400ECAE5B /* BannerAdView.swift */; };
 		28FE96322DD33AC400ECAE5B /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE960F2DD33AC400ECAE5B /* SettingsView.swift */; };
 		28FE96332DD33AC400ECAE5B /* AdContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE95EA2DD33AC400ECAE5B /* AdContainerView.swift */; };
-		28FE96342DD33AC400ECAE5B /* AppIconExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE95BE2DD33AC400ECAE5B /* AppIconExporter.swift */; };
 		28FE96352DD33AC400ECAE5B /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE95E52DD33AC400ECAE5B /* SubscriptionManager.swift */; };
 		28FE96362DD33AC400ECAE5B /* AdConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE95C12DD33AC400ECAE5B /* AdConfig.swift */; };
 		28FE96372DD33AC400ECAE5B /* FAQViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FE95F52DD33AC400ECAE5B /* FAQViews.swift */; };
@@ -83,7 +81,6 @@
 		28FE96602DD33AC400ECAE5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28FE95C02DD33AC400ECAE5B /* Assets.xcassets */; };
 		28FE96622DD33AC400ECAE5B /* StoreKitTestConfiguration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 28FE95E82DD33AC400ECAE5B /* StoreKitTestConfiguration.storekit */; };
 		28FE96632DD33AC400ECAE5B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28FE95E22DD33AC400ECAE5B /* Preview Assets.xcassets */; };
-		28FE96642DD33AC400ECAE5B /* get-pip.py in Resources */ = {isa = PBXBuildFile; fileRef = 28FE95D42DD33AC400ECAE5B /* get-pip.py */; };
 		8712323F743F7D608F65A1D4 /* Pods_AnimalGestioneProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A339245298984A3ED5E817 /* Pods_AnimalGestioneProjectTests.framework */; };
 		C3CD51E73871342D3429AF85 /* Pods_AnimalGestioneProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF413571F0460F9FA2800BC0 /* Pods_AnimalGestioneProject.framework */; };
 /* End PBXBuildFile section */
@@ -111,8 +108,6 @@
 		2824B7872DCF368900625889 /* AnimalGestioneProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalGestioneProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28FE95BC2DD33AC400ECAE5B /* AnimalGestioneProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGestioneProjectApp.swift; sourceTree = "<group>"; };
 		28FE95BD2DD33AC400ECAE5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28FE95BE2DD33AC400ECAE5B /* AppIconExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconExporter.swift; sourceTree = "<group>"; };
-		28FE95BF2DD33AC400ECAE5B /* AppIconGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconGenerator.swift; sourceTree = "<group>"; };
 		28FE95C02DD33AC400ECAE5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28FE95C12DD33AC400ECAE5B /* AdConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdConfig.swift; sourceTree = "<group>"; };
 		28FE95C22DD33AC400ECAE5B /* AppSetupManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetupManager.swift; sourceTree = "<group>"; };
@@ -127,7 +122,6 @@
 		28FE95CE2DD33AC400ECAE5B /* DebugDataExport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugDataExport.swift; sourceTree = "<group>"; };
 		28FE95D02DD33AC400ECAE5B /* AnimalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalDataStore.swift; sourceTree = "<group>"; };
 		28FE95D22DD33AC400ECAE5B /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
-		28FE95D42DD33AC400ECAE5B /* get-pip.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "get-pip.py"; sourceTree = "<group>"; };
 		28FE95D52DD33AC400ECAE5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28FE95D62DD33AC400ECAE5B /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 		28FE95D72DD33AC400ECAE5B /* AnimalModel+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalModel+CoreData.swift"; sourceTree = "<group>"; };
@@ -230,22 +224,18 @@
 			children = (
 				28FE95BC2DD33AC400ECAE5B /* AnimalGestioneProjectApp.swift */,
 				28FE95BD2DD33AC400ECAE5B /* AppDelegate.swift */,
-				28FE95BE2DD33AC400ECAE5B /* AppIconExporter.swift */,
-				28FE95BF2DD33AC400ECAE5B /* AppIconGenerator.swift */,
 				28FE95C02DD33AC400ECAE5B /* Assets.xcassets */,
 				28FE95C42DD33AC400ECAE5B /* Config */,
 				28FE95C92DD33AC400ECAE5B /* CoreData */,
 				28FE95CF2DD33AC400ECAE5B /* DataManagement */,
 				28FE95D12DD33AC400ECAE5B /* DataStore */,
 				28FE95D32DD33AC400ECAE5B /* Extensions */,
-				28FE95D42DD33AC400ECAE5B /* get-pip.py */,
 				28FE95D52DD33AC400ECAE5B /* Info.plist */,
 				28FE95DE2DD33AC400ECAE5B /* Models */,
 				28FE95E12DD33AC400ECAE5B /* Notifications */,
 				28FE95E32DD33AC400ECAE5B /* Preview Content */,
 				28FE95E72DD33AC400ECAE5B /* StoreKit */,
 				28FE95E82DD33AC400ECAE5B /* StoreKitTestConfiguration.storekit */,
-				28FE95E92DD33AC400ECAE5B /* Subscription */,
 				28FE96162DD33AC400ECAE5B /* Views */,
 			);
 			path = AnimalGestioneProject;
@@ -352,13 +342,6 @@
 				28FE95E62DD33AC400ECAE5B /* SubscriptionProduct.swift */,
 			);
 			path = StoreKit;
-			sourceTree = "<group>";
-		};
-		28FE95E92DD33AC400ECAE5B /* Subscription */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Subscription;
 			sourceTree = "<group>";
 		};
 		28FE95F12DD33AC400ECAE5B /* Ads */ = {
@@ -568,7 +551,6 @@
 				28FE96602DD33AC400ECAE5B /* Assets.xcassets in Resources */,
 				28FE96622DD33AC400ECAE5B /* StoreKitTestConfiguration.storekit in Resources */,
 				28FE96632DD33AC400ECAE5B /* Preview Assets.xcassets in Resources */,
-				28FE96642DD33AC400ECAE5B /* get-pip.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,7 +690,6 @@
 				28FE96192DD33AC400ECAE5B /* NotificationManager.swift in Sources */,
 				28FE961A2DD33AC400ECAE5B /* AnimalGestione.xcdatamodeld in Sources */,
 				28FE961B2DD33AC400ECAE5B /* SupportURLView.swift in Sources */,
-				28FE961C2DD33AC400ECAE5B /* AppIconGenerator.swift in Sources */,
 				28FE961D2DD33AC400ECAE5B /* PrivacyPolicyURLView.swift in Sources */,
 				28FE961E2DD33AC400ECAE5B /* AddAnimalView.swift in Sources */,
 				28FE961F2DD33AC400ECAE5B /* HealthChartView.swift in Sources */,
@@ -732,7 +713,6 @@
 				28FE96312DD33AC400ECAE5B /* BannerAdView.swift in Sources */,
 				28FE96322DD33AC400ECAE5B /* SettingsView.swift in Sources */,
 				28FE96332DD33AC400ECAE5B /* AdContainerView.swift in Sources */,
-				28FE96342DD33AC400ECAE5B /* AppIconExporter.swift in Sources */,
 				28FE96352DD33AC400ECAE5B /* SubscriptionManager.swift in Sources */,
 				28FE96362DD33AC400ECAE5B /* AdConfig.swift in Sources */,
 				28FE96372DD33AC400ECAE5B /* FAQViews.swift in Sources */,
