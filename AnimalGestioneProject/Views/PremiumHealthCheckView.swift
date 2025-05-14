@@ -35,10 +35,10 @@ struct PremiumHealthCheckView: View {
             
             // プレミアム機能の説明
             VStack(alignment: .leading, spacing: 12) {
-                FeatureRow(icon: "checkmark.circle.fill", title: "詳細な健康分析", description: "より詳細な健康データ分析とグラフ表示")
-                FeatureRow(icon: "chart.xyaxis.line", title: "傾向分析", description: "体重、健康状態の長期的な傾向分析")
-                FeatureRow(icon: "flag.fill", title: "健康アラート", description: "異常値検出と早期警告システム")
-                FeatureRow(icon: "doc.text.fill", title: "レポート機能", description: "獣医に提供できる健康レポートの作成")
+                HealthFeatureRow(icon: "checkmark.circle.fill", title: "詳細な健康分析", description: "より詳細な健康データ分析とグラフ表示")
+                HealthFeatureRow(icon: "chart.xyaxis.line", title: "傾向分析", description: "体重、健康状態の長期的な傾向分析")
+                HealthFeatureRow(icon: "flag.fill", title: "健康アラート", description: "異常値検出と早期警告システム")
+                HealthFeatureRow(icon: "doc.text.fill", title: "レポート機能", description: "獣医に提供できる健康レポートの作成")
             }
             .padding()
             .background(Color(.systemGray6))
@@ -194,6 +194,30 @@ struct AnimalInfoCard: View {
         // データストアからデータを取得するロジック
         // 実際の実装は、CoreDataStoreの構造に依存します
         return nil // 仮実装
+    }
+}
+
+// 健康チェック機能の説明行コンポーネント
+struct HealthFeatureRow: View {
+    let icon: String
+    let title: String
+    let description: String
+    
+    var body: some View {
+        HStack(alignment: .top, spacing: 15) {
+            Image(systemName: icon)
+                .foregroundColor(.red)  // 健康チェック用に赤色を使用
+                .font(.title2)
+            
+            VStack(alignment: .leading, spacing: 3) {
+                Text(title)
+                    .font(.headline)
+                
+                Text(description)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+        }
     }
 }
 

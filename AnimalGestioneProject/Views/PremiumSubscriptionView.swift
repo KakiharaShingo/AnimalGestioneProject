@@ -80,8 +80,8 @@ struct PremiumSubscriptionView: View {
                 .font(.headline)
                 .padding(.bottom, 5)
             
-            FeatureRow(icon: "xmark.circle.fill", title: "広告非表示", description: "アプリ内の広告をすべて非表示にします")
-            FeatureRow(icon: "plus.circle.fill", title: "ペット登録無制限", description: "無制限の数のペットを登録できます")
+            PremiumFeatureRow(icon: "xmark.circle.fill", title: "広告非表示", description: "アプリ内の広告をすべて非表示にします")
+            PremiumFeatureRow(icon: "plus.circle.fill", title: "ペット登録無制限", description: "無制限の数のペットを登録できます")
         }
         .padding()
         .background(Color(.systemGray6))
@@ -167,7 +167,7 @@ struct PremiumSubscriptionView: View {
 }
 
 /// 機能説明行コンポーネント
-struct FeatureRow: View {
+struct PremiumFeatureRow: View {
     let icon: String
     let title: String
     let description: String
