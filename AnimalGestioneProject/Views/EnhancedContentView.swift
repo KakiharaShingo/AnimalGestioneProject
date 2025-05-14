@@ -341,6 +341,7 @@ struct CalendarTabView: View {
             .background(Color(.systemGroupedBackground).ignoresSafeArea())
             .navigationTitle("カレンダー")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
@@ -656,6 +657,7 @@ struct SettingsView: View {
             .navigationTitle("設定")
             .listStyle(InsetGroupedListStyle())
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .sheet(isPresented: $showingPremiumView) {
             // プレミアム機能の表示フラグがオンの場合のみ表示
             if InAppPurchaseManager.showPremiumFeatures {
