@@ -262,6 +262,7 @@ struct EnhancedHomeView: View {
                 }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     private var upcomingCyclePredictions: [(animal: Animal, date: Date)] {

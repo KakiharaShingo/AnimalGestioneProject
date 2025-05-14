@@ -194,6 +194,7 @@ struct EnhancedAnimalListView: View {
                 )
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
         .onAppear {
             setupNotificationObservers()
         }

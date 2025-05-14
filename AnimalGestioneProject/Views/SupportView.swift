@@ -32,59 +32,64 @@ struct SupportView: View {
     @State private var selectedGuideItem: GuideItem? = nil
     
     var body: some View {
-        VStack(spacing: 0) {
-            // タブセレクター
-            HStack(spacing: 0) {
-                ForEach(0..<3) { index in
-                    Button(action: {
-                        withAnimation {
-                            selectedTab = index
+        NavigationView {
+            VStack(spacing: 0) {
+                // タブセレクター
+                HStack(spacing: 0) {
+                    ForEach(0..<3) { index in
+                        Button(action: {
+                            withAnimation {
+                                selectedTab = index
+                            }
+                        }) {
+                            VStack(spacing: 8) {
+                                Image(systemName: tabIcon(for: index))
+                                    .font(.system(size: 22))
+                                
+                                Text(tabTitle(for: index))
+                                    .font(.caption)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 12)
+                            .background(selectedTab == index ? Color.blue.opacity(0.1) : Color.clear)
+                            .foregroundColor(selectedTab == index ? .blue : .gray)
                         }
-                    }) {
-                        VStack(spacing: 8) {
-                            Image(systemName: tabIcon(for: index))
-                                .font(.system(size: 22))
-                            
-                            Text(tabTitle(for: index))
-                                .font(.caption)
+                        
+                        if index < 2 {
+                            Divider()
                         }
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 12)
-                        .background(selectedTab == index ? Color.blue.opacity(0.1) : Color.clear)
-                        .foregroundColor(selectedTab == index ? .blue : .gray)
                     }
-                    
-                    if index < 2 {
-                        Divider()
+                }
+                .background(Color(.systemBackground))
+                .overlay(
+                    Rectangle()
+                        .frame(height: 1)
+                        .foregroundColor(Color(.systemGray5)),
+                    alignment: .bottom
+                )
+                
+                // コンテンツ表示
+                Group {
+                    switch selectedTab {
+                    case 0:
+                        FAQListView()
+                    case 1:
+                        GuidesListView(showingGuide: $showingGuide, selectedGuideItem: $selectedGuideItem)
+                    case 2:
+                        ContactSupportView(showingContactForm: $showingContactForm)
+                    default:
+                        EmptyView()
                     }
                 }
             }
-            .background(Color(.systemBackground))
-            .overlay(
-                Rectangle()
-                    .frame(height: 1)
-                    .foregroundColor(Color(.systemGray5)),
-                alignment: .bottom
-            )
-            
-            TabView(selection: $selectedTab) {
-                FAQListView()
-                    .tag(0)
-                
-                GuidesListView(showingGuide: $showingGuide, selectedGuideItem: $selectedGuideItem)
-                    .tag(1)
-                
-                ContactSupportView(showingContactForm: $showingContactForm)
-                    .tag(2)
-            }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+            .navigationBarTitle("サポート", displayMode: .inline)
+            .navigationBarItems(leading: Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("閉じる")
+            })
         }
-        .navigationBarTitle("サポート", displayMode: .inline)
-        .navigationBarItems(leading: Button(action: {
-            presentationMode.wrappedValue.dismiss()
-        }) {
-            Text("閉じる")
-        })
+        .navigationViewStyle(StackNavigationViewStyle())
         .sheet(isPresented: $showingContactForm) {
             ContactFormView(isPresented: $showingContactForm)
         }
@@ -96,6 +101,7 @@ struct SupportView: View {
                     })
                     .navigationBarTitle(guideItem.title, displayMode: .inline)
             }
+            .navigationViewStyle(StackNavigationViewStyle())
         }
     }
     
