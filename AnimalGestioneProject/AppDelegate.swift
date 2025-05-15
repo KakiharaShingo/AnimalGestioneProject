@@ -2,7 +2,7 @@
 import Foundation
 import UIKit
 import GoogleMobileAds
-import AppTrackingTransparency
+// import AppTrackingTransparency
 import AdSupport
 import SwiftUI
 import UserNotifications
@@ -25,10 +25,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             print("AdMob初期化ステータス: ", status.adapterStatusesByClassName)
         })
         
-        // iOS 14以降でトラッキング許可リクエストを遅延実行（Appleのガイドラインに従う）
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.requestTrackingAuthorization()
-        }
+        // トラッキング許可リクエストは削除しました - NSUserTrackingUsageDescriptionが原因のクラッシュを修正
         
         // InAppPurchaseManagerとAdManagerの初期化
         // これらはシングルトンパターンを使用しているので参照するだけでOK
@@ -41,33 +38,9 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return true
     }
     
-    // トラッキング許可リクエスト処理
-    private func requestTrackingAuthorization() {
-        if #available(iOS 14, *) {
-            ATTrackingManager.requestTrackingAuthorization { status in
-                switch status {
-                case .authorized:
-                    // トラッキング許可が与えられた場合、IDFA にアクセス可能
-                    print("トラッキング許可: 許可されました")
-                    // トラッキングIDが利用可能になったので広告IDをリフレッシュ
-                    self.refreshAdRequest()
-                case .denied:
-                    // トラッキングが明示的に拒否された
-                    print("トラッキング許可: 拒否されました")
-                case .notDetermined:
-                    // ユーザーが選択していない
-                    print("トラッキング許可: まだ選択されていません")
-                case .restricted:
-                    // デバイスの制限によりトラッキングが不可能
-                    print("トラッキング許可: 制限されています")
-                @unknown default:
-                    print("トラッキング許可: 不明なステータス")
-                }
-            }
-        }
-    }
+    // トラッキング許可リクエスト処理は削除しました - NSUserTrackingUsageDescriptionが原因のクラッシュを修正
     
-    // 広告リクエストを更新する
+    // 広告リクエストを更新する - アプリ起動時に広告を事前ロード
     private func refreshAdRequest() {
         // 広告マネージャーを再初期化
         DispatchQueue.main.async {
@@ -75,6 +48,12 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             AdManager.shared.interstitialAdManager.loadInterstitialAd()
             AdManager.shared.rewardedAdManager.loadRewardedAd()
         }
+    }
+    
+    // アプリがアクティブになったとき
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        // 直接広告をロードする
+        refreshAdRequest()
     }
     
     // 通知カテゴリを設定

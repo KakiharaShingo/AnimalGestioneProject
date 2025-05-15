@@ -70,7 +70,5 @@
 			<string>cstr6suwn9.skadnetwork</string>
 		</dict>
 	</array>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>この識別子は、お客様により関連性の高いパーソナライズされた広告を表示するために使用されます。</string>
 </dict>
 </plist>
