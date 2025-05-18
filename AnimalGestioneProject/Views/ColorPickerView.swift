@@ -1,9 +1,5 @@
 import SwiftUI
 
-// このビューは利用されません - 削除予定
-// 一時的にコンパイルエラーを回避するためにコメントアウトしています
-
-/*
 struct ColorPickerView: View {
     @Environment(\.presentationMode) var presentationMode
     @Binding var color: Color
@@ -143,4 +139,3 @@ struct ColorPickerView_Previews: PreviewProvider {
         ColorPickerView(color: .constant(Color.blue), onSave: { _ in })
     }
 }
-*/

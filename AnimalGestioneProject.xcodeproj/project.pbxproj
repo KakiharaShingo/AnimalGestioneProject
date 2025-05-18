@@ -75,7 +75,6 @@
 		289AAF082DD3C75300D5F04E /* CSVExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289AAE752DD3C75300D5F04E /* CSVExportView.swift */; };
 		289AAF092DD3C75300D5F04E /* AnimalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289AAEA92DD3C75300D5F04E /* AnimalDetailView.swift */; };
 		289AAF0A2DD3C75300D5F04E /* AdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289AAE9A2DD3C75300D5F04E /* AdManager.swift */; };
-		289AAF0B2DD3C75300D5F04E /* PremiumHealthCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289AAEB92DD3C75300D5F04E /* PremiumHealthCheckView.swift */; };
 		289AAF0C2DD3C75300D5F04E /* AnimalDetailView+ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289AAEAA2DD3C75300D5F04E /* AnimalDetailView+ColorPicker.swift */; };
 		289AAF0D2DD3C75300D5F04E /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 289AAEAB2DD3C75300D5F04E /* ColorPickerView.swift */; };
 		289AAF0E2DD3C75300D5F04E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 289AAE922DD3C75300D5F04E /* Preview Assets.xcassets */; };
@@ -166,7 +165,6 @@
 		289AAEB62DD3C75300D5F04E /* InlinePrivacyViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlinePrivacyViews.swift; sourceTree = "<group>"; };
 		289AAEB72DD3C75300D5F04E /* IntegratedSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratedSupportView.swift; sourceTree = "<group>"; };
 		289AAEB82DD3C75300D5F04E /* PhysiologicalCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysiologicalCycleView.swift; sourceTree = "<group>"; };
-		289AAEB92DD3C75300D5F04E /* PremiumHealthCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumHealthCheckView.swift; sourceTree = "<group>"; };
 		289AAEBA2DD3C75300D5F04E /* PremiumSubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumSubscriptionView.swift; sourceTree = "<group>"; };
 		289AAEBB2DD3C75300D5F04E /* PrivacyPolicyConsentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyConsentView.swift; sourceTree = "<group>"; };
 		289AAEBC2DD3C75300D5F04E /* PrivacyPolicyURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyURLView.swift; sourceTree = "<group>"; };
@@ -458,7 +456,6 @@
 				289AAEB62DD3C75300D5F04E /* InlinePrivacyViews.swift */,
 				289AAEB72DD3C75300D5F04E /* IntegratedSupportView.swift */,
 				289AAEB82DD3C75300D5F04E /* PhysiologicalCycleView.swift */,
-				289AAEB92DD3C75300D5F04E /* PremiumHealthCheckView.swift */,
 				289AAEBA2DD3C75300D5F04E /* PremiumSubscriptionView.swift */,
 				289AAEBB2DD3C75300D5F04E /* PrivacyPolicyConsentView.swift */,
 				289AAEBC2DD3C75300D5F04E /* PrivacyPolicyURLView.swift */,
@@ -849,7 +846,6 @@
 				289AAF082DD3C75300D5F04E /* CSVExportView.swift in Sources */,
 				289AAF092DD3C75300D5F04E /* AnimalDetailView.swift in Sources */,
 				289AAF0A2DD3C75300D5F04E /* AdManager.swift in Sources */,
-				289AAF0B2DD3C75300D5F04E /* PremiumHealthCheckView.swift in Sources */,
 				289AAF0C2DD3C75300D5F04E /* AnimalDetailView+ColorPicker.swift in Sources */,
 				289AAF0D2DD3C75300D5F04E /* ColorPickerView.swift in Sources */,
 			);

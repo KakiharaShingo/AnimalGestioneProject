@@ -119,22 +119,6 @@ struct AnimalDetailView: View {
                             }
                             
                             Spacer()
-                            
-                            // プレミアム健康チェックボタン
-                            Button(action: {
-                                isShowingPremiumHealthCheck = true
-                            }) {
-                                HStack {
-                                    Image(systemName: "crown")
-                                        .foregroundColor(.yellow)
-                                    Text("高度健康分析")
-                                        .font(.caption)
-                                }
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 4)
-                                .background(Color(.systemGray6))
-                                .cornerRadius(8)
-                            }
                         }
                         .padding(.top)
                     }
@@ -332,43 +316,12 @@ struct AnimalDetailView: View {
         }
         .sheet(isPresented: $showingGroomingRecord) {
             GroomingRecordView(animalId: animal.id)
-                .environmentObject(dataStore)
-        }
-        .sheet(isPresented: $isShowingPremiumHealthCheck) {
-            PremiumHealthCheckView(animalId: animal.id)
-                .environmentObject(dataStore)
         }
         .sheet(isPresented: $showingColorPicker) {
-            VStack {
-                Text("テーマ色を選択")
-                    .font(.headline)
-                    .padding()
-                
-                ColorPicker("色を選択", selection: $selectedColor)
-                    .padding()
-                
-                Button("適用") {
-                    var updatedAnimal = animal
-                    updatedAnimal.color = selectedColor
-                    dataStore.updateAnimalColor(id: animal.id, color: selectedColor)
-                    animal = updatedAnimal
-                    showingColorPicker = false
-                    
-                    // 色変更の通知を送信
-                    NotificationCenter.default.post(
-                        name: NSNotification.Name("AnimalColorChanged"),
-                        object: animal.id
-                    )
-                }
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(8)
-                .padding()
-                
-                Spacer()
+            ColorPickerView(color: $selectedColor) { newColor in
+                animal.color = newColor
+                dataStore.updateAnimal(animal)
             }
-            .padding()
         }
         .alert(isPresented: $showingDeleteConfirmation) {
             Alert(
