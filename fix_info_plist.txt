@@ -10,3 +10,46 @@
 追加の注意事項:
 - プロジェクト設定で「INFOPLIST_FILE」パラメータが正しく指定されていれば（現在は「$(SRCROOT)/AnimalGestioneProject/Info.plist」）、Info.plistを「Copy Bundle Resources」から削除しても問題ありません。
 - この修正では、Info.plistは引き続きアプリに含まれますが、ビルドプロセス中に二重にコピーされなくなります。
+
+
+
+
+
+
+error: Resource "$RESOURCE_PATH" not found. Run 'pod install' to update the copy resources script.
+EOM   
+    exit 1
+  fi
+  case $RESOURCE_PATH in
+    *.storyboard)
+      echo "ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_$
+      ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET$
+      ;;
+    *.xib)
+      echo "ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_$
+      ibtool --reference-external-strings-file --errors --warnings --notices --minimum-deployment-target ${!DEPLOYMENT_TARGET$
+      ;;
+    *.framework)
+      echo "mkdir -p ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}" || true
+      mkdir -p "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+      echo "rsync --delete -av "${RSYNC_PROTECT_TMP_FILES[@]}" $RESOURCE_PATH ${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}" $
+      rsync --delete -av "${RSYNC_PROTECT_TMP_FILES[@]}" "$RESOURCE_PATH" "${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+      ;;
+    *.xcdatamodel)
+      echo "xcrun momc \"$RESOURCE_PATH\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PAT$
+      xcrun momc "$RESOURCE_PATH" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcdat$
+      ;;
+    *.xcdatamodeld)
+      echo "xcrun momc \"$RESOURCE_PATH\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PAT$
+      xcrun momc "$RESOURCE_PATH" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcdat$
+      ;;
+    *.xcmappingmodel)
+      echo "xcrun mapc \"$RESOURCE_PATH\" \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PAT$
+      xcrun mapc "$RESOURCE_PATH" "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/`basename "$RESOURCE_PATH" .xcmap$
+      ;;
+    *.xcassets)
+      ABSOLUTE_XCASSET_FILE="$RESOURCE_PATH"
+      XCASSET_FILES+=("$ABSOLUTE_XCASSET_FILE")
+      ;;
+    *)
+      echo "$RESOURCE_PATH" || true

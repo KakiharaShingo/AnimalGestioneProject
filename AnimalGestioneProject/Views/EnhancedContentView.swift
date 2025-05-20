@@ -1,6 +1,5 @@
 import SwiftUI
 import CoreData
-import GoogleMobileAds
 import UserNotifications
 import StoreKit
 

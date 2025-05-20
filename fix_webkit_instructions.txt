@@ -1,0 +1,50 @@
+To fix the WebKit linking issue, please follow these steps:
+
+1. Open Terminal and navigate to your project directory:
+   ```
+   cd /Users/shingo/Xcode_Local/git/AnimalGestioneProject
+   ```
+
+2. Make the script executable:
+   ```
+   chmod +x fix_webkit_linking.sh
+   ```
+
+3. Run the script:
+   ```
+   ./fix_webkit_linking.sh
+   ```
+
+4. Open your Xcode project.
+
+5. In Xcode, select your project in the Project Navigator.
+
+6. Select the "AnimalGestioneProject" target.
+
+7. Go to the "Build Phases" tab.
+
+8. Click the "+" button at the top of the pane.
+
+9. Select "New Link Binary With Libraries" phase.
+
+10. Click the "+" button in the new phase.
+
+11. Search for "WebKit.framework" and select it.
+
+12. Click "Add".
+
+13. Clean your project (Shift+Command+K).
+
+14. Rebuild your project (Command+B).
+
+Alternatively, if you prefer to do this manually in Xcode:
+
+1. Open your Xcode project
+2. Select your project in the Project Navigator
+3. Select your target "AnimalGestioneProject"
+4. Go to the "General" tab
+5. Scroll down to "Frameworks, Libraries, and Embedded Content"
+6. Click the "+" button
+7. Search for "WebKit.framework"
+8. Select it and click "Add"
+9. Clean and rebuild your project

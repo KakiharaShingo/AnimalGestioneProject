@@ -1,209 +1,223 @@
 import SwiftUI
-import GoogleMobileAds
 import UIKit
-import Network
+import GoogleMobileAds
+import os.log
+
+// 型識別のためのカスタムクラス
+class AdRequestCreator {
+    static func createRequest() -> Any {
+        // GoogleMobileAds.Request()を返す
+        return Request()
+    }
+}
 
 // バナー広告表示用のSwiftUIラッパー
 struct BannerAdView: UIViewRepresentable {
-    var adUnitID: String
-    var adSize: GADAdSize
-    var onAdLoaded: ((Bool) -> Void)? // 広告の読み込み状態を通知するコールバック
+    private let adUnitID: String
+    private var bannerSize: CGSize
+    var onAdLoaded: ((Bool) -> Void)?
+    private let logger = Logger(subsystem: "com.animalgestione", category: "BannerAdView")
     
-    // 広告ビューのサイズを保持するプロパティを追加
-    private let bannerWidth: CGFloat
-    private let bannerHeight: CGFloat
-    
-    init(adUnitID: String, adSize: GADAdSize? = nil, onAdLoaded: ((Bool) -> Void)? = nil) {
+    init(adUnitID: String, size: CGSize? = nil, onAdLoaded: ((Bool) -> Void)? = nil) {
         self.adUnitID = adUnitID
         self.onAdLoaded = onAdLoaded
         
-        // デバイスタイプに応じて適切な広告サイズを選択
-        if let customAdSize = adSize {
-            self.adSize = customAdSize
-            self.bannerWidth = customAdSize.size.width
-            self.bannerHeight = customAdSize.size.height
+        // デフォルトサイズの設定
+        if let customSize = size {
+            self.bannerSize = customSize
         } else {
             if UIDevice.current.userInterfaceIdiom == .pad {
-                // iPadの場合はリーダーボードサイズ（728x90）を使用
-                self.adSize = GADAdSizeLeaderboard
-                self.bannerWidth = 728
-                self.bannerHeight = 90
+                // iPadの場合
+                self.bannerSize = CGSize(width: 728, height: 90)
             } else {
-                // iPhoneの場合は標準バナーサイズ（320x50）を使用
-                self.adSize = GADAdSizeBanner
-                self.bannerWidth = 320
-                self.bannerHeight = 50
+                // iPhoneの場合
+                self.bannerSize = CGSize(width: 320, height: 50)
             }
         }
+        
+        logger.info("広告を初期化: \(adUnitID)")
     }
     
-    func makeUIView(context: Context) -> GADBannerView {
-        let bannerView = GADBannerView(adSize: adSize)
-        bannerView.adUnitID = adUnitID
+    // UIViewの作成
+    func makeUIView(context: Context) -> UIView {
+        logger.info("💡 BannerAdView: makeUIViewを開始")
         
-        // iPad用の広告サイズを設定
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            bannerView.adSize = GADAdSizeLeaderboard
+        // コンテナビューを作成
+        let containerView = UIView(frame: CGRect(origin: .zero, size: bannerSize))
+        containerView.backgroundColor = .clear
+        
+        // テスト広告IDかどうかをチェック
+        if adUnitID.contains("ca-app-pub-3940256099942544") {
+            logger.info("✅ テスト広告IDを使用中")
+        } else {
+            logger.info("⚠️ 本番広告IDを使用中")
         }
         
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-           let rootViewController = windowScene.windows.first?.rootViewController {
-            bannerView.rootViewController = rootViewController
-            
-            // 広告ビューのフレームを明示的に設定
-            let screenWidth = UIScreen.main.bounds.width
-            let xPosition = (screenWidth - bannerWidth) / 2
-            bannerView.frame = CGRect(x: xPosition, y: 0, width: bannerWidth, height: bannerHeight)
-        } else if let rootViewController = UIApplication.shared.windows.first?.rootViewController {
-            bannerView.rootViewController = rootViewController
-        }
+        // 固定のテスト広告IDを使用
+        let testAdUnitID = "ca-app-pub-3940256099942544/2934735716"
+        logger.info("📱 テスト広告ID: \(testAdUnitID)")
         
-        // 広告のロード
-        let request = GADRequest()
+        // 広告サイズの決定
+        let adSize = getBannerAdSize()
         
-        // ネットワーク接続の監視を設定
-        let monitor = NWPathMonitor()
-        let queue = DispatchQueue(label: "NetworkMonitor")
-        
-        monitor.pathUpdateHandler = { path in
-            if path.status == .satisfied {
-                // 接続が確立されたら少し待ってから広告を読み込む
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                    // 接続タイプに応じた処理
-                    if path.usesInterfaceType(.wifi) {
-                        bannerView.load(request)
-                    } else if path.usesInterfaceType(.cellular) {
-                        // モバイルデータ通信の場合は少し待ってから読み込み
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                            let newRequest = GADRequest()
-                            bannerView.load(newRequest)
-                        }
-                    } else {
-                        bannerView.load(request)
-                    }
-                }
-            } else {
-                // 接続が利用できない場合は少し待ってから再試行
-                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
-                    if path.status == .satisfied {
-                        let newRequest = GADRequest()
-                        bannerView.load(newRequest)
-                    }
-                }
-            }
-        }
-        
-        // 監視を開始
-        monitor.start(queue: queue)
-        
-        // デリゲートを設定
+        // バナービューの作成と設定
+        let bannerView = BannerView(adSize: adSize)
+        bannerView.adUnitID = testAdUnitID
         bannerView.delegate = context.coordinator
+        bannerView.rootViewController = findRootViewController()
+        containerView.addSubview(bannerView)
         
-        return bannerView
+        // バナービューをコンテナに追加
+        bannerView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            bannerView.topAnchor.constraint(equalTo: containerView.topAnchor),
+            bannerView.leftAnchor.constraint(equalTo: containerView.leftAnchor),
+            bannerView.rightAnchor.constraint(equalTo: containerView.rightAnchor),
+            bannerView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor)
+        ])
+        
+        // 広告リクエストを作成して読み込み
+        if let request = AdRequestCreator.createRequest() as? Request {
+            bannerView.load(request)
+            logger.info("🚀 バナー広告読み込み開始: \(testAdUnitID)")
+        } else {
+            logger.error("❗️ リクエストの作成に失敗しました")
+        }
+        
+        // デバッグ情報を出力
+        logger.info("📐 広告ビューの準備完了 - サイズ: \(String(describing: bannerView.frame.size))")
+        
+        return containerView
     }
     
-    func updateUIView(_ uiView: GADBannerView, context: Context) {
-        // 更新時にフレームが変更されないようにする
-        let screenWidth = UIScreen.main.bounds.width
-        let xPosition = (screenWidth - bannerWidth) / 2
-        uiView.frame = CGRect(x: xPosition, y: 0, width: bannerWidth, height: bannerHeight)
+    // 適切なAdSizeを取得
+    private func getBannerAdSize() -> AdSize {
+        if bannerSize.width >= 728 && bannerSize.height >= 90 {
+            logger.info("📏 AdSizeLeaderboardを使用")
+            return AdSizeLeaderboard
+        } else if bannerSize.width >= 468 && bannerSize.height >= 60 {
+            logger.info("📏 AdSizeFullBannerを使用")
+            return AdSizeFullBanner
+        } else if bannerSize.width >= 320 && bannerSize.height >= 100 {
+            logger.info("📏 AdSizeLargeBannerを使用")
+            return AdSizeLargeBanner
+        } else {
+            logger.info("📏 AdSizeBannerを使用")
+            return AdSizeBanner
+        }
     }
     
-    // コーディネーターを作成してデリゲートを処理
+    // rootViewControllerを見つける
+    private func findRootViewController() -> UIViewController {
+        // 最初の試み: UIWindowSceneから取得
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootVC = windowScene.windows.first?.rootViewController {
+            logger.info("✅ rootViewController設定成功: \(type(of: rootVC))")
+            return rootVC
+        }
+        
+        // 第2の試み: keyWindowから取得
+        if let keyWindow = UIApplication.shared.windows.first(where: { $0.isKeyWindow }),
+           let rootVC = keyWindow.rootViewController {
+            logger.info("✅ フォールバック: keyWindowからrootViewControllerを取得: \(type(of: rootVC))")
+            return rootVC
+        }
+        
+        // 第3の試み: 最初のウィンドウから取得
+        if let anyWindow = UIApplication.shared.windows.first,
+           let rootVC = anyWindow.rootViewController {
+            logger.info("✅ フォールバック: 最初のウィンドウからrootViewControllerを取得")
+            return rootVC
+        }
+        
+        // 最終手段: 新しいUIViewControllerを作成
+        logger.error("❌ エラー: どの方法でもrootViewControllerを取得できませんでした")
+        let fallbackVC = UIViewController()
+        logger.info("⚠️ 新しいUIViewControllerをrootViewControllerとして使用")
+        return fallbackVC
+    }
+    
+    // UIViewの更新
+    func updateUIView(_ uiView: UIView, context: Context) {
+        // 更新が必要な場合はここに実装
+    }
+    
+    // コーディネーターの作成
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
     
-    // GADBannerViewDelegateの処理を担当するコーディネータークラス
-    class Coordinator: NSObject, GADBannerViewDelegate {
+    // コーディネータークラス
+    class Coordinator: NSObject, BannerViewDelegate {
         var parent: BannerAdView
-        private var retryCount = 0
-        private let maxRetries = 3
-        private var lastErrorTime: Date?
-        private let retryInterval: TimeInterval = 5.0
-        private var isRetrying = false
+        private let logger = Logger(subsystem: "com.animalgestione", category: "BannerAdCoordinator")
         
         init(_ parent: BannerAdView) {
             self.parent = parent
-            super.init()
         }
         
-        // 広告が読み込まれたとき
-        func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
-            retryCount = 0
-            lastErrorTime = nil
-            isRetrying = false
+        // 広告が読み込まれた
+        func bannerViewDidReceiveAd(_ bannerView: BannerView) {
+            logger.info("✅ バナー広告の読み込みに成功しました: サイズ=\(String(describing: bannerView.adSize))")
             parent.onAdLoaded?(true)
         }
         
-        // 広告の読み込みに失敗したとき
-        func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-            let nsError = error as NSError
-            let currentTime = Date()
+        // 広告の読み込みに失敗した
+        func bannerView(_ bannerView: BannerView, didFailToReceiveAdWithError error: Error) {
+            logger.error("❌ バナー広告の読み込みに失敗しました: \(error.localizedDescription)")
+            parent.onAdLoaded?(false)
             
-            // エラーの種類に応じて処理を分岐
-            if nsError.domain == "com.google.admob" && nsError.code == 2 {
-                // 既に再試行中の場合は処理をスキップ
-                if isRetrying {
-                    return
-                }
-                
-                // 最後のエラーから一定時間経過しているか確認
-                if let lastError = lastErrorTime,
-                   currentTime.timeIntervalSince(lastError) < retryInterval {
-                    return
-                }
-                
-                if retryCount < maxRetries {
-                    retryCount += 1
-                    lastErrorTime = currentTime
-                    isRetrying = true
-                    
-                    // エラーの種類に応じて待機時間を調整
-                    let waitTime = Double(retryCount * 2)
-                    DispatchQueue.main.asyncAfter(deadline: .now() + waitTime) {
-                        let newRequest = GADRequest()
-                        bannerView.load(newRequest)
-                    }
-                } else {
-                    retryCount = 0
-                    lastErrorTime = nil
-                    isRetrying = false
+            // エラーの詳細を表示
+            let nserror = error as NSError
+            logger.error("📊 エラーコード: \(nserror.code), ドメイン: \(nserror.domain)")
+            
+            // 5秒後に再試行
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
+                self.logger.info("🔄 5秒後の広告再読み込み試行")
+                if let newRequest = AdRequestCreator.createRequest() as? Request {
+                    bannerView.load(newRequest)
                 }
             }
-            
-            parent.onAdLoaded?(false)
         }
         
-        // 広告がクリックされたとき
-        func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
-            print("広告がインプレッションを記録しました")
+        // 広告が画面を覆う場合の処理
+        func bannerViewWillPresentScreen(_ bannerView: BannerView) {
+            logger.info("🔍 バナー広告が画面を覆います")
         }
         
-        // 広告がスクリーンを覆うコンテンツを表示するとき
-        func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
-             print("広告がスクリーンを表示します")
+        // 広告が閉じられる場合の処理
+        func bannerViewWillDismissScreen(_ bannerView: BannerView) {
+            logger.info("🔍 バナー広告が閉じられます")
         }
         
-        // 広告が閉じられたとき
-        func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
-            print("広告が閉じられました")
+        // 広告が閉じられた場合の処理
+        func bannerViewDidDismissScreen(_ bannerView: BannerView) {
+            logger.info("🔍 バナー広告が閉じられました")
         }
     }
 }
 
-// アダプティブバナー用の拡張機能
+// デバイスタイプの判定用拡張
 extension BannerAdView {
-    static func adaptiveBanner(width: CGFloat) -> GADAdSize {
-        return GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(width)
+    // デバイスタイプに応じた適切なサイズを計算
+    static func getAdSize(width: CGFloat? = nil) -> CGSize {
+        let screenWidth = width ?? UIScreen.main.bounds.width
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            // iPadの場合
+            return CGSize(width: min(728, screenWidth), height: 90)
+        } else {
+            // iPhoneの場合
+            return CGSize(width: min(320, screenWidth), height: 50)
+        }
     }
 }
 
 // テスト用のプレビュー
 struct BannerAdView_Previews: PreviewProvider {
     static var previews: some View {
-        // テスト用のAdMobバナー広告ID
         BannerAdView(adUnitID: "ca-app-pub-3940256099942544/2934735716")
             .frame(height: 50)
+            .previewLayout(.sizeThatFits)
     }
 }

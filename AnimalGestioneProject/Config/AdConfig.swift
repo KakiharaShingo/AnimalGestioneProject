@@ -3,7 +3,7 @@ import Foundation
 /// 広告設定を管理する構造体
 struct AdConfig {
     // テスト用のIDか本番用のIDかを切り替えるフラグ
-    static let useTestIds = false
+    static let useTestIds = true  // テスト用IDを使用するように変更
     
     // バナー広告ID
     static var bannerAdUnitId: String {

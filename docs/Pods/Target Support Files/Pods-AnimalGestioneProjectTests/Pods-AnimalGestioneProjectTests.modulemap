@@ -1,6 +1,0 @@
-framework module Pods_AnimalGestioneProjectTests {
-  umbrella header "Pods-AnimalGestioneProjectTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

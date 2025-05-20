@@ -1,5 +1,4 @@
 import SwiftUI
-import GoogleMobileAds
 
 struct RewardedFeatureView: View {
     @Environment(\.presentationMode) var presentationMode

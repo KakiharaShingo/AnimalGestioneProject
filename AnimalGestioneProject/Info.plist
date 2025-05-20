@@ -70,5 +70,7 @@
 			<string>cstr6suwn9.skadnetwork</string>
 		</dict>
 	</array>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>このアプリでは広告の最適化のためにユーザーのトラッキングを許可しています。</string>
 </dict>
 </plist>
