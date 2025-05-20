@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## Google-Mobile-Ads-SDK
 
-Copyright 2024 Google LLC
+Copyright 2025 Google LLC
 
 ## GoogleUserMessagingPlatform
 
