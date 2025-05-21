@@ -1,0 +1,424 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/VaccineRecordView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "ワクチン記録",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 205
+        }
+      },
+      {
+        "comment": "",
+        "key": "表示",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 27
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "カスタム",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 56
+        }
+      },
+      {
+        "comment": "",
+        "key": "期限が%lld日過ぎています",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 75
+        }
+      },
+      {
+        "comment": "",
+        "key": "今日が接種日です",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 79
+        }
+      },
+      {
+        "comment": "",
+        "key": "あと%lld日",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 83
+        }
+      },
+      {
+        "comment": "",
+        "key": "あと%lld日",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "完了済み",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 101
+        }
+      },
+      {
+        "comment": "",
+        "key": "完了",
+        "location": {
+          "startingColumn": 44,
+          "startingLine": 95
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "ワクチン記録はありません",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 122
+        }
+      },
+      {
+        "comment": "",
+        "key": "カスタム",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 142
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回: %@",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 163
+        }
+      },
+      {
+        "comment": "",
+        "key": "(%lld日超過)",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 170
+        }
+      },
+      {
+        "comment": "",
+        "key": "(あと%lld日)",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 174
+        }
+      },
+      {
+        "comment": "",
+        "key": "予定",
+        "location": {
+          "startingColumn": 56,
+          "startingLine": 202
+        }
+      },
+      {
+        "comment": "",
+        "key": "完了",
+        "location": {
+          "startingColumn": 94,
+          "startingLine": 202
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべての記録",
+        "location": {
+          "startingColumn": 105,
+          "startingLine": 202
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 209
+        }
+      },
+      {
+        "comment": "",
+        "key": "記録を削除",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 234
+        }
+      },
+      {
+        "comment": "",
+        "key": "このワクチン記録を削除しますか？この操作は元に戻せません。",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 235
+        }
+      },
+      {
+        "comment": "",
+        "key": "削除",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 236
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 51,
+          "startingLine": 242
+        }
+      },
+      {
+        "comment": "",
+        "key": "ワクチン記録を追加",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 401
+        }
+      },
+      {
+        "comment": "",
+        "key": "メモ",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 396
+        }
+      },
+      {
+        "comment": "",
+        "key": "ワクチン種類",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 348
+        }
+      },
+      {
+        "comment": "",
+        "key": "ワクチン名を入力",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 363
+        }
+      },
+      {
+        "comment": "",
+        "key": "接種日",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 369
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回接種を予定",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 373
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定日",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 388
+        }
+      },
+      {
+        "comment": "",
+        "key": "間隔",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 377
+        }
+      },
+      {
+        "comment": "",
+        "key": "日",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 385
+        }
+      },
+      {
+        "comment": "",
+        "key": "365",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 378
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 405
+        }
+      },
+      {
+        "comment": "",
+        "key": "保存",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 411
+        }
+      },
+      {
+        "comment": "",
+        "key": "エラー",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 418
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 420
+        }
+      },
+      {
+        "comment": "",
+        "key": "ワクチン記録を編集",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 598
+        }
+      },
+      {
+        "comment": "",
+        "key": "メモ",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 593
+        }
+      },
+      {
+        "comment": "",
+        "key": "ワクチン種類",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 546
+        }
+      },
+      {
+        "comment": "",
+        "key": "ワクチン名を入力",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 560
+        }
+      },
+      {
+        "comment": "",
+        "key": "接種日",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 566
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回接種を予定",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 570
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定日",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 585
+        }
+      },
+      {
+        "comment": "",
+        "key": "間隔",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 574
+        }
+      },
+      {
+        "comment": "",
+        "key": "日",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 582
+        }
+      },
+      {
+        "comment": "",
+        "key": "365",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 575
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 602
+        }
+      },
+      {
+        "comment": "",
+        "key": "保存",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 608
+        }
+      },
+      {
+        "comment": "",
+        "key": "エラー",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 615
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 617
+        }
+      }
+    ]
+  },
+  "version": 1
+}

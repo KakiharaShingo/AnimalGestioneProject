@@ -1,0 +1,24 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/Components/SearchBar.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "検索...",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 9
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 42
+        }
+      }
+    ]
+  },
+  "version": 1
+}

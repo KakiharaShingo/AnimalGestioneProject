@@ -1,0 +1,16 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/EmbeddedPrivacyPolicyView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 14
+        }
+      }
+    ]
+  },
+  "version": 1
+}

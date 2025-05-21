@@ -1,0 +1,32 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/SupportView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "サポート",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 85
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 89
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 57,
+          "startingLine": 99
+        }
+      }
+    ]
+  },
+  "version": 1
+}

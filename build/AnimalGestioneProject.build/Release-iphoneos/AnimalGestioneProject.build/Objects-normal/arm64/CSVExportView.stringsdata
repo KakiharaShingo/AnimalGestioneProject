@@ -1,0 +1,136 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/DataManagement/CSVExportView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "CSVエクスポート",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 166
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 49,
+          "startingLine": 167
+        }
+      },
+      {
+        "comment": "",
+        "key": "CSVエクスポート",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 60
+        }
+      },
+      {
+        "comment": "",
+        "key": "エクスポート済みCSVファイル",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "CSVインポートについて",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 159
+        }
+      },
+      {
+        "comment": "",
+        "key": "CSVファイルの形式については、エクスポートしたファイルを参考にしてください。",
+        "location": {
+          "startingColumn": 86,
+          "startingLine": 159
+        }
+      },
+      {
+        "comment": "",
+        "key": "エクスポートするデータ",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 61
+        }
+      },
+      {
+        "comment": "",
+        "key": "CSVとしてエクスポート",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 75
+        }
+      },
+      {
+        "comment": "",
+        "key": "エクスポート中...",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 82
+        }
+      },
+      {
+        "comment": "",
+        "key": "エクスポート完了",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 92
+        }
+      },
+      {
+        "comment": "",
+        "key": "エクスポート済みのCSVファイルがありません",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 152
+        }
+      },
+      {
+        "comment": "",
+        "key": "CSVファイルはExcelなどの表計算ソフトで開くことができ、データの閲覧や編集に便利です。エクスポートしたCSVファイルはスプレッドシートなどでバックアップとして保存できます。",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 160
+        }
+      },
+      {
+        "comment": "",
+        "key": "ファイルの削除",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 175
+        }
+      },
+      {
+        "comment": "",
+        "key": "このCSVファイルを削除しますか？",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 176
+        }
+      },
+      {
+        "comment": "",
+        "key": "削除",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 177
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 51,
+          "startingLine": 182
+        }
+      }
+    ]
+  },
+  "version": 1
+}

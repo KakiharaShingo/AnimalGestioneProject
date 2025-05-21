@@ -1,0 +1,384 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/HealthRecordView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "エラー",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 149
+        }
+      },
+      {
+        "comment": "",
+        "key": "健康記録",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "健康記録",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 86
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ (%@)",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 76
+        }
+      },
+      {
+        "comment": "",
+        "key": "記録はありません",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 90
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "追加",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 123
+        }
+      },
+      {
+        "comment": "",
+        "key": "ペットの情報を読み込めませんでした",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 138
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 142
+        }
+      },
+      {
+        "comment": "",
+        "key": "健康記録を追加",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 219
+        }
+      },
+      {
+        "comment": "",
+        "key": "体重",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 186
+        }
+      },
+      {
+        "comment": "",
+        "key": "体温",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 191
+        }
+      },
+      {
+        "comment": "",
+        "key": "食欲",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 196
+        }
+      },
+      {
+        "comment": "",
+        "key": "活動量",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 205
+        }
+      },
+      {
+        "comment": "",
+        "key": "メモ",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 214
+        }
+      },
+      {
+        "comment": "",
+        "key": "日付",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 184
+        }
+      },
+      {
+        "comment": "",
+        "key": "体重 (kg)",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 187
+        }
+      },
+      {
+        "comment": "",
+        "key": "体温 (°C)",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 192
+        }
+      },
+      {
+        "comment": "",
+        "key": "食欲",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 197
+        }
+      },
+      {
+        "comment": "",
+        "key": "食欲不振",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 198
+        }
+      },
+      {
+        "comment": "",
+        "key": "普通",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 199
+        }
+      },
+      {
+        "comment": "",
+        "key": "食欲旺盛",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 200
+        }
+      },
+      {
+        "comment": "",
+        "key": "活動量",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 206
+        }
+      },
+      {
+        "comment": "",
+        "key": "低活動",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 207
+        }
+      },
+      {
+        "comment": "",
+        "key": "普通",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 208
+        }
+      },
+      {
+        "comment": "",
+        "key": "活発",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 209
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 222
+        }
+      },
+      {
+        "comment": "",
+        "key": "保存",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 228
+        }
+      },
+      {
+        "comment": "",
+        "key": "健康記録を編集",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 315
+        }
+      },
+      {
+        "comment": "",
+        "key": "体重",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 282
+        }
+      },
+      {
+        "comment": "",
+        "key": "体温",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 287
+        }
+      },
+      {
+        "comment": "",
+        "key": "食欲",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 292
+        }
+      },
+      {
+        "comment": "",
+        "key": "活動量",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 301
+        }
+      },
+      {
+        "comment": "",
+        "key": "メモ",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 310
+        }
+      },
+      {
+        "comment": "",
+        "key": "日付",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 280
+        }
+      },
+      {
+        "comment": "",
+        "key": "体重 (kg)",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 283
+        }
+      },
+      {
+        "comment": "",
+        "key": "体温 (°C)",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 288
+        }
+      },
+      {
+        "comment": "",
+        "key": "食欲",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 293
+        }
+      },
+      {
+        "comment": "",
+        "key": "食欲不振",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 294
+        }
+      },
+      {
+        "comment": "",
+        "key": "普通",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 295
+        }
+      },
+      {
+        "comment": "",
+        "key": "食欲旺盛",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 296
+        }
+      },
+      {
+        "comment": "",
+        "key": "活動量",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 302
+        }
+      },
+      {
+        "comment": "",
+        "key": "低活動",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 303
+        }
+      },
+      {
+        "comment": "",
+        "key": "普通",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 304
+        }
+      },
+      {
+        "comment": "",
+        "key": "活発",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 305
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 318
+        }
+      },
+      {
+        "comment": "",
+        "key": "保存",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 324
+        }
+      }
+    ]
+  },
+  "version": 1
+}

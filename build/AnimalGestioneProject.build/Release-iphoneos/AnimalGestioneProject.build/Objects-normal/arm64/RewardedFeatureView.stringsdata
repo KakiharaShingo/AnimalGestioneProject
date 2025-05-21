@@ -1,0 +1,64 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/Ads/RewardedFeatureView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%@機能を使用",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 24
+        }
+      },
+      {
+        "comment": "",
+        "key": "広告を視聴して%@機能を無料で使用できます。または、プレミアムへのアップグレードですべての機能を制限なく利用できます。",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 28
+        }
+      },
+      {
+        "comment": "",
+        "key": "広告を視聴して使用",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 40
+        }
+      },
+      {
+        "comment": "",
+        "key": "プレミアムへアップグレード",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 72
+        }
+      },
+      {
+        "comment": "",
+        "key": "エラー",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 100
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 102
+        }
+      }
+    ]
+  },
+  "version": 1
+}

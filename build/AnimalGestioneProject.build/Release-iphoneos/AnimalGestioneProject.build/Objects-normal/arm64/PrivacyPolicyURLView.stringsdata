@@ -1,0 +1,80 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/PrivacyPolicyURLView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "プライバシーポリシーURL",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 75
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 76
+        }
+      },
+      {
+        "comment": "",
+        "key": "プライバシーポリシーURL",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 9
+        }
+      },
+      {
+        "comment": "",
+        "key": "このアプリのプライバシーポリシーは以下のURLで公開されています：",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 13
+        }
+      },
+      {
+        "comment": "",
+        "key": "注意: プライバシーポリシーの内容を更新する場合は、アプリ内の表示とGitHubページの両方を更新してください。",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 69
+        }
+      },
+      {
+        "comment": "",
+        "key": "公開URL:",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 18
+        }
+      },
+      {
+        "comment": "",
+        "key": "ブラウザで開く",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 32
+        }
+      },
+      {
+        "comment": "",
+        "key": "GitHub リポジトリ:",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 44
+        }
+      },
+      {
+        "comment": "",
+        "key": "リポジトリを開く",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 58
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,32 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/Ads/AdContainerView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "広告を読み込み中...",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 76
+        }
+      },
+      {
+        "comment": "",
+        "key": "広告を読み込み中...",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 156
+        }
+      },
+      {
+        "comment": "",
+        "key": "メインコンテンツ",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 174
+        }
+      }
+    ]
+  },
+  "version": 1
+}

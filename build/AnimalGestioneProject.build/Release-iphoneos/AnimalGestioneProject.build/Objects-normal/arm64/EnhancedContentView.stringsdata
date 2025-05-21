@@ -1,0 +1,584 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/EnhancedContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "ホーム",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 49
+        }
+      },
+      {
+        "comment": "",
+        "key": "カレンダー",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 56
+        }
+      },
+      {
+        "comment": "",
+        "key": "ペット",
+        "location": {
+          "startingColumn": 27,
+          "startingLine": 63
+        }
+      },
+      {
+        "comment": "",
+        "key": "設定",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 61,
+          "startingLine": 120
+        }
+      },
+      {
+        "comment": "",
+        "key": "エラー: ペット情報が見つかりません",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 127
+        }
+      },
+      {
+        "comment": "",
+        "key": "存在しないか削除されたペットの健康記録を開こうとしました",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 132
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 137
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 210
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 53,
+          "startingLine": 211
+        }
+      },
+      {
+        "comment": "",
+        "key": "未読の通知",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 153
+        }
+      },
+      {
+        "comment": "",
+        "key": "予定更新",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 190
+        }
+      },
+      {
+        "comment": "",
+        "key": "最終更新: 2025/5/10",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 171
+        }
+      },
+      {
+        "comment": "",
+        "key": "ポチの生理予測",
+        "location": {
+          "startingColumn": 55,
+          "startingLine": 162
+        }
+      },
+      {
+        "comment": "",
+        "key": "ミルクの健康診断",
+        "location": {
+          "startingColumn": 91,
+          "startingLine": 162
+        }
+      },
+      {
+        "comment": "",
+        "key": "ポチのワクチン接種",
+        "location": {
+          "startingColumn": 120,
+          "startingLine": 162
+        }
+      },
+      {
+        "comment": "",
+        "key": "明日から生理が始まる可能性があります。",
+        "location": {
+          "startingColumn": 55,
+          "startingLine": 165
+        }
+      },
+      {
+        "comment": "",
+        "key": "明日は健康診断の予定日です。",
+        "location": {
+          "startingColumn": 56,
+          "startingLine": 166
+        }
+      },
+      {
+        "comment": "",
+        "key": "来週、狂犬病ワクチンの接種ため病院へ行きましょう。",
+        "location": {
+          "startingColumn": 103,
+          "startingLine": 166
+        }
+      },
+      {
+        "comment": "",
+        "key": "削除",
+        "location": {
+          "startingColumn": 47,
+          "startingLine": 184
+        }
+      },
+      {
+        "comment": "",
+        "key": "生理周期通知",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 203
+        }
+      },
+      {
+        "comment": "",
+        "key": "健康診断リマインダー",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 204
+        }
+      },
+      {
+        "comment": "",
+        "key": "ワクチン接種通知",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 205
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知を許可する",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 197
+        }
+      },
+      {
+        "comment": "",
+        "key": "カレンダー",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 341
+        }
+      },
+      {
+        "comment": "",
+        "key": "設定",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 656
+        }
+      },
+      {
+        "comment": "",
+        "key": "一般設定",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 394
+        }
+      },
+      {
+        "comment": "",
+        "key": "ペットアイコン",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 427
+        }
+      },
+      {
+        "comment": "",
+        "key": "データ管理",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 446
+        }
+      },
+      {
+        "comment": "",
+        "key": "アプリについて",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 460
+        }
+      },
+      {
+        "comment": "",
+        "key": "広告",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 481
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 395
+        }
+      },
+      {
+        "comment": "",
+        "key": "リマインダー時間",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 408
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知設定",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 417
+        }
+      },
+      {
+        "comment": "",
+        "key": "タブアイコン",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 428
+        }
+      },
+      {
+        "comment": "",
+        "key": "現在のアイコン",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 438
+        }
+      },
+      {
+        "comment": "",
+        "key": "データのバックアップと復元",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 450
+        }
+      },
+      {
+        "comment": "",
+        "key": "データのCSVエクスポート",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 456
+        }
+      },
+      {
+        "comment": "",
+        "key": "バージョン",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 462
+        }
+      },
+      {
+        "comment": "",
+        "key": "1.0.0",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 464
+        }
+      },
+      {
+        "comment": "",
+        "key": "サポート",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 471
+        }
+      },
+      {
+        "comment": "",
+        "key": "プライバシーポリシー",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 477
+        }
+      },
+      {
+        "comment": "",
+        "key": "広告は表示されません",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 524
+        }
+      },
+      {
+        "comment": "",
+        "key": "広告はアプリの実行をサポートしています",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 546
+        }
+      },
+      {
+        "comment": "",
+        "key": "このアプリは広告によって支援されています",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 550
+        }
+      },
+      {
+        "comment": "",
+        "key": "ステータス",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 484
+        }
+      },
+      {
+        "comment": "",
+        "key": "無料版",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 513
+        }
+      },
+      {
+        "comment": "",
+        "key": "プレミアム",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 491
+        }
+      },
+      {
+        "comment": "",
+        "key": "デバッグモード",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 504
+        }
+      },
+      {
+        "comment": "",
+        "key": "広告を非表示にする",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 534
+        }
+      },
+      {
+        "comment": "",
+        "key": "プレミアムにアップグレード",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 536
+        }
+      },
+      {
+        "comment": "",
+        "key": "AdMobプライバシーポリシー",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 555
+        }
+      },
+      {
+        "comment": "",
+        "key": "この機能は現在利用できません",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 668
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 671
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知設定",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 734
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 53,
+          "startingLine": 735
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知設定",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 685
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知タイプ",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 706
+        }
+      },
+      {
+        "comment": "",
+        "key": "リマインダータイミング",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 713
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知履歴",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 723
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知を許可する",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 686
+        }
+      },
+      {
+        "comment": "",
+        "key": "リマインダー時間",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 698
+        }
+      },
+      {
+        "comment": "",
+        "key": "生理周期通知",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 707
+        }
+      },
+      {
+        "comment": "",
+        "key": "健康診断リマインダー",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 708
+        }
+      },
+      {
+        "comment": "",
+        "key": "ワクチン接種通知",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 709
+        }
+      },
+      {
+        "comment": "",
+        "key": "予定リマインダー",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 710
+        }
+      },
+      {
+        "comment": "",
+        "key": "予定日通知",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 714
+        }
+      },
+      {
+        "comment": "",
+        "key": "当日",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 715
+        }
+      },
+      {
+        "comment": "",
+        "key": "一日前",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 716
+        }
+      },
+      {
+        "comment": "",
+        "key": "二日前",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 717
+        }
+      },
+      {
+        "comment": "",
+        "key": "三日前",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 718
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべての通知をクリア",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 728
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,216 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/DataManagement/DataManagementView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "データ管理",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 188
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 49,
+          "startingLine": 189
+        }
+      },
+      {
+        "comment": "",
+        "key": "バックアップ作成",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "バックアップファイルのインポート",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 82
+        }
+      },
+      {
+        "comment": "",
+        "key": "バックアップファイル",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "データ管理",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 174
+        }
+      },
+      {
+        "comment": "",
+        "key": "警告：「すべてのデータを削除」を選択すると、アプリ内のすべての情報（動物データ、健康記録、予定、写真など）が完全に消去されます。削除されたデータはバックアップからも回復できません。この操作は元に戻せません。",
+        "location": {
+          "startingColumn": 71,
+          "startingLine": 174
+        }
+      },
+      {
+        "comment": "",
+        "key": "新しいバックアップを作成",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 52
+        }
+      },
+      {
+        "comment": "",
+        "key": "最終バックアップ",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 59
+        }
+      },
+      {
+        "comment": "",
+        "key": "バックアップ中...",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 68
+        }
+      },
+      {
+        "comment": "",
+        "key": "ファイルからインポート",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 89
+        }
+      },
+      {
+        "comment": "",
+        "key": "インポート中...",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 96
+        }
+      },
+      {
+        "comment": "",
+        "key": "バックアップファイルがありません",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 167
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべてのデータを削除",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 181
+        }
+      },
+      {
+        "comment": "",
+        "key": "バックアップの削除",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 204
+        }
+      },
+      {
+        "comment": "",
+        "key": "このバックアップファイルを削除しますか？\n\nファイル名：\n%@",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 205
+        }
+      },
+      {
+        "comment": "",
+        "key": "削除",
+        "location": {
+          "startingColumn": 58,
+          "startingLine": 206
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 55,
+          "startingLine": 212
+        }
+      },
+      {
+        "comment": "",
+        "key": "バックアップのインポート",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 217
+        }
+      },
+      {
+        "comment": "",
+        "key": "このバックアップをインポートしますか？現在のデータはすべて置き換えられます。",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 218
+        }
+      },
+      {
+        "comment": "",
+        "key": "インポート",
+        "location": {
+          "startingColumn": 58,
+          "startingLine": 219
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 55,
+          "startingLine": 222
+        }
+      },
+      {
+        "comment": "",
+        "key": "全データの削除",
+        "location": {
+          "startingColumn": 37,
+          "startingLine": 227
+        }
+      },
+      {
+        "comment": "",
+        "key": "本当にアプリ内のすべてのデータを削除しますか？\n\n・すべての動物情報\n・健康記録\n・予防接種履歴\n・写真・画像\n・その他すべてのデータ\n\nこれらの情報は完全に削除され、バックアップからも回復できません。この操作は元に戻せません。",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 228
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべてのデータを削除",
+        "location": {
+          "startingColumn": 58,
+          "startingLine": 229
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 55,
+          "startingLine": 232
+        }
+      }
+    ]
+  },
+  "version": 1
+}

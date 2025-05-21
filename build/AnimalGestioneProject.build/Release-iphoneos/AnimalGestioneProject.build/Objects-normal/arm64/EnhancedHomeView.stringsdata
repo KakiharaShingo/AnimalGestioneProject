@@ -1,0 +1,176 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/EnhancedHomeView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "ホーム",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 254
+        }
+      },
+      {
+        "comment": "",
+        "key": "今日の予定",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 19
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべて表示",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 35
+        }
+      },
+      {
+        "comment": "",
+        "key": "今日の予定はありません",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "マイペット",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 82
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべて表示",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 96
+        }
+      },
+      {
+        "comment": "",
+        "key": "近日の生理周期予測",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 141
+        }
+      },
+      {
+        "comment": "",
+        "key": "予測可能な生理周期はありません",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 177
+        }
+      },
+      {
+        "comment": "",
+        "key": "最近の健康記録",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 193
+        }
+      },
+      {
+        "comment": "",
+        "key": "健康記録がありません",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 237
+        }
+      },
+      {
+        "comment": "",
+        "key": "ペットが登録されていません",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 356
+        }
+      },
+      {
+        "comment": "",
+        "key": "ペットを追加して、健康管理を始めましょう",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 360
+        }
+      },
+      {
+        "comment": "",
+        "key": "ペットを追加",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 366
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ (%@)",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 481
+        }
+      },
+      {
+        "comment": "",
+        "key": "最新の健康記録",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 561
+        }
+      },
+      {
+        "comment": "",
+        "key": "体重",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 576
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ kg",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 580
+        }
+      },
+      {
+        "comment": "",
+        "key": "体温",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 589
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ °C",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 593
+        }
+      },
+      {
+        "comment": "",
+        "key": "食欲",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 601
+        }
+      },
+      {
+        "comment": "",
+        "key": "活動量",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 612
+        }
+      }
+    ]
+  },
+  "version": 1
+}

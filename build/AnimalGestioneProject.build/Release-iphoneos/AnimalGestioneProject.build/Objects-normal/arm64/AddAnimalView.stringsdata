@@ -1,0 +1,144 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/AddAnimalView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "ペットを追加",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 67
+        }
+      },
+      {
+        "comment": "",
+        "key": "基本情報",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 25
+        }
+      },
+      {
+        "comment": "",
+        "key": "画像",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 47
+        }
+      },
+      {
+        "comment": "",
+        "key": "名前",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 26
+        }
+      },
+      {
+        "comment": "",
+        "key": "種類（例：猫、犬）",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 27
+        }
+      },
+      {
+        "comment": "",
+        "key": "品種（任意）",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 28
+        }
+      },
+      {
+        "comment": "",
+        "key": "性別",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "誕生日を設定",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 36
+        }
+      },
+      {
+        "comment": "",
+        "key": "誕生日",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 40
+        }
+      },
+      {
+        "comment": "",
+        "key": "画像を選択",
+        "location": {
+          "startingColumn": 45,
+          "startingLine": 63
+        }
+      },
+      {
+        "comment": "",
+        "key": "画像を変更",
+        "location": {
+          "startingColumn": 65,
+          "startingLine": 63
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "保存",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 76
+        }
+      },
+      {
+        "comment": "",
+        "key": "登録数制限",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 95
+        }
+      },
+      {
+        "comment": "",
+        "key": "無料版では%lld匹までしか登録できません。プレミアム版にアップグレードして制限を解除しますか？",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 96
+        }
+      },
+      {
+        "comment": "",
+        "key": "アップグレード",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 97
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 51,
+          "startingLine": 100
+        }
+      }
+    ]
+  },
+  "version": 1
+}

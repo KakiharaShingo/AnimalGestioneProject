@@ -1,0 +1,144 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/PremiumSubscriptionView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "プレミアムプラン",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 30
+        }
+      },
+      {
+        "comment": "",
+        "key": "お知らせ",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 39
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 40
+        }
+      },
+      {
+        "comment": "",
+        "key": "プレミアムにアップグレード",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 64
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべての機能を利用して、より充実したペット管理を",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 68
+        }
+      },
+      {
+        "comment": "",
+        "key": "プレミアム特典",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 79
+        }
+      },
+      {
+        "comment": "",
+        "key": "商品情報を読み込んでいます...",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 114
+        }
+      },
+      {
+        "comment": "",
+        "key": "過去の購入を復元",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 128
+        }
+      },
+      {
+        "comment": "",
+        "key": "サブスクリプションは自動更新され、Appleの課金システムにより課金されます。",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 142
+        }
+      },
+      {
+        "comment": "",
+        "key": "期間終了の24時間前までにキャンセルしない限り自動更新されます。",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 147
+        }
+      },
+      {
+        "comment": "",
+        "key": "・",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 154
+        }
+      },
+      {
+        "comment": "",
+        "key": "利用規約",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 153
+        }
+      },
+      {
+        "comment": "",
+        "key": "プライバシーポリシー",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 155
+        }
+      },
+      {
+        "comment": "",
+        "key": "購入済み",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 224
+        }
+      },
+      {
+        "comment": "",
+        "key": "処理中...",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 245
+        }
+      },
+      {
+        "comment": "",
+        "key": "購入",
+        "location": {
+          "startingColumn": 59,
+          "startingLine": 245
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,16 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/BannerTest.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "GoogleMobileAdsのテスト",
+        "location": {
+          "startingColumn": 14,
+          "startingLine": 7
+        }
+      }
+    ]
+  },
+  "version": 1
+}

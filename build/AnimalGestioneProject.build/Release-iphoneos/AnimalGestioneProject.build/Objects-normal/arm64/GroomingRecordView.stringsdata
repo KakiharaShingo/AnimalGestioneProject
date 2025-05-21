@@ -1,0 +1,416 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/GroomingRecordView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "トリミング記録",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 181
+        }
+      },
+      {
+        "comment": "",
+        "key": "表示",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 27
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 43
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリミング",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 53
+        }
+      },
+      {
+        "comment": "",
+        "key": "期限が%lld日過ぎています",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 68
+        }
+      },
+      {
+        "comment": "",
+        "key": "今日が予定日です",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 72
+        }
+      },
+      {
+        "comment": "",
+        "key": "あと%lld日",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 76
+        }
+      },
+      {
+        "comment": "",
+        "key": "あと%lld日",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 80
+        }
+      },
+      {
+        "comment": "",
+        "key": "完了",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 96
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリミング記録はありません",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリミング",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 122
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回: %@",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 139
+        }
+      },
+      {
+        "comment": "",
+        "key": "(%lld日超過)",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 146
+        }
+      },
+      {
+        "comment": "",
+        "key": "(あと%lld日)",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 150
+        }
+      },
+      {
+        "comment": "",
+        "key": "予定",
+        "location": {
+          "startingColumn": 56,
+          "startingLine": 178
+        }
+      },
+      {
+        "comment": "",
+        "key": "完了",
+        "location": {
+          "startingColumn": 94,
+          "startingLine": 178
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべての記録",
+        "location": {
+          "startingColumn": 105,
+          "startingLine": 178
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 185
+        }
+      },
+      {
+        "comment": "",
+        "key": "記録を削除",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 210
+        }
+      },
+      {
+        "comment": "",
+        "key": "このトリミング記録を削除しますか？この操作は元に戻せません。",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 211
+        }
+      },
+      {
+        "comment": "",
+        "key": "削除",
+        "location": {
+          "startingColumn": 54,
+          "startingLine": 212
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 51,
+          "startingLine": 218
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリミング記録を追加",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 349
+        }
+      },
+      {
+        "comment": "",
+        "key": "メモ",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 344
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリミング種類",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 307
+        }
+      },
+      {
+        "comment": "",
+        "key": "種類を入力",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 314
+        }
+      },
+      {
+        "comment": "",
+        "key": "実施日",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 317
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回を予定",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 321
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定日",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 336
+        }
+      },
+      {
+        "comment": "",
+        "key": "間隔",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 325
+        }
+      },
+      {
+        "comment": "",
+        "key": "日",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 333
+        }
+      },
+      {
+        "comment": "",
+        "key": "30",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 326
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 353
+        }
+      },
+      {
+        "comment": "",
+        "key": "保存",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 359
+        }
+      },
+      {
+        "comment": "",
+        "key": "エラー",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 366
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 368
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリミング記録を編集",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 508
+        }
+      },
+      {
+        "comment": "",
+        "key": "メモ",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 503
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリミング種類",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 461
+        }
+      },
+      {
+        "comment": "",
+        "key": "種類を入力",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 473
+        }
+      },
+      {
+        "comment": "",
+        "key": "実施日",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 476
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回を予定",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 480
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定日",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 495
+        }
+      },
+      {
+        "comment": "",
+        "key": "間隔",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 484
+        }
+      },
+      {
+        "comment": "",
+        "key": "日",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 492
+        }
+      },
+      {
+        "comment": "",
+        "key": "30",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 485
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 512
+        }
+      },
+      {
+        "comment": "",
+        "key": "保存",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 518
+        }
+      },
+      {
+        "comment": "",
+        "key": "エラー",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 525
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 527
+        }
+      }
+    ]
+  },
+  "version": 1
+}

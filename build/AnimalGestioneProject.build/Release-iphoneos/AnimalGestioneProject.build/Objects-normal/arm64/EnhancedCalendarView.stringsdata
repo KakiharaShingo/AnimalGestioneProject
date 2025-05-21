@@ -1,0 +1,160 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/EnhancedCalendarView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "%lld",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 84
+        }
+      },
+      {
+        "comment": "",
+        "key": "%lld件",
+        "location": {
+          "startingColumn": 46,
+          "startingLine": 121
+        }
+      },
+      {
+        "comment": "",
+        "key": "+%lld",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 113
+        }
+      },
+      {
+        "comment": "",
+        "key": "この日に予定はありません",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 162
+        }
+      },
+      {
+        "comment": "",
+        "key": "予定を削除",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 372
+        }
+      },
+      {
+        "comment": "",
+        "key": "この予定を削除してもよろしいですか？",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 373
+        }
+      },
+      {
+        "comment": "",
+        "key": "削除",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 374
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 47,
+          "startingLine": 377
+        }
+      },
+      {
+        "comment": "",
+        "key": "予定を追加",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 510
+        }
+      },
+      {
+        "comment": "",
+        "key": "ペット",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 480
+        }
+      },
+      {
+        "comment": "",
+        "key": "予定の詳細",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 490
+        }
+      },
+      {
+        "comment": "",
+        "key": "メモ",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 505
+        }
+      },
+      {
+        "comment": "",
+        "key": "ペットを選択",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 481
+        }
+      },
+      {
+        "comment": "",
+        "key": "選択してください",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 482
+        }
+      },
+      {
+        "comment": "",
+        "key": "予定の種類",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 491
+        }
+      },
+      {
+        "comment": "",
+        "key": "タイトル",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 500
+        }
+      },
+      {
+        "comment": "",
+        "key": "日時",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 502
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 514
+        }
+      },
+      {
+        "comment": "",
+        "key": "保存",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 520
+        }
+      }
+    ]
+  },
+  "version": 1
+}

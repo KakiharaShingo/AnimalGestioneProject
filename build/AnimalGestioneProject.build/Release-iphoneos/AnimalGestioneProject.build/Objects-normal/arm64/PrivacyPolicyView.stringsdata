@@ -1,0 +1,240 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/PrivacyPolicyView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "プライバシーポリシー",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 164
+        }
+      },
+      {
+        "comment": "",
+        "key": "プライバシーポリシー",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 16
+        }
+      },
+      {
+        "comment": "",
+        "key": "最終更新日: 2025年5月11日",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 21
+        }
+      },
+      {
+        "comment": "",
+        "key": "AnimalGestioneProject（以下、「当アプリ」といいます）は、お客様のプライバシーを尊重し、個人情報の保護に努めています。本プライバシーポリシーは、当アプリのご利用に際して収集する情報の種類、その使用方法、お客様の選択肢について説明するものです。",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 27
+        }
+      },
+      {
+        "comment": "",
+        "key": "当アプリをダウンロードしてご利用いただくことにより、お客様は本プライバシーポリシーに記載された方針に同意したものとみなされます。",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 29
+        }
+      },
+      {
+        "comment": "",
+        "key": "お客様が提供する情報",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "当アプリは、以下の情報をお客様に提供していただくことがあります：",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 38
+        }
+      },
+      {
+        "comment": "",
+        "key": "自動的に収集される情報",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 45
+        }
+      },
+      {
+        "comment": "",
+        "key": "当アプリは、以下の情報を自動的に収集することがあります：",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 49
+        }
+      },
+      {
+        "comment": "",
+        "key": "収集した情報は、以下の目的で使用されます：",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "ローカルストレージ",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 69
+        }
+      },
+      {
+        "comment": "",
+        "key": "当アプリで入力されたすべてのペット情報と健康記録は、お客様のデバイス上にローカルに保存され、標準設定ではサーバーにアップロードされることはありません。",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 73
+        }
+      },
+      {
+        "comment": "",
+        "key": "データバックアップ",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 75
+        }
+      },
+      {
+        "comment": "",
+        "key": "お客様がデータのバックアップ機能を使用した場合、データは暗号化された形式で保存され、お客様がアクセスできる場所（iCloudなど）に保存されます。",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 79
+        }
+      },
+      {
+        "comment": "",
+        "key": "当アプリは、以下の場合を除き、お客様の個人情報を第三者と共有することはありません：",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 84
+        }
+      },
+      {
+        "comment": "",
+        "key": "サービスプロバイダー",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 86
+        }
+      },
+      {
+        "comment": "",
+        "key": "当アプリは、以下のサービスプロバイダーと情報を共有することがあります：",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 90
+        }
+      },
+      {
+        "comment": "",
+        "key": "法的要件",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 96
+        }
+      },
+      {
+        "comment": "",
+        "key": "法律の要求、規制の遵守、法的手続き、政府からの要請に応じるために必要な場合。",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 100
+        }
+      },
+      {
+        "comment": "",
+        "key": "お客様には以下の権利があります：",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 105
+        }
+      },
+      {
+        "comment": "",
+        "key": "当アプリは、お客様の情報を不正アクセス、改ざん、漏洩から保護するために適切な技術的・組織的対策を講じています。ただし、インターネット上またはモバイルプラットフォーム上での情報伝送は完全に安全ではないことをご了承ください。",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 115
+        }
+      },
+      {
+        "comment": "",
+        "key": "当アプリは、13歳未満の子どもから意図的に個人情報を収集することはありません。13歳未満の子どもからの情報収集に気づいた場合は、速やかに削除するための措置を講じます。",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 120
+        }
+      },
+      {
+        "comment": "",
+        "key": "当アプリは、本プライバシーポリシーを随時更新することがあります。変更があった場合は、アプリ内で通知するか、更新されたプライバシーポリシーを掲載します。定期的にプライバシーポリシーを確認されることをお勧めします。",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 125
+        }
+      },
+      {
+        "comment": "",
+        "key": "本プライバシーポリシーに関するご質問やご意見がございましたら、以下の連絡先までお問い合わせください：",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 130
+        }
+      },
+      {
+        "comment": "",
+        "key": "メールアドレス: sk.shingo.10@gmail.com",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 132
+        }
+      },
+      {
+        "comment": "",
+        "key": "上記プライバシーポリシーに同意します",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 139
+        }
+      },
+      {
+        "comment": "",
+        "key": "続ける",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 149
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 169
+        }
+      },
+      {
+        "comment": "",
+        "key": "•",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 209
+        }
+      }
+    ]
+  },
+  "version": 1
+}

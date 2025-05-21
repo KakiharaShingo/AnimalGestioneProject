@@ -1,0 +1,288 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/AnimalDetailView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "基本情報",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "健康記録",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリミング記録",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 129
+        }
+      },
+      {
+        "comment": "",
+        "key": "生理周期",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 173
+        }
+      },
+      {
+        "comment": "",
+        "key": "ワクチン記録",
+        "location": {
+          "startingColumn": 39,
+          "startingLine": 217
+        }
+      },
+      {
+        "comment": "",
+        "key": "テーマ色",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 66
+        }
+      },
+      {
+        "comment": "",
+        "key": "記録なし",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 92
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべて表示",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 101
+        }
+      },
+      {
+        "comment": "",
+        "key": "健康記録を管理",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 116
+        }
+      },
+      {
+        "comment": "",
+        "key": "記録なし",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 134
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定: %@",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 152
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべて表示",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 143
+        }
+      },
+      {
+        "comment": "",
+        "key": "トリミング記録を管理",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 163
+        }
+      },
+      {
+        "comment": "",
+        "key": "記録なし",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 178
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予測: %@",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 196
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべて表示",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 187
+        }
+      },
+      {
+        "comment": "",
+        "key": "生理周期を管理",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 207
+        }
+      },
+      {
+        "comment": "",
+        "key": "記録なし",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 222
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定: %@",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 240
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべて表示",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 231
+        }
+      },
+      {
+        "comment": "",
+        "key": "ワクチン記録を管理",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 251
+        }
+      },
+      {
+        "comment": "",
+        "key": "このペットを削除",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 269
+        }
+      },
+      {
+        "comment": "",
+        "key": "編集",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 286
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 57,
+          "startingLine": 304
+        }
+      },
+      {
+        "comment": "",
+        "key": "ペットを削除",
+        "location": {
+          "startingColumn": 29,
+          "startingLine": 328
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@を削除しますか？この操作は取り消せません。関連するすべての記録も削除されます。",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 329
+        }
+      },
+      {
+        "comment": "",
+        "key": "削除",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 330
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 47,
+          "startingLine": 341
+        }
+      },
+      {
+        "comment": "",
+        "key": "〜 %@",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 404
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ kg",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 461
+        }
+      },
+      {
+        "comment": "",
+        "key": "%@ °C",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 471
+        }
+      },
+      {
+        "comment": "",
+        "key": "食欲: %@",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 482
+        }
+      },
+      {
+        "comment": "",
+        "key": "活動量: %@",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 488
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定: %@",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 533
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定: %@",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 580
+        }
+      }
+    ]
+  },
+  "version": 1
+}

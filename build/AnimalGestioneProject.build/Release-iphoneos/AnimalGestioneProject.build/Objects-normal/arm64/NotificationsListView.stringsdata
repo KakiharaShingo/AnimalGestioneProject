@@ -1,0 +1,120 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Notifications/NotificationsListView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "通知",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 69
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 49,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "新着通知",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 22
+        }
+      },
+      {
+        "comment": "",
+        "key": "予定通知",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 47
+        }
+      },
+      {
+        "comment": "",
+        "key": "すべての通知を既読にする",
+        "location": {
+          "startingColumn": 36,
+          "startingLine": 37
+        }
+      },
+      {
+        "comment": "",
+        "key": "削除",
+        "location": {
+          "startingColumn": 55,
+          "startingLine": 31
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 55,
+          "startingLine": 56
+        }
+      },
+      {
+        "comment": "",
+        "key": "予定: %@",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 208
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知はありません",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 260
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知が届くと、ここに表示されます。",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 264
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知が許可されていません",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 284
+        }
+      },
+      {
+        "comment": "",
+        "key": "アプリの通知を受け取るには、設定から通知を許可してください。",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 288
+        }
+      },
+      {
+        "comment": "",
+        "key": "通知を許可する",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 297
+        }
+      },
+      {
+        "comment": "",
+        "key": "設定アプリを開く",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 314
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,72 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/PrivacyPolicyConsentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "プライバシーポリシー",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 22
+        }
+      },
+      {
+        "comment": "",
+        "key": "AnimalGestioneProjectへようこそ",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 26
+        }
+      },
+      {
+        "comment": "",
+        "key": "上記プライバシーポリシーに同意します",
+        "location": {
+          "startingColumn": 20,
+          "startingLine": 72
+        }
+      },
+      {
+        "comment": "",
+        "key": "当アプリは、以下の情報を収集します：",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 34
+        }
+      },
+      {
+        "comment": "",
+        "key": "収集した情報の使用目的：",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 42
+        }
+      },
+      {
+        "comment": "",
+        "key": "お客様のデータはお使いのデバイス上にローカル保存され、標準設定ではサーバーにアップロードされません。",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 51
+        }
+      },
+      {
+        "comment": "",
+        "key": "プライバシーポリシーの全文を読む",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 58
+        }
+      },
+      {
+        "comment": "",
+        "key": "同意して続ける",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 87
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,0 +1,80 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/SupportURLView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "サポートURL",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 75
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 76
+        }
+      },
+      {
+        "comment": "",
+        "key": "サポートURL",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 9
+        }
+      },
+      {
+        "comment": "",
+        "key": "このアプリのサポートページは以下のURLで公開されています：",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 13
+        }
+      },
+      {
+        "comment": "",
+        "key": "注意: サポートページの内容を更新する場合は、アプリ内の表示とGitHubページの両方を更新してください。",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 69
+        }
+      },
+      {
+        "comment": "",
+        "key": "公開URL:",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 18
+        }
+      },
+      {
+        "comment": "",
+        "key": "ブラウザで開く",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 32
+        }
+      },
+      {
+        "comment": "",
+        "key": "メールでの問い合わせ:",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 44
+        }
+      },
+      {
+        "comment": "",
+        "key": "メールを送信",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 58
+        }
+      }
+    ]
+  },
+  "version": 1
+}

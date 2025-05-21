@@ -1,0 +1,112 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/Ads/PremiumPurchaseView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 109
+        }
+      },
+      {
+        "comment": "",
+        "key": "閉じる",
+        "location": {
+          "startingColumn": 49,
+          "startingLine": 110
+        }
+      },
+      {
+        "comment": "",
+        "key": "プレミアムにアップグレード",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 33
+        }
+      },
+      {
+        "comment": "",
+        "key": "プレミアム購入済み",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 54
+        }
+      },
+      {
+        "comment": "",
+        "key": "製品情報を読み込む",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 60
+        }
+      },
+      {
+        "comment": "",
+        "key": "過去の購入を復元",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 98
+        }
+      },
+      {
+        "comment": "",
+        "key": "月額サブスクリプション",
+        "location": {
+          "startingColumn": 94,
+          "startingLine": 77
+        }
+      },
+      {
+        "comment": "",
+        "key": "永久購入",
+        "location": {
+          "startingColumn": 132,
+          "startingLine": 77
+        }
+      },
+      {
+        "comment": "",
+        "key": "月額500円で広告非表示",
+        "location": {
+          "startingColumn": 94,
+          "startingLine": 81
+        }
+      },
+      {
+        "comment": "",
+        "key": "一度のお支払いで永久に広告非表示",
+        "location": {
+          "startingColumn": 129,
+          "startingLine": 81
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 117
+        }
+      },
+      {
+        "comment": "",
+        "key": "成功",
+        "location": {
+          "startingColumn": 76,
+          "startingLine": 115
+        }
+      },
+      {
+        "comment": "",
+        "key": "エラー",
+        "location": {
+          "startingColumn": 87,
+          "startingLine": 115
+        }
+      }
+    ]
+  },
+  "version": 1
+}

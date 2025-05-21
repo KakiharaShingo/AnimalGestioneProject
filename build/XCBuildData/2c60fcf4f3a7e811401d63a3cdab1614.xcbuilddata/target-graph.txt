@@ -1,0 +1,2 @@
+Target dependency graph (1 target)
+Target 'AnimalGestioneProject' in project 'AnimalGestioneProject' (no dependencies)

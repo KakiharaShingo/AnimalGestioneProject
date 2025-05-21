@@ -1,0 +1,400 @@
+{
+  "" : {
+    "const-values" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-master.swiftconstvalues",
+    "dependencies" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-master.d",
+    "diagnostics" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-master.dia",
+    "emit-module-dependencies" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-master-emit-module.dia",
+    "swift-dependencies" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-master.swiftdeps"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/AnimalGestioneProjectApp.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProjectApp.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProjectApp.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProjectApp.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/AppDelegate.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AppDelegate.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AppDelegate.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AppDelegate.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/BannerTest.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/BannerTest.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/BannerTest.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/BannerTest.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Config/AdConfig.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AdConfig.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AdConfig.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AdConfig.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Config/AppSetupManager.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AppSetupManager.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AppSetupManager.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AppSetupManager.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Config/URLProvider.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/URLProvider.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/URLProvider.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/URLProvider.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/CoreData/CoreDataStore+Records.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CoreDataStore+Records.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CoreDataStore+Records.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CoreDataStore+Records.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/CoreData/CoreDataStore.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CoreDataStore.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CoreDataStore.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CoreDataStore.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/CoreData/PersistenceController.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PersistenceController.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PersistenceController.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PersistenceController.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/DataManagement/CSVDataExportManager.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CSVDataExportManager.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CSVDataExportManager.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CSVDataExportManager.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/DataManagement/CSVExportView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CSVExportView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CSVExportView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CSVExportView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/DataManagement/DataExportImportManager.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/DataExportImportManager.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/DataExportImportManager.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/DataExportImportManager.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/DataManagement/DataManagementView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/DataManagementView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/DataManagementView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/DataManagementView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/DataManagement/DebugDataExport.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/DebugDataExport.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/DebugDataExport.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/DebugDataExport.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/DataStore/AnimalDataStore.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalDataStore.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalDataStore.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalDataStore.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Extensions/Color+Extensions.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/Color+Extensions.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/Color+Extensions.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/Color+Extensions.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Models/AnimalModel+CoreData.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalModel+CoreData.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalModel+CoreData.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalModel+CoreData.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Models/AnimalModel.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalModel.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalModel.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalModel.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Models/CheckupRecord.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CheckupRecord.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CheckupRecord.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/CheckupRecord.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Models/GroomingRecord.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/GroomingRecord.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/GroomingRecord.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/GroomingRecord.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Models/MedicationRecord.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/MedicationRecord.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/MedicationRecord.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/MedicationRecord.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Models/OtherRecord.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/OtherRecord.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/OtherRecord.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/OtherRecord.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Models/VaccineRecord.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/VaccineRecord.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/VaccineRecord.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/VaccineRecord.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Models/WeightRecord.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/WeightRecord.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/WeightRecord.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/WeightRecord.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Notifications/NotificationManager.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/NotificationManager.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/NotificationManager.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/NotificationManager.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Notifications/NotificationsListView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/NotificationsListView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/NotificationsListView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/NotificationsListView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/StoreKit/InAppPurchaseManager.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/InAppPurchaseManager.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/InAppPurchaseManager.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/InAppPurchaseManager.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/StoreKit/SubscriptionManager.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SubscriptionManager.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SubscriptionManager.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SubscriptionManager.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/StoreKit/SubscriptionProduct.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SubscriptionProduct.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SubscriptionProduct.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SubscriptionProduct.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/ViewModels/PremiumSubscriptionViewModel.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PremiumSubscriptionViewModel.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PremiumSubscriptionViewModel.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PremiumSubscriptionViewModel.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/AddAnimalView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AddAnimalView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AddAnimalView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AddAnimalView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/Ads/AdContainerView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AdContainerView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AdContainerView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AdContainerView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/Ads/AdManager.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AdManager.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AdManager.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AdManager.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/Ads/BannerAdView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/BannerAdView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/BannerAdView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/BannerAdView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/Ads/InterstitialAdManager.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/InterstitialAdManager.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/InterstitialAdManager.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/InterstitialAdManager.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/Ads/PremiumPurchaseView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PremiumPurchaseView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PremiumPurchaseView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PremiumPurchaseView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/Ads/RewardedAdManager.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/RewardedAdManager.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/RewardedAdManager.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/RewardedAdManager.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/Ads/RewardedFeatureView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/RewardedFeatureView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/RewardedFeatureView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/RewardedFeatureView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/AnimalDetailView+ColorPicker.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalDetailView+ColorPicker.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalDetailView+ColorPicker.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalDetailView+ColorPicker.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/AnimalDetailView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalDetailView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalDetailView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalDetailView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/ColorPickerView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/ColorPickerView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/ColorPickerView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/ColorPickerView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/Components/SearchBar.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SearchBar.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SearchBar.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SearchBar.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/EditAnimalView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EditAnimalView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EditAnimalView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EditAnimalView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/EmbeddedPrivacyPolicyView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EmbeddedPrivacyPolicyView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EmbeddedPrivacyPolicyView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EmbeddedPrivacyPolicyView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/EnhancedAnimalListView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EnhancedAnimalListView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EnhancedAnimalListView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EnhancedAnimalListView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/EnhancedCalendarView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EnhancedCalendarView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EnhancedCalendarView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EnhancedCalendarView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/EnhancedContentView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EnhancedContentView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EnhancedContentView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EnhancedContentView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/EnhancedHomeView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EnhancedHomeView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EnhancedHomeView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/EnhancedHomeView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/GroomingRecordView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/GroomingRecordView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/GroomingRecordView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/GroomingRecordView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/HealthChartView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/HealthChartView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/HealthChartView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/HealthChartView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/HealthRecordView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/HealthRecordView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/HealthRecordView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/HealthRecordView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/ImagePicker.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/ImagePicker.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/ImagePicker.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/ImagePicker.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/InlinePrivacyViews.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/InlinePrivacyViews.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/InlinePrivacyViews.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/InlinePrivacyViews.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/IntegratedSupportView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/IntegratedSupportView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/IntegratedSupportView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/IntegratedSupportView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/PhysiologicalCycleView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PhysiologicalCycleView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PhysiologicalCycleView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PhysiologicalCycleView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/PremiumSubscriptionView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PremiumSubscriptionView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PremiumSubscriptionView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PremiumSubscriptionView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/PrivacyPolicyConsentView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PrivacyPolicyConsentView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PrivacyPolicyConsentView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PrivacyPolicyConsentView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/PrivacyPolicyURLView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PrivacyPolicyURLView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PrivacyPolicyURLView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PrivacyPolicyURLView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/PrivacyPolicyView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PrivacyPolicyView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PrivacyPolicyView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PrivacyPolicyView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/ScheduleEditView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/ScheduleEditView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/ScheduleEditView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/ScheduleEditView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/SettingsView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SettingsView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SettingsView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SettingsView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/SimplePrivacyConsent.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SimplePrivacyConsent.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SimplePrivacyConsent.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SimplePrivacyConsent.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/SplashScreen.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SplashScreen.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SplashScreen.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SplashScreen.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/SupportURLView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SupportURLView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SupportURLView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SupportURLView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/SupportView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SupportView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SupportView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/SupportView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/SupportViews/ContactViews.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/ContactViews.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/ContactViews.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/ContactViews.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/SupportViews/FAQViews.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/FAQViews.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/FAQViews.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/FAQViews.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/SupportViews/GuideDetailView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/GuideDetailView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/GuideDetailView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/GuideDetailView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/VaccineRecordView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/VaccineRecordView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/VaccineRecordView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/VaccineRecordView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/WeightRecordView.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/WeightRecordView.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/WeightRecordView.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/WeightRecordView.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/DerivedSources/CoreDataGenerated/AnimalGestione/AnimalEntity+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalEntity+CoreDataClass.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalEntity+CoreDataClass.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalEntity+CoreDataClass.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/DerivedSources/CoreDataGenerated/AnimalGestione/AnimalEntity+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalEntity+CoreDataProperties.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalEntity+CoreDataProperties.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalEntity+CoreDataProperties.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/DerivedSources/CoreDataGenerated/AnimalGestione/AnimalGestione+CoreDataModel.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestione+CoreDataModel.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestione+CoreDataModel.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestione+CoreDataModel.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/DerivedSources/CoreDataGenerated/AnimalGestione/HealthRecordEntity+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/HealthRecordEntity+CoreDataClass.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/HealthRecordEntity+CoreDataClass.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/HealthRecordEntity+CoreDataClass.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/DerivedSources/CoreDataGenerated/AnimalGestione/HealthRecordEntity+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/HealthRecordEntity+CoreDataProperties.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/HealthRecordEntity+CoreDataProperties.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/HealthRecordEntity+CoreDataProperties.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/DerivedSources/CoreDataGenerated/AnimalGestione/PhysiologicalCycleEntity+CoreDataClass.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PhysiologicalCycleEntity+CoreDataClass.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PhysiologicalCycleEntity+CoreDataClass.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PhysiologicalCycleEntity+CoreDataClass.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/DerivedSources/CoreDataGenerated/AnimalGestione/PhysiologicalCycleEntity+CoreDataProperties.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PhysiologicalCycleEntity+CoreDataProperties.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PhysiologicalCycleEntity+CoreDataProperties.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/PhysiologicalCycleEntity+CoreDataProperties.o"
+  },
+  "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}

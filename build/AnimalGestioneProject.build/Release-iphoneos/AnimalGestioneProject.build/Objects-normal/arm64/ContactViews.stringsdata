@@ -1,0 +1,184 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/SupportViews/ContactViews.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "サポートが必要ですか？",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 60
+        }
+      },
+      {
+        "comment": "",
+        "key": "技術的な問題や機能追加の要望など、お気軽にお問い合わせください。サポートチームが対応いたします。",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 64
+        }
+      },
+      {
+        "comment": "",
+        "key": "お問い合わせフォームを開く",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 73
+        }
+      },
+      {
+        "comment": "",
+        "key": "その他のサポートオプション",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 87
+        }
+      },
+      {
+        "comment": "",
+        "key": "sk.shingo.10@gmail.com",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 95
+        }
+      },
+      {
+        "comment": "",
+        "key": "よくある質問（FAQ）を確認する",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 104
+        }
+      },
+      {
+        "comment": "",
+        "key": "お問い合わせ",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 197
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 199
+        }
+      },
+      {
+        "comment": "",
+        "key": "お客様情報",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 137
+        }
+      },
+      {
+        "comment": "",
+        "key": "お問い合わせ内容",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 144
+        }
+      },
+      {
+        "comment": "",
+        "key": "デバイス情報を含めることで、より正確なサポートが提供できます。",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 165
+        }
+      },
+      {
+        "comment": "",
+        "key": "お名前",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 138
+        }
+      },
+      {
+        "comment": "",
+        "key": "メールアドレス",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 139
+        }
+      },
+      {
+        "comment": "",
+        "key": "カテゴリ",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 145
+        }
+      },
+      {
+        "comment": "",
+        "key": "詳細なご説明をお願いします...",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 153
+        }
+      },
+      {
+        "comment": "",
+        "key": "デバイス情報を含める",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 166
+        }
+      },
+      {
+        "comment": "",
+        "key": "メールアプリが設定されていないため、メールを送信できません。",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 182
+        }
+      },
+      {
+        "comment": "",
+        "key": "送信",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 174
+        }
+      },
+      {
+        "comment": "",
+        "key": "メールアドレスをコピーする",
+        "location": {
+          "startingColumn": 34,
+          "startingLine": 191
+        }
+      },
+      {
+        "comment": "",
+        "key": "送信完了",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 205
+        }
+      },
+      {
+        "comment": "",
+        "key": "お問い合わせを受け付けました。通常2営業日以内に返信いたします。",
+        "location": {
+          "startingColumn": 35,
+          "startingLine": 206
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 207
+        }
+      }
+    ]
+  },
+  "version": 1
+}

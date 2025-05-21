@@ -69,7 +69,7 @@ class SubscriptionManager: ObservableObject {
     }
     
     // プレミアム機能の表示/非表示を管理するフラグ
-    static let showPremiumFeatures = false
+    static let showPremiumFeatures = true
     
     // 利用可能な全商品ID
     var productIDs: [String] {

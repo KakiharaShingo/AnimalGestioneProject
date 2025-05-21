@@ -1,0 +1,112 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/ScheduleEditView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "予定を編集",
+        "location": {
+          "startingColumn": 30,
+          "startingLine": 116
+        }
+      },
+      {
+        "comment": "",
+        "key": "予定の詳細",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 70
+        }
+      },
+      {
+        "comment": "",
+        "key": "メモ",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 111
+        }
+      },
+      {
+        "comment": "",
+        "key": "タイトル",
+        "location": {
+          "startingColumn": 31,
+          "startingLine": 71
+        }
+      },
+      {
+        "comment": "",
+        "key": "日時",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 73
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定を設定",
+        "location": {
+          "startingColumn": 32,
+          "startingLine": 77
+        }
+      },
+      {
+        "comment": "",
+        "key": "次回予定日",
+        "location": {
+          "startingColumn": 40,
+          "startingLine": 97
+        }
+      },
+      {
+        "comment": "",
+        "key": "間隔（日）",
+        "location": {
+          "startingColumn": 38,
+          "startingLine": 84
+        }
+      },
+      {
+        "comment": "",
+        "key": "30",
+        "location": {
+          "startingColumn": 43,
+          "startingLine": 85
+        }
+      },
+      {
+        "comment": "",
+        "key": "キャンセル",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 120
+        }
+      },
+      {
+        "comment": "",
+        "key": "保存",
+        "location": {
+          "startingColumn": 28,
+          "startingLine": 126
+        }
+      },
+      {
+        "comment": "",
+        "key": "エラー",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 134
+        }
+      },
+      {
+        "comment": "",
+        "key": "OK",
+        "location": {
+          "startingColumn": 50,
+          "startingLine": 136
+        }
+      }
+    ]
+  },
+  "version": 1
+}

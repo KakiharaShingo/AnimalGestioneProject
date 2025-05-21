@@ -1,0 +1,96 @@
+{
+  "source": "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/Views/HealthChartView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "健康グラフ",
+        "location": {
+          "startingColumn": 26,
+          "startingLine": 61
+        }
+      },
+      {
+        "comment": "",
+        "key": "チャートタイプ",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 29
+        }
+      },
+      {
+        "comment": "",
+        "key": "期間",
+        "location": {
+          "startingColumn": 24,
+          "startingLine": 37
+        }
+      },
+      {
+        "comment": "",
+        "key": "この期間のデータがありません",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 75
+        }
+      },
+      {
+        "comment": "",
+        "key": "統計情報",
+        "location": {
+          "startingColumn": 18,
+          "startingLine": 128
+        }
+      },
+      {
+        "comment": "",
+        "key": "この期間のデータがありません",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 133
+        }
+      },
+      {
+        "comment": "",
+        "key": "体重データがありません",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 181
+        }
+      },
+      {
+        "comment": "",
+        "key": "体温データがありません",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 212
+        }
+      },
+      {
+        "comment": "",
+        "key": "食欲データがありません",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 235
+        }
+      },
+      {
+        "comment": "",
+        "key": "活動量データがありません",
+        "location": {
+          "startingColumn": 33,
+          "startingLine": 261
+        }
+      },
+      {
+        "comment": "",
+        "key": "データがありません",
+        "location": {
+          "startingColumn": 22,
+          "startingLine": 416
+        }
+      }
+    ]
+  },
+  "version": 1
+}
