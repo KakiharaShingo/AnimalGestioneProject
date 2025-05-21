@@ -2,7 +2,7 @@
 //  AnimalEntity+CoreDataProperties.swift
 //  
 //
-//  Created by 垣原親伍 on 2025/05/21.
+//  Created by 垣原親伍 on 2025/05/22.
 //
 //  This file was automatically generated and should not be edited.
 //

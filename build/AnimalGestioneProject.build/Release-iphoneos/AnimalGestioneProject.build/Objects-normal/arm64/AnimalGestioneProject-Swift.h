@@ -315,21 +315,21 @@ SWIFT_CLASS_NAMED("AnimalEntity")
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * _Nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * _Nullable)context OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class PhysiologicalCycleEntity;
-@class NSSet;
-@interface AnimalEntity (SWIFT_EXTENSION(AnimalGestioneProject))
-- (void)addPhysiologicalCyclesObject:(PhysiologicalCycleEntity * _Nonnull)value;
-- (void)removePhysiologicalCyclesObject:(PhysiologicalCycleEntity * _Nonnull)value;
-- (void)addPhysiologicalCycles:(NSSet * _Nonnull)values;
-- (void)removePhysiologicalCycles:(NSSet * _Nonnull)values;
-@end
-
 @class HealthRecordEntity;
+@class NSSet;
 @interface AnimalEntity (SWIFT_EXTENSION(AnimalGestioneProject))
 - (void)addHealthRecordsObject:(HealthRecordEntity * _Nonnull)value;
 - (void)removeHealthRecordsObject:(HealthRecordEntity * _Nonnull)value;
 - (void)addHealthRecords:(NSSet * _Nonnull)values;
 - (void)removeHealthRecords:(NSSet * _Nonnull)values;
+@end
+
+@class PhysiologicalCycleEntity;
+@interface AnimalEntity (SWIFT_EXTENSION(AnimalGestioneProject))
+- (void)addPhysiologicalCyclesObject:(PhysiologicalCycleEntity * _Nonnull)value;
+- (void)removePhysiologicalCyclesObject:(PhysiologicalCycleEntity * _Nonnull)value;
+- (void)addPhysiologicalCycles:(NSSet * _Nonnull)values;
+- (void)removePhysiologicalCycles:(NSSet * _Nonnull)values;
 @end
 
 @class NSDate;

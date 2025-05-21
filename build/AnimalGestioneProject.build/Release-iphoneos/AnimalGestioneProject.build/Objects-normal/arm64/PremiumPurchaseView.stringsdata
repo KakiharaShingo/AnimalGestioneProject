@@ -7,7 +7,7 @@
         "key": "",
         "location": {
           "startingColumn": 33,
-          "startingLine": 109
+          "startingLine": 108
         }
       },
       {
@@ -15,7 +15,7 @@
         "key": "閉じる",
         "location": {
           "startingColumn": 49,
-          "startingLine": 110
+          "startingLine": 109
         }
       },
       {
@@ -23,7 +23,7 @@
         "key": "プレミアムにアップグレード",
         "location": {
           "startingColumn": 22,
-          "startingLine": 33
+          "startingLine": 32
         }
       },
       {
@@ -31,7 +31,7 @@
         "key": "プレミアム購入済み",
         "location": {
           "startingColumn": 26,
-          "startingLine": 54
+          "startingLine": 53
         }
       },
       {
@@ -39,7 +39,7 @@
         "key": "製品情報を読み込む",
         "location": {
           "startingColumn": 32,
-          "startingLine": 60
+          "startingLine": 59
         }
       },
       {
@@ -47,7 +47,7 @@
         "key": "過去の購入を復元",
         "location": {
           "startingColumn": 32,
-          "startingLine": 98
+          "startingLine": 97
         }
       },
       {
@@ -55,7 +55,7 @@
         "key": "月額サブスクリプション",
         "location": {
           "startingColumn": 94,
-          "startingLine": 77
+          "startingLine": 76
         }
       },
       {
@@ -63,7 +63,7 @@
         "key": "永久購入",
         "location": {
           "startingColumn": 132,
-          "startingLine": 77
+          "startingLine": 76
         }
       },
       {
@@ -71,7 +71,7 @@
         "key": "月額500円で広告非表示",
         "location": {
           "startingColumn": 94,
-          "startingLine": 81
+          "startingLine": 80
         }
       },
       {
@@ -79,7 +79,7 @@
         "key": "一度のお支払いで永久に広告非表示",
         "location": {
           "startingColumn": 129,
-          "startingLine": 81
+          "startingLine": 80
         }
       },
       {
@@ -87,7 +87,7 @@
         "key": "OK",
         "location": {
           "startingColumn": 50,
-          "startingLine": 117
+          "startingLine": 116
         }
       },
       {
@@ -95,7 +95,7 @@
         "key": "成功",
         "location": {
           "startingColumn": 76,
-          "startingLine": 115
+          "startingLine": 114
         }
       },
       {
@@ -103,7 +103,7 @@
         "key": "エラー",
         "location": {
           "startingColumn": 87,
-          "startingLine": 115
+          "startingLine": 114
         }
       }
     ]

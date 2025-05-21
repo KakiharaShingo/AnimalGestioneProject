@@ -1,9 +1,9 @@
-"/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/CoreData/CoreDataStore.swift":
+"/Users/shingo/Xcode_Local/git/AnimalGestioneProject/AnimalGestioneProject/ViewModels/PremiumSubscriptionViewModel.swift":
+  diagnostics: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-master.dia"
+  dependencies: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-master.d"
+  swiftdoc: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject.swiftdoc"
   abi-baseline-json: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject.abi.json"
+  swiftsourceinfo: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject.swiftsourceinfo"
+  const-values: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-master.swiftconstvalues"
   objc-header: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-Swift.h"
   swiftmodule: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject.swiftmodule"
-  const-values: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-master.swiftconstvalues"
-  diagnostics: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-master.dia"
-  swiftdoc: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject.swiftdoc"
-  dependencies: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject-master.d"
-  swiftsourceinfo: "/Users/shingo/Xcode_Local/git/AnimalGestioneProject/build/AnimalGestioneProject.build/Release-iphoneos/AnimalGestioneProject.build/Objects-normal/arm64/AnimalGestioneProject.swiftsourceinfo"

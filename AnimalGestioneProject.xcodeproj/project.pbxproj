@@ -24,8 +24,6 @@
 		28402A452DDB8D4B004680F8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28402A442DDB8D4A004680F8 /* Security.framework */; };
 		28402A472DDB8D50004680F8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28402A462DDB8D50004680F8 /* StoreKit.framework */; };
 		28402A492DDB8D56004680F8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28402A482DDB8D56004680F8 /* SystemConfiguration.framework */; };
-		28402A4B2DDBA3AF004680F8 /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28402A4A2DDBA3AF004680F8 /* GoogleMobileAds.xcframework */; };
-		28402A4C2DDBA3AF004680F8 /* GoogleMobileAds.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 28402A4A2DDBA3AF004680F8 /* GoogleMobileAds.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2898A1B32DDDAED800E2F50D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898A1A12DDDAED800E2F50D /* ImagePicker.swift */; };
 		2898A1B42DDDAED800E2F50D /* ContactViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898A1902DDDAED800E2F50D /* ContactViews.swift */; };
 		2898A1B52DDDAED800E2F50D /* GroomingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898A1732DDDAED800E2F50D /* GroomingRecord.swift */; };
@@ -100,6 +98,7 @@
 		2898A1FF2DDDAED800E2F50D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2898A17C2DDDAED800E2F50D /* Preview Assets.xcassets */; };
 		2898A2002DDDAED800E2F50D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2898A1552DDDAED800E2F50D /* Assets.xcassets */; };
 		2898A2012DDDB57400E2F50D /* PremiumSubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2898A1832DDDAED800E2F50D /* PremiumSubscriptionViewModel.swift */; };
+		28BE027F2DDE46F900787E0F /* GoogleMobileAds.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2898A16C2DDDAED800E2F50D /* GoogleMobileAds.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,7 +125,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				28402A4C2DDBA3AF004680F8 /* GoogleMobileAds.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,7 +149,6 @@
 		28402A442DDB8D4A004680F8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		28402A462DDB8D50004680F8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		28402A482DDB8D56004680F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		28402A4A2DDBA3AF004680F8 /* GoogleMobileAds.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:EQHXZ8M8AV:Google LLC"; lastKnownFileType = wrapper.xcframework; name = GoogleMobileAds.xcframework; path = GoogleMobileAdsFramework/GoogleMobileAds.xcframework; sourceTree = "<group>"; };
 		2898A1532DDDAED800E2F50D /* AnimalGestioneProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGestioneProjectApp.swift; sourceTree = "<group>"; };
 		2898A1542DDDAED800E2F50D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2898A1552DDDAED800E2F50D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -245,6 +242,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BE027F2DDE46F900787E0F /* GoogleMobileAds.xcframework in Frameworks */,
 				28402A332DDB8D0D004680F8 /* CoreMedia.framework in Frameworks */,
 				28402A452DDB8D4B004680F8 /* Security.framework in Frameworks */,
 				28402A2B2DDB8CF2004680F8 /* AVFoundation.framework in Frameworks */,
@@ -252,7 +250,6 @@
 				28402A432DDB8D45004680F8 /* QuartzCore.framework in Frameworks */,
 				28402A392DDB8D22004680F8 /* JavaScriptCore.framework in Frameworks */,
 				28402A352DDB8D14004680F8 /* CoreTelephony.framework in Frameworks */,
-				28402A4B2DDBA3AF004680F8 /* GoogleMobileAds.xcframework in Frameworks */,
 				283DA1342DDB8AF70074C330 /* WebKit.framework in Frameworks */,
 				28402A2F2DDB8D01004680F8 /* CFNetwork.framework in Frameworks */,
 				28402A3B2DDB8D29004680F8 /* MediaPlayer.framework in Frameworks */,
@@ -286,7 +283,6 @@
 		283DA1322DDB8AF70074C330 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				28402A4A2DDBA3AF004680F8 /* GoogleMobileAds.xcframework */,
 				28402A482DDB8D56004680F8 /* SystemConfiguration.framework */,
 				28402A462DDB8D50004680F8 /* StoreKit.framework */,
 				28402A442DDB8D4A004680F8 /* Security.framework */,
@@ -958,6 +954,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"AnimalGestioneProject/Preview Content\"";
 				DEVELOPMENT_TEAM = V47R62H7V3;
 				ENABLE_PREVIEWS = YES;
@@ -994,6 +991,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"AnimalGestioneProject/Preview Content\"";
 				DEVELOPMENT_TEAM = V47R62H7V3;
 				ENABLE_PREVIEWS = YES;
